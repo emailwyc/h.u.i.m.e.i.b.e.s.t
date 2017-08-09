@@ -1,0 +1,53 @@
+<?php $this->load->view('common/header');?>
+<title>医生详情</title>
+<script type="text/javascript">  
+$(document).ready(function(){
+	$(".pl-con .star span").click(function(){
+		var num=$(this).index();
+		$(".pl-con .star span").each(function(x){
+			if(x<=num){
+				$(this).addClass("cur");
+			}else{
+				$(this).removeClass("cur");
+			}
+		})
+		$("#star").val(num+1);
+	})
+})
+</script>  
+</head>  
+<body>
+  <!-- 医生-信息2 -->
+  <div class="ys-info2">
+    <div class="top">
+      <div class="left tc">
+        <img class="tx" src="<?=@$doctor['avatar']?>" onerror="this.onerror=null;this.src='/ui/images/doctor.jpg'" alt="" />
+		<?php if(@$doctor['level']==3){?>
+        <img class="jb" src="/ui/images/sanjia.png" alt="" />
+		<?php }?>
+      </div>
+      <div class="right cw8">
+        <p class="xm fs16 cw1"><?=@$doctor['name']?></p>
+        <p class="zw"><?=@$doctor['position']?> <?=$doctor['department']?></p>
+        <p class="zxgh"><span><img src="/ui/images/ico3-zx.png" alt="" />咨询量 <?=@$doctor['con_num']?></span><img src="/ui/images/ico3-gh.png" alt="" />挂号量 <?=@$doctor['reg_num']?></p>
+      </div>
+    </div>
+  </div>
+  <!-- 医生-信息 end -->
+  <div class="pl-con pb35">
+    <div class="item cfix myd">
+      <div class="fl fs14">满意度</div>
+      <div class="fl star"><span></span><span></span><span></span><span></span><span></span></div>
+      <input type="hidden" value="" id="star" name="star" />
+    </div>
+    <div class="item plnr">
+      <div class="fs14">评价内容</div>
+      <div class="textarea">
+        <textarea name="message" class="lh15 fs13" maxlength="300"  placeholder="写下您的就医经历，为更多人提供宝贵的参考（请输入10-300字）"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="bb">
+    <div><input type="submit" class="btn1" value="添加家庭成员" /></div>
+  </div>
+<?php $this->load->view('common/footer');?>

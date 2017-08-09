@@ -1,0 +1,36 @@
+echat_redirect]]></EventKey>
+<MenuId>402483012</MenuId>
+</xml>
+ERROR - 2016-02-19 05:24:13 --> {"signature":"2b9bddf306d4ec4492b5af5075c31aad9b43734f","timestamp":"1455830652","nonce":"270984472"}
+ERROR - 2016-02-19 05:24:13 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwXprTABaaLx0tASNAOsVFxE]]></FromUserName>
+<CreateTime>1455830652</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+<MenuId>402483012</MenuId>
+</xml>
+ERROR - 2016-02-19 05:38:07 --> {"signature":"ec5deee407cc20ff41ba04bbc83c7ad2a4b0f788","timestamp":"1455831487","nonce":"273864457"}
+ERROR - 2016-02-19 05:38:07 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwYUg-iwYAn4ZHhHz444FfoA]]></FromUserName>
+<CreateTime>1455831487</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[我的邀请]]></Content>
+<MsgId>6252748625554886753</MsgId>
+</xml>
+ERROR - 2016-02-19 06:00:03 --> {"signature":"12b9033ea992cc44fa687df399c47fa502098ca7","timestamp":"1455832803","nonce":"555866001"}
+ERROR - 2016-02-19 06:00:03 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwQwTlqCkQuUdWVKcDREjYmg]]></FromUserName>
+<CreateTime>1455832803</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[ 我的邀请]]></Content>
+<MsgId>6252754277731848354</MsgId>
+</xml>
+ERROR - 2016-02-19 06:21:16 --> {"signature":"f1614565e078fd8cb9c049e69c18d8947103f702","timestamp":"1455834076","nonce":"838396456"}
+ERROR - 2016-02-19 06:21:16 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwXnX8XlP9GyIs55RtBaN1qY]]></FromUserName>
+<CreateTime>1455834076</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[100028]]></EventKey>
+<Ticket><![CDATA[g

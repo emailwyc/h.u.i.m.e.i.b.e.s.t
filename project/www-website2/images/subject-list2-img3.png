@@ -1,0 +1,29 @@
+sgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+ERROR - 2015-12-18 15:09:34 --> {"signature":"d9feb8e9e6fd2ce07263f37cc2874a0d13874f66","timestamp":"1450422574","nonce":"1281251947"}
+ERROR - 2015-12-18 15:09:34 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwV84ots96PJvXfCyu4wSWuw]]></FromUserName>
+<CreateTime>1450422574</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+ERROR - 2015-12-18 15:20:16 --> {"signature":"def1951be153e4f776cfd91ec8a5670a3db0174f","timestamp":"1450423216","nonce":"981040881"}
+ERROR - 2015-12-18 15:20:16 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwTY8eDZ1yf-cpNPEon66VWI]]></FromUserName>
+<CreateTime>1450423216</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+</xml>
+ERROR - 2015-12-18 15:21:03 --> {"signature":"e9ad10730351fdc979f7ceeac99c860a2ceff23e","timestamp":"1450423263","nonce":"771097093"}
+ERROR - 2015-12-18 15:21:03 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwV6ScRssbBa9P1mH5glTYOs]]></FromUserName>
+<CreateTime>1450423263</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+</xml>
+ERROR - 2015-12-18 15:21:06 --> {"signature":"efe3e13b3eaced03cfe95c89b9dcd8c19cd5ce16","timestamp":"1450423266","nonce

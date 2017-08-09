@@ -1,0 +1,551 @@
+{%- macro DoctorList(doctors) -%}
+    <div style="border: 1px solid #337ab7; padding:8px">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th style="min-width:12px; width:12px">#</th>
+                        <th>姓名</th>
+                        <th>是否显示</th>
+                        <th>综合排序值</th>
+                        <th>医院</th>
+                        <th>科室</th>
+                        <th>职称</th>
+                        <th>医生助理</th>
+                        <th>关注量</th>
+                        <th>文章量</th>
+                        <th>一级区域</th>
+                        <th>二级区域</th>
+                        <th>最近登录时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for doctor in doctors %}
+                <tr class="clickable-row" data-href="/admin/doctor/show/{{ doctor.id }}">
+                        <td style="min-width:12px; width:12px"><span class="text-muted small">{{ loop.index }}</span></td>
+                        <td>{{ doctor.name }}</td>
+                        <td>{{ doctor.freeze }}</td>
+                        <td>{{ doctor.mul_num }}</td>
+                        <td>{{ doctor.hospital }}</td>
+                        <td>{{ doctor.department }}</td>
+                        <td>{{ doctor.position }}</td>
+                        <td>{% if doctor.assistant %}{{ doctor.assistant }}{% endif %}</td>
+                        <td>{% if doctor.starred %}{{ doctor.starred }}{% endif %}</td>
+                        <td>{% if doctor.articles %}{{ doctor.articles }}{% endif %}</td>
+                        <td>{% if doctor.region_id %}{{ doctor.region_id }}{% else %}{% endif %}</td>
+                        <td>{% if doctor.region_child_id %}{{ doctor.region_child_id }} {% else %}{% endif %}</td>
+                        <td>{% if doctor.uref.actived_at %}{{doctor.uref.actived_at | utc_datetime }}{% else %}无{% endif %}</td>
+                    </tr>
+                {%- endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{%- endmacro -%}
+
+
+{%- macro Doctor(doctor) -%}
+    <div class="table-responsive">
+    <table class="table table-bordered table-striped" style="margin:0">
+        <tbody>
+            <tr>
+                <th>手机号码</th>
+                <td>{{ doctor.mobile }}</td>
+                <th>是否显示</th>
+                <td>{{ doctor.freeze }}</td>
+            </tr>
+            <tr>
+                <th>姓名</th>
+                <td>{{ doctor.name }}</td>
+                <th>医生助理</th>
+                <td>{{ doctor.assistant }}</td>
+            </tr>
+            <tr>
+                <th>医院</th>
+                <td>{{ doctor.hospital }}</td>
+                <th>详细科室</th>
+                <td>{{ doctor.department }}</td>
+            </tr>
+            <tr>
+                <th>一级科室</th>
+                <td>{% if doctor.department_id %}{{ doctor.department_id }}{% else %}{% endif %}</td>
+                <th>二级科室</th>
+                <td>{% if doctor.department_child_id %}{{ doctor.department_child_id }}{% else %}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>职称</th>
+                <td>{{ doctor.position }}</td>
+                <th>头衔</th>
+                <td>{{ doctor.title }}</td>
+            </tr>
+            <tr>
+                <th>关注量</th>
+                <td>{{ doctor.starred }}</td>
+                <th>文章量</th>
+                <td>{{ doctor.articles }}</td>
+            </tr>
+            <tr>
+                <th>门诊地点</th>
+                <td colspan="3">{{ doctor.locations | join('<br>'|safe) }}</td>
+            </tr>
+            <tr>
+                <th>擅长</th>
+                <td colspan="3">{{ doctor.speciality }}</td>
+            </tr>
+            <tr>
+                <th>简介</th>
+                <td colspan="3">{{ doctor.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    <br>
+    <p class="text-muted small" style="margin-bottom:50px">
+    <span class="text-danger">最近登录：{% if doctor.uref.actived_at %}{{doctor.uref.actived_at | utc_datetime }}{% else %}无{% endif %}</span>
+        <br>
+        更新时间：{{ doctor.updated_at | utc_datetime }}
+        <br>
+        创建时间：{{ doctor.created_at | utc_datetime }}
+    </p>
+{%- endmacro -%}
+
+
+{%- macro HospitalList(hospitals) -%}
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th>一级区域</th>
+                <th>二级区域</th>
+                <th>医院地址</th>
+                <th>分院地址</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hospital in hospitals %}
+        <tr class="clickable-row" data-href="/admin/hospital/show/{{ hospital.id }}">
+                <td class="text-nowrap">{{ hospital.name }}</td>
+                <td>{% if hospital.region_id %}{{ hospital.region_id }}{% else %}{% endif %} </td>
+                <td>{% if hospital.region_child_id %}{{ hospital.region_child_id }}{% else %}{% endif %} </td>
+                <td>{{ hospital.address }} </td>
+                <td>{{ hospital.branches | safe }}</td>
+            </tr>
+        {%- endfor %}
+        </tbody>
+    </table>
+{%- endmacro -%}
+
+
+{%- macro Hospital(hospital) -%}
+    <table class="table table-responsive">
+        <tbody>
+            <tr>
+                <td>名称</td>
+                <td>{{ hospital.name }}</td>
+            </tr>
+            <tr>
+                <td>一级区域</td>
+                <td>{% if hospital.region_id %}{{ hospital.region_id }}{% else %}{% endif %}</td>
+            </tr>
+            <tr>
+                <td>二级区域</td>
+                <td>{% if hospital.region_child_id %}{{ hospital.region_child_id }}{% else %}{% endif %}</td>
+            </tr>
+            <tr>
+                <td>医院地址</td>
+                <td>{{ hospital.address }}</td>
+            </tr>
+            <tr>
+                <td>分院地址</td>
+                <td>{{ hospital.branches | safe }}</td>
+            </tr>
+            <tr>
+                <td>挂号规则</td>
+                <td>{{ hospital.rule }}</td>
+            </tr>
+            <tr>
+                <td>描述</td>
+                <td>{{ hospital.description }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="text-muted small">
+        创建时间：{{ hospital.created_at | utc_datetime }}
+        <br>
+        更新时间：{{ hospital.updated_at | utc_datetime }}
+    </p>
+{%- endmacro -%}
+
+
+{%- macro DepartmentList(departments) -%}
+{% set h5_host = 'http://h5.huimeibest.com' %}
+{% if g.run_mode == 'development' %}
+    {% set h5_host = 'http://h5test.huimeibest.com' %}
+{% endif %}
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>图片</th>
+                <th>上级科室</th>
+                <th>名称</th>
+                <th>首页显示</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for department in departments %}
+        <tr class="clickable-row" data-href="/admin/department/show/{{ department.id }}">
+                <td>
+                    {% if department.lcon %}
+                        <img src="{{ h5_host }}{{ department.lcon }}" style="margin:-18px 0; width:28px; height:28px">
+                    {% endif %}
+                </td>
+                <td class="text-nowrap">{{ department.parent }}</td>
+                <td class="text-nowrap">{{ department.name }}</td>
+                <td>{% if department.tags == 1 %}是{% endif %}</td>
+            </tr>
+        {%- endfor %}
+        </tbody>
+    </table>
+{%- endmacro -%}
+
+
+{%- macro Department(department) -%}
+{% set h5_host = 'http://h5.huimeibest.com' %}
+{% if g.run_mode == 'development' %}
+    {% set h5_host = 'http://h5test.huimeibest.com' %}
+{% endif %}
+    <table class="table table-responsive">
+        <tbody>
+            <tr>
+                <td>名称</td>
+                <td>{{ department.name }}</td>
+            </tr>
+            <tr>
+                <td>上级科室</td>
+                <td>{{ department.parent }}</td>
+            </tr>
+            <tr>
+                <td>图片</td>
+                <td>{% if department.lcon %}<img src="{{ h5_host }}{{ department.lcon }}">{% else %}无{% endif %}</td>
+            </tr>
+            <tr>
+                <td>首页显示</td>
+                <td>{% if department.tags == 1 %}是{% else %}否{% endif %}</td>
+            </tr>
+            <tr>
+                <td>描述</td>
+                <td>{{ department.description }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="text-muted small">
+        创建时间：{{ department.created_at | utc_datetime }}
+        <br>
+        更新时间：{{ department.updated_at | utc_datetime }}
+    </p>
+{%- endmacro -%}
+
+
+{%- macro RegionList(regions) -%}
+{% set h5_host = 'http://h5.huimeibest.com' %}
+{% if g.run_mode == 'development' %}
+    {% set h5_host = 'http://h5test.huimeibest.com' %}
+{% endif %}
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th>上级区域</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for region in regions %}
+        <tr class="clickable-row" data-href="/admin/region/show/{{ region.id }}">
+                <td class="text-nowrap">{{ region.name }}</td>
+                <td class="text-nowrap">{{ region.parent }}</td>
+            </tr>
+        {%- endfor %}
+        </tbody>
+    </table>
+{%- endmacro -%}
+
+
+{%- macro Region(region) -%}
+{% set h5_host = 'http://h5.huimeibest.com' %}
+{% if g.run_mode == 'development' %}
+    {% set h5_host = 'http://h5test.huimeibest.com' %}
+{% endif %}
+    <table class="table table-responsive">
+        <tbody>
+            <tr>
+                <td>名称</td>
+                <td>{{ region.name }}</td>
+            </tr>
+            <tr>
+                <td>上级区域</td>
+                <td>{{ region.parent }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+{%- endmacro -%}
+
+
+{%- macro DoctorArticles(articles) -%}
+    <table class="table">
+        <tbody>
+        {% if not articles %}
+            <tr><td colspan="8"><br><p class="text-center">没有文章</p><br></td></tr>
+        {% else %}
+            {% for article in articles %}
+            <tr>
+                <td style="min-width:24px;width:24px"><p class="text-muted small" style="margin:0">{{ loop.index }}</p></td>
+                <td style="min-width:36px;width:36px"><img src="{{ article.image_url}}" class="img-thumbnail" style="width:80px;height:80px"></td>
+                <td>
+                    <a href="{{ article.link_url }}" target="_blank">{{ article.title }}</a>
+                    <p class="text-muted small" style="margin:0">{{ article.posted_date }}</p>
+                    <br>
+                    <p class="text-muted small" style="margin:0">{{ article.description }}</p>
+                </td>
+            </tr>
+            {%- endfor %}
+        {% endif %}
+        </tbody>
+    </table>
+{%- endmacro -%}
+
+
+{%- macro OrderList(orders) -%}
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th style="min-width:12px; width:12px">#</th>
+                    <th>订单信息</th>
+                    <th>医生</th>
+                    <th>患者</th>
+                    <th>医生助理</th>
+                    <th>就诊时间</th>
+                    <th>订单时间</th>
+                    <th>订单状态</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% if not orders %}
+                <tr><td colspan="8"><br><p class="text-center">没有订单数据</p><br></td></tr>
+            {% else %}
+                {% for item in orders %}
+                <tr>
+                        <td style="min-width:12px; width:12px"><span class="text-muted small">{{ loop.index }}</span></td>
+                        <td>流水号：{{ item.seq }}<br>订单号：{{ item.id }}</td>
+                        <td>{{ item.doctor.name}}<br>
+                            <p class="small">{{ item.doctor.hospital }}<br>{{ item.doctor.department }}</p></td>
+                        <td>{{ item.name }}<br>
+                            <p class="small">{{ Gender(item.gender) }} {{ item.age }}<br>
+                            {{ item.mobile }}</p></td>
+                        <td>{% if item.doctor.assistant %}{{ item.doctor.assistant }}{% endif %}</td>
+                        <td>{{ item.schedule | utc_datetime_human }}</td>
+                        <td>{{ item.created_at | utc_datetime }}</td>
+                        <td>{{ item.status }}</td>
+                    </tr>
+                {%- endfor %}
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+{%- endmacro -%}
+
+{%- macro OrderQrcodeList(orders) -%}
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr>
+                    <th style="min-width:12px; width:12px">#</th>
+                    <th>订单id</th>
+                    <th>支付金额</th>
+                    <th>支付状态</th>
+                    <th>支付时间</th>
+                    <th>描述</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% if not orders %}
+                <tr><td colspan="8"><br><p class="text-center">没有订单数据</p><br></td></tr>
+            {% else %}
+                {% for item in orders %}
+                <tr>
+                        <td style="min-width:12px; width:12px"><span class="text-muted small">{{ loop.index }}</span></td>
+                        <td>流水号：{{ item.seq }}<br>订单号：{{ item.id }}</td>
+                        <td>{{ item.price }}</td>
+                        <td>{{ item.status }}</td>
+                        <td>{{ item.pay_at }}</td>
+                        <td>{{ item.desc }}</td>
+                    </tr>
+                {%- endfor %}
+            {% endif %}
+            </tbody>
+        </table>
+    </div>
+{%- endmacro -%}
+
+
+{%- macro OrderDetail(order) -%}
+    <div class="table-responsive">
+        {% if not order %}
+            <div class="alert alert-danger"><p class="text-center">没有订单数据</p><br></div>
+        {% else %}
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>订单信息</th>
+                        <th>订单类型</th>
+                        <th>医生</th>
+                        <th>患者</th>
+                        <th>医生助理</th>
+                        <th>就诊时间</th>
+                        <th>订单时间</th>
+                        <th>订单状态</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>流水号：{{ order.seq }}<br>订单号：{{ order.id }}</td>
+                        <td>{{ order.service }}</td>
+                        <td>{{ order.doctor.name}}<br>
+                            <p class="small">{{ order.doctor.hospital }}<br>{{ order.doctor.department }}</p></td>
+                        <td>{{ order.name }}<br>
+                            <p class="small">{{ Gender(order.gender) }} {{ order.age }}<br>
+                            {{ order.mobile }}</p></td>
+                        <td>{% if order.doctor.assistant %}{{ order.doctor.assistant }}{% endif %}</td>
+                        <td>{{ order.schedule | utc_datetime_human }}</td>
+                        <td>{{ order.created_at | utc_datetime }}</td>
+                        <td>{{ order.status }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+{%- endmacro -%}
+
+
+{%- macro DoctorPrivate(doctor_private) -%}
+    <div class="table-responsive">
+        {% if not doctor_private %}
+            <div class="alert alert-danger"><p class="text-center">没有银行卡信息</p><br></div>
+        {% else %}
+            <table class="table table-bordered table-striped table-hover">
+                <tbody>
+                    <tr>
+                        <th>所属银行</th>
+                        <td>{{ doctor_private.bank_card.bank }}</td>
+                    </tr>
+                    <tr>
+                        <th>开户地</th>
+                        <td>{{ doctor_private.bank_card.city }}</td>
+                    </tr>
+                    <tr>
+                        <th>开户支行</th>
+                        <td>{{ doctor_private.bank_card.branch }}</td>
+                    </tr>
+                    <tr>
+                        <th>持卡人</th>
+                        <td>{{ doctor_private.doctor_name }}</td>
+                    </tr>
+                    <tr>
+                        <th>卡号</th>
+                        <td>{{ doctor_private.bank_card.card }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+{%- endmacro -%}
+
+
+{%- macro AnalyticsDoctor(data) -%}
+    <div class="table-responsive">
+        {% if not data %}
+            <div class="alert alert-danger"><p class="text-center">没有数据</p><br></div>
+        {% else %}
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th rowspan="2" style="min-width:12px; width:12px">#</th>
+                        <th rowspan="2">医生</th>
+                        <th rowspan="2">医院</th>
+                        <th colspan="4">门诊</th>
+                        <th colspan="4">电话问诊</th>
+                        <th colspan="4">图文咨询</th>
+                        <th rowspan="2">总收入额</th>
+                    </tr>
+                    <tr>
+                        <th>开通数量</th>
+                        <th>订单数量</th>
+                        <th>订单价格</th>
+                        <th>实时价格</th>
+                        <th>开通时间(分钟)</th>
+                        <th>订单时间(分钟)</th>
+                        <th>订单价格</th>
+                        <th>实时价格</th>
+                        <th>是否开通</th>
+                        <th>订单数量</th>
+                        <th>订单价格</th>
+                        <th>实时价格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                    <tr>
+                        <td style="min-width:12px; width:12px"><span class="text-muted small">{{ loop.index }}</span></td>
+                        <td>{{ item.doctor.name }}</td>
+                        <td>{{ item.doctor.hospital }}</td>
+                        <td>{{ item.detail.clinic.quantity }}</td>
+                        <td>{{ item.detail.clinic.count }}</td>
+                        <td>{{ item.detail.clinic.price | join('<br>'|safe) }}</td>
+                        <td>{{ item.detail.clinic.current_price | join('<br>'|safe) }}</td>
+                        <td>{{ item.detail.phonecall.quantity }}</td>
+                        <td>{{ item.detail.phonecall.count }}</td>
+                        <td>{{ item.detail.phonecall.price | join('<br>'|safe) }}</td>
+                        <td>{{ item.detail.phonecall.current_price | join('<br>'|safe) }}</td>
+                        <td>{% if item.detail.consult.on %}是{% else %}否{% endif %}</td>
+                        <td>{{ item.detail.consult.count }}</td>
+                        <td>{{ item.detail.consult.price | join('<br>'|safe) }}</td>
+                        <td>{{ item.detail.consult.current_price | join('<br>'|safe) }}</td>
+                        <td>{{ item.revenue_total }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+{%- endmacro -%}
+
+
+{%- macro Gender(gender) -%}
+{% if gender == 'male' %}男{% elif gender == 'female' %}女{% else %}-{% endif %}
+{%- endmacro -%}
+
+
+{%- macro DatePicker() -%}
+        <div class="btn-group" style="margin-bottom:32px">
+            <button type="button" class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown"> 请选择月份 <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="?when=2016-01" class="btn btn-lg">2016-01</a></li>
+                <li><a href="?when=2016-02" class="btn btn-lg">2016-02</a></li>
+                <li><a href="?when=2016-03" class="btn btn-lg">2016-03</a></li>
+            </ul>
+        </div>
+{%- endmacro -%}
+
+

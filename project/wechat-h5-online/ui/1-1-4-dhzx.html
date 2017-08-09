@@ -1,0 +1,175 @@
+<?php $this->load->view('common/header');?>
+<title>预约挂号</title>
+<link rel="stylesheet" href="/ui/css/swiper.css">
+</head>  
+<body class="green bg1">
+  <!-- 医生-信息 -->
+  <div class="ys-info">
+    <div href="#" class="top">
+      <div class="left tc">
+        <a href="javascript:void(0)"><img class="tx" src="<?=@$doctor['avatar']?>" onerror="this.onerror=null;this.src=\'/ui/images/doctor.jpg\'" alt="" /></a>
+		<?php if(@$doctor['level']==3){?>
+			<img class="jb" src="/ui/images/sanjia.png" alt="" />
+		<?php }?>
+      </div>
+      <div class="right cw8">
+        <p class="xm fs16 cw1"><?=@$doctor['name']?></p>
+        <p class="zw"><?=@$doctor['position']?></p>
+        <p class="sc"><?=@$doctor['hospital']?></p>
+      </div>
+      <div class="zxgh cw8"><img src="/ui/images/ico3-dh.png" alt="" /><span>咨询量 <em><?=@$doctor['reg_num']?></em></span></div>
+    </div>
+    <div class="btn cfix tc">
+      <a href="/doctor/details/<?=@$doctor['_id']?>"><img src="/ui/images/ico3-jj.png" alt="" /><span>医生简介</span></a>
+      <?php if(@$carest==1){?>
+      <a href="javascript:void(0)" class="gz-btn cur" ><img src="/ui/images/ico3-gz.png" alt="" /><span>已关注</span></a>
+      <?php }else{?>
+      <a href="javascript:void(0)" class="gz-btn"><img src="/ui/images/ico3-gz2.png" alt="" /><span>关注</span></a>
+      <?php }?>
+
+      <?php if(@$doctor['service_provided']['consult']['on']){?>
+      <a href="/consult/index/<?=@$doctor['_id']?>"><img src="/ui/images/ico3-zx.png" alt="" /><span>图文咨询</span></a>
+      <?php }else{?>
+      <a href="javascript:void(0);" class="no"><img src="/ui/images/ico3-zx.png" alt="" /><span>图文咨询</span></a>
+      <?php }?>
+      <?php if(@$doctor['service_provided']['clinic']['on'] && $isSub){?>
+			<a href="/subscribe/index/<?=@$doctor['_id']?>"><img src="/ui/images/ico3-gh.png" alt="" /><span>预约挂号</span></a>
+      <?php }else{?>
+			<a href="javascript:void(0);" class="no"><img src="/ui/images/ico3-gh.png" alt="" /><span>预约挂号</span></a>
+      <?php }?>
+    </div>  
+  </div>
+  <!-- 医生-信息 end -->
+  <!-- 医生-时间 -->
+  <div class="ys-time pt50 swiper-container">
+    <div class="tit fs16">
+      <img src="/ui/images/ico4-6.png" alt="" />请选择与医生通话时间
+    </div>
+    <div class="btn tc fs16  fs1">
+      <em class="prev swiper-button-prev"></em><span class="date"><?=@$time_slot[1]?></span><em class="next swiper-button-next"></em>
+    </div>
+    <div class="calendar swiper-wrapper">
+	
+	<?php foreach($clander as $v){?>	
+      <div class="swiper-slide">
+        <div class="list cfix">
+          <div><a href="#">10:10</a></div>
+          <div><a href="#">10:10</a></div>
+          <div><a href="#">10:10</a></div>
+          <div><a href="#">10:10</a></div>
+          <div><a href="#">10:10</a></div>
+          <div><a href="#">10:10</a></div>
+          <div><a href="#">10:10</a></div>
+        </div>
+      </div>
+	  <?php }?>
+    </div>
+    <div class="about ch4">
+      点击浅色格子，选择接听电话时间
+    </div>
+    <div class="page swiper-pagination">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    
+  </div>
+  <!-- 医生-时间 end -->
+<script src="/ui/js/swiper.3.1.2.jquery.min.js"></script>
+<script type="text/javascript">  
+$(document).ready(function(){
+    var ysid="<?=@$doctor['_id']?>";
+	var isajax;
+	$(".gz-btn").click(function(){
+		if($(this).hasClass("cur")){
+			$.ajax({
+				type: "get",
+				url: "/doctor/fans/"+ysid+"/2",
+				dataType: "json", 
+				beforeSend: function(){
+					isajax=1;
+				},
+				success: function (data){
+					if(data=="1"){
+						$(".gz-btn").removeClass("cur");
+						$(".gz-btn img").attr("src","/ui/images/ico3-gz2.png");
+						$(".gz-btn span").text("关注");
+						$.alert("取消关注成功")
+					}
+					else{if(data=="2"){
+						    $.alert("操作失败")
+					    }
+					    else{
+							location.href=loginhref;
+					    }
+					}
+					isajax=0;
+				}
+		    })
+		}
+		else{
+			$.ajax({
+				type: "get",
+				url: "/doctor/fans/"+ysid+"/1",
+				async: false,
+				dataType: "json", 
+				beforeSend: function(){
+					isajax=1;
+				},
+				success: function (data){
+					if(data=="1"){
+						$(".gz-btn").addClass("cur");
+						$(".gz-btn img").attr("src","/ui/images/ico3-gz.png");
+						$(".gz-btn span").text("已关注");
+						$.alert("关注成功")
+					} else{
+						if(data=="2"){
+								$.alert("操作失败")
+						} else{
+								location.href=loginhref;
+						}
+					}
+					isajax=0;
+				}
+		    })
+		}
+	})
+});
+
+var num;
+var swiper = new Swiper('.swiper-container', {
+	pagination: '.swiper-pagination',
+	paginationClickable: true,
+	nextButton: '.swiper-button-next',
+	prevButton: '.swiper-button-prev',
+	// Enable debugger
+	debugger: true,
+	onTransitionEnd: function(swiper){ 
+		if(swiper.activeIndex=="0") {
+			num="<?=@$time_slot[1]?>";
+		} else{
+			if(swiper.activeIndex=="1") {
+				num="<?=@$time_slot[2]?>";
+			} else{
+				if(swiper.activeIndex=="2") {
+					num="<?=@$time_slot[3]?>";
+				}
+			}
+		}
+		$(".ys-time .date").text(num)
+	} 	  
+});
+wx.ready(function () {  
+	wx.onMenuShareAppMessage({
+		title: '<?=@$doctor['name']?>-<?=@$doctor['position']?>[找明医]', // 分享标题
+		desc: '<?=@$doctor['description']?>', // 分享描述
+		imgUrl: '<?=@$doctor['avatar']?>', // 分享图标
+		success: function () { 
+		},
+		cancel: function () {
+		}
+	});  
+});    
+</script>
+  
+<?php $this->load->view('common/footer');?>

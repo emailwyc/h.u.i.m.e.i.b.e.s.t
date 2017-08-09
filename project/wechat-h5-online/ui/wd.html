@@ -1,0 +1,67 @@
+<!DOCTYPE=html>  
+<html>  
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link rel="shortcut icon" href="images/favicon.ico" />  
+<title>企业合作</title>
+<link href="css/style.css" rel="stylesheet" />
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/iscroll.js"></script>
+<style>
+html{ height:100%; overflow:hidden;} 
+#wrapper{ position: absolute; left: 0;width: 100%; bottom:0; overflow: hidden; top:0; z-index:1;}
+</style>
+</head>  
+<body>
+  <div id="wrapper" class="b50">
+    <div id="scroller">
+      <div class="wd-info tc">
+        <div class="fs16">姓名</div>
+        <img src="" />
+      </div>
+      <!--我的列表-->
+      <div class="wd-list">
+        <ul>
+          <li>
+            <a href="#"><img src="images/ico7-1.png" />就诊人列表</a>
+          </li>
+          <li>
+            <a href="#"><img src="images/ico7-2.png" />医生列表</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#"><img src="images/ico7-3.png" />就诊记录</a>
+          </li>
+          <li>
+            <a href="#"><img src="images/ico7-4.png" />优惠券</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="#"><img src="images/ico7-5.png" />常见问题</a>
+          </li>
+          <li>
+            <a href="#"><img src="images/ico7-6.png" />关于我们</a>
+          </li>
+        </ul>
+      </div>
+      <!--我的列表 end-->
+    </div>
+  </div>
+<script> 
+	$(window).load(function(){
+		var myScroll;
+		myScroll= new IScroll("#wrapper", {
+			mouseWheel: true,
+			scrollbars: true,
+			click: true
+		});
+	})
+</script>     
+</body>  
+</html> 

@@ -1,0 +1,51 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+    overflow-y: scroll;
+}
+
+.theme-dropdown .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.theme > .row {
+    margin: 0px;
+}
+
+.theme > p > .btn {
+    margin: 5px 0;
+}
+
+.theme .navbar .container {
+    width: auto;
+}
+
+.clickable-row {
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 36px;
+}
+
+.form-control[disabled] {
+    background-color: #fff;
+}
+
+.input-group-addon label {
+    margin: 0;
+}
+
+.form-group .alert {
+    margin: 8px 0 12px;
+    padding: 6px 12px;
+}
+
+.input-group-lg > .height-auto{
+    height: auto;
+}
+td {
+    min-width: 90px;
+}

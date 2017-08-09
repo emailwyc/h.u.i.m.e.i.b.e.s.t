@@ -1,0 +1,487 @@
+<!DOCTYPE html>  
+<html>  
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link rel="shortcut icon" href="images/favicon.ico" />  
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<title>接口说明文档</title>
+<link href="css/style.css" rel="stylesheet" />
+</head>  
+<body>
+</div>
+<h1>正式接口将h5test 改为h5即可</h1>
+
+<h2>医生：</h2>
+	<b>得到医生列表</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/doctor/getlist</br>
+		&nbsp;&nbsp;参数        ：p页数，searchk(要搜索的字段)，searchv(搜索的值)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到医助列表</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/doctor/getassistant</br>
+		&nbsp;&nbsp;参数        ：p页数（每页50条）</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到医生详情</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/doctor/getDoctorDetail</br>
+		&nbsp;&nbsp;参数      	：_id:医生id</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>添加医生：(见图片上传接口）</b><hr>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/doctor/addDoctor</br>
+		&nbsp;&nbsp;参数      	：(mobile,name,freeze,assistant,avatar,hospital_id,hospital,region_id,region_child_id,department,department_id,department_child_id,position,title,speciality,description,mul_num)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>编辑医生：(见图片上传接口）</b><hr>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/doctor/editDoctor</br>
+		&nbsp;&nbsp;参数      	：(_id:医生id,mobile,name,freeze,assistant,avatar,hospital_id,hospital,region_id,region_child_id,department,department_id,department_child_id,position,title,speciality,description,mul_num)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+<b style="color: red">搜索医生姓名：</b><hr>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/doctor/searchName</br>
+&nbsp;&nbsp;参数      	：name</br>
+&nbsp;&nbsp;返回（json）:格式{"data":[{"_id":{"$id":"55f95a9783cdf8575085a7f3"},"name":"\u738b\u660e\u5e05"},{"_id":{"$id":"562b419f83cdf87623093ab1"},"name":"\u738b\u660e\u5e05"}],"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+	<b>上传图片</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/doctor/sign_avatar</br>
+		&nbsp;&nbsp;参数      	：(msg:图片流，type：图片类型，filename：更新时传以前图片的名称，添加新图片时候可以传空或者不传该参数（可选参数）)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+<b style="color: red">验证手机号：</b><hr>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/doctor/checkPhone</br>
+&nbsp;&nbsp;参数      	：mobile（必须）</br>
+&nbsp;&nbsp;返回（json）:格式{"data":[],"message":"\u624b\u673a\u53f7\u5df2\u5b58\u5728","status":404}正常返回时候status=0,其他视为异常</br></br>
+
+<h2>区域：</h2>
+	<b>得到一级地区列表</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/region/getRegion</br>
+		&nbsp;&nbsp;参数        ：p页数（每页100条）</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到二级地区列表</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/region/getRegionChild</br>
+		&nbsp;&nbsp;参数        ：p:页数（每页100条）; parent:一级地区id</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到一级和二级地区列表</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/region/getRegionAndChild</br>
+		&nbsp;&nbsp;参数        ：p:页数（每页50条）; </br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到某个区域详情</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/region/getDetail</br>
+		&nbsp;&nbsp;参数        ：_id:区域id; </br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>添加地区</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/region/addRegion</br>
+		&nbsp;&nbsp;参数      	：(name,parent:上级区域id(如果是一级则不传参数))</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>编辑地区</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/region/editRegion</br>
+		&nbsp;&nbsp;参数      	：(_id:需要更新的Id，name,parent:上级区域id(如果是一级则不传参数))</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+
+<h2>文章相关：</h2>
+	<b>添加医生文章</b>:<hr/>
+	&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/article/addDoctorArticle</br>
+	&nbsp;&nbsp;参数      	：(title,posted_date,link_url,image_url,description,'doctor'))</br>
+	&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>编辑医生文章</b>:<hr/>
+	&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/article/editDoctorArticle</br>
+	&nbsp;&nbsp;参数      	：_id:需要更新的文章id，其他：(title,posted_date,link_url,image_url,description))</br>
+	&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到某医生文章列表</b>:<hr/>
+	&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/article/getDoctorArticle</br>
+	&nbsp;&nbsp;参数      	：p:页数(每页20条)，doctor:医生id</br>
+	&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到所有文章列表</b>:<hr/>
+	&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/article/getList</br>
+	&nbsp;&nbsp;参数      	：p:页数(每页20条)</br>
+	&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>添加精品文章</b>:<hr/>
+	&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/article/addArticleHot</br>
+	&nbsp;&nbsp;参数      	：(title,posted_date,link_url,image_url,description))</br>
+	&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>编辑精品文章</b>:<hr/>
+	&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/article/editArticleHot</br>
+	&nbsp;&nbsp;参数      	：_id:需要更新的文章id，其他：(title,posted_date,link_url,image_url,description))</br>
+	&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+
+<h2>医院相关：</h2>
+	<b>得到所有医院</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/hospital/getHospital</br>
+		&nbsp;&nbsp;参数        ：p页数（每页100条）</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到医院列表</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/hospital/getList</br>
+		&nbsp;&nbsp;参数        ：p页数（每页20条）(可以自定义其他参数)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到某个医院详情</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/hospital/getDetail</br>
+		&nbsp;&nbsp;参数        ：_id:医院id</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>添加医院</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/hospital/addHospital</br>
+		&nbsp;&nbsp;参数      	：(name,description,rule,region_id,region_child_id,address,branches:(json格式数组，如：'[ { "name" : "a", "address" : "1" }, { "name" : "b", "address" : "2" }, { "name" : "c", "address" : "3" } ]'</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>编辑医院</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/hospital/editHospital</br>
+		&nbsp;&nbsp;参数      	：id:要更新的医院id，其他参数：(name,description,rule,region_id,region_child_id,address,branches)</br>
+		&nbsp;&nbsp;参数      	：(_id:要更新的医院id，name,description,rule,region_id,region_child_id,address,branches:(json格式数组，如：'[ { "name" : "a", "address" : "1" }, { "name" : "b", "address" : "2" }, { "name" : "c", "address" : "3" } ]'</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+<h2>科室相关：</h2>
+	<b>得到所有科室(包含子科室)</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/department/getDepartment</br>
+		&nbsp;&nbsp;参数        ：p页数（每页30条）(默认p=1)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到所有一级科室(不包含子科室)</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/department/getParent</br>
+		&nbsp;&nbsp;参数        ：p页数（每页200条）(默认p=1)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到二级科室根据parent</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/department/getChild</br>
+		&nbsp;&nbsp;参数        ：parent:一级科室id；p页数（每页200条）(默认p=1)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到某个科室详情</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/department/getDetail</br>
+		&nbsp;&nbsp;参数        ：_id:科室id</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>添加科室</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/department/addDepartment</br>
+		&nbsp;&nbsp;参数      	：(name,description,parent(如果是一级科室，则没有该参数,否则传ID))</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>编辑编辑科室</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/department/editDepartment</br>
+		&nbsp;&nbsp;参数      	：(_id:需要更新的可是ID，name,description,parent(如果是一级科室，则没有该参数,否则传ID))</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+<h2>订单相关：</h2>
+	<b>得到医生订单信息统计</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/order/getDoctorInfo</br>
+		&nbsp;&nbsp;参数        ：p页数（每页20条）(默认p=1), start:开始时间（2016-12-12 20:20:20）,end:结束时间</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到医生订单信息统计页数</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/order/getDoctorInfoCount</br>
+		&nbsp;&nbsp;参数        ：start:开始时间（2016-12-12 20:20:20）,end:结束时间</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到订单详情</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/order/getOrderInfo</br>
+		&nbsp;&nbsp;参数        ：_id：订单id</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+<b>所有订单列表</b>:<hr/>
+     &nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/order/all</br>
+     &nbsp;&nbsp;参数        ：p页数（每页20条）(默认p=1),status订单状态:1：新订单,2：已完成,3：未支付,4：取消支付 (不传该参数默认搜索所有订单)</br>
+     &nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"OK"}正常返回时候status=0,其他视为异常</br></br>
+
+<h2>患者端APP,文章：</h2>
+	<b>得到文章列表</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/patArticle/getList</br>
+		&nbsp;&nbsp;参数        ：p页数（每页20条）(默认p=1), class:文章分类，1：梅奥 2：原创 3：精选 (不传该参数默认搜索所有类型文章),key(任意字符，搜索文章标题，简介，内容)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到文章详情</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/patArticle/getDetails</br>
+		&nbsp;&nbsp;参数        ：_id：文章id</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+<b>添加文章</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/patArticle/addArticle</br>
+		&nbsp;&nbsp;参数        ：title,description,icon
+头图,link_url:type=2是链接,body:文章内容,type=1时候可以传链接不传,class:文章分类。1：梅奥 2：原创 3：精选,
+type:文章类型（1：文本类型，2链接类型）,status:1.0发布,author,doctor(只有分类为“原创”添加此字段),<font style="color: red;">push_message(true/false)是否推送</font>,tags(数组)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+<b>编辑文章</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/patArticle/editArticle</br>
+		&nbsp;&nbsp;参数        ：_id：文章id，title,description,icon,link_url,body,class,type,status:1.0发布,author,<font style="color: red;">push_message(true/false)是否推送</font>tags(数组)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+<b>删除文章</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/patArticle/delArticle</br>
+		&nbsp;&nbsp;参数        ：_id：文章id</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	<b>得到文章评论列表</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/patArticle/getCommentList</br>
+		&nbsp;&nbsp;参数        ：p页数（每页20条）(默认p=1), article_id文章id</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+<b>删除评论</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/patArticle/delComment</br>
+		&nbsp;&nbsp;参数：        _id: 评论id</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+<b style="color: red">标签搜索（有修改1.0）</b>:<hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/PatTag/likeSearch</br>
+&nbsp;&nbsp;参数：        name: 标签名字,type：1（疾病标签）2(症状标签)	</br>
+&nbsp;&nbsp;返回（json）:格式{"data":[{"_id":"577c73626803faf611370475","name":"12"},{"_id":"577ca04b6803faf51137047a","name":"211"},{"_id":"577f45e96803fa263837047c","name":"1221"},{"_id":"577f4b5c6803faf411370479","name":"12222"},{"_id":"577f4c156803faf21137047e","name":"321"}],"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+
+
+<b>消息推送</b>:<hr/>
+&nbsp;&nbsp;地址（POST）：后台添加选择是推送</br>
+&nbsp;&nbsp;参数：        扩展参数中传输：_id: 文章id，type：推送类型(article-文章类型)</br>
+</br></br>
+
+<h2 style="color:red">标签管理：</h2>
+<b>标签列表</b>:<hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/patTag/all</br>
+&nbsp;&nbsp;参数 ：name,type</br>
+&nbsp;&nbsp;返回（json）:格式{"data":{"page":1,"data":[{"_id":{"$id":"577c73626803faf611370474"},"name":"1","type":1,"status":1},{"_id":{"$id":"57a2d4bd6803fac97a5c3766"},"name":"\u504f\u5934\u75bc","type":1,"status":1}]},"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+<b>标签添加</b>:<hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/patTag/add</br>
+&nbsp;&nbsp;参数 ：必填['name','type'(1为疾病标签，2为症状标签)]status(默认添加状态status=1（正常）)</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+b>标签删除</b>:<hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/patTag/del</br>
+&nbsp;&nbsp;参数 ：必填['id']status(默认添加状态status=1（正常）)</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+<b>标签修改</b>:<hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/patTag/update</br>
+&nbsp;&nbsp;参数 ：必填['id','name','type'(1为疾病标签，2为症状标签)]status(默认添加状态status=1（正常）)</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+<b>单个标签</b>:<hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/patTag/one</br>
+&nbsp;&nbsp;参数 ：必填['id']</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<h2>管理员管理：</h2>
+<b>后台管理员添加</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/admin/add</br>
+		&nbsp;&nbsp;参数       ：'mobile','pwd','name','position'：职位,'branch'：部门</br>(默认添加状态status=1（正常）管理员)
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+<b>后台管理员列表</b>:<hr/>
+	&nbsp;&nbsp;地址（GET）：http://h5test.huimeibest.com:8082/admin/all</br>
+	&nbsp;&nbsp;参数：       p页数 </br>
+	&nbsp;&nbsp;返回（json）:格式{"data":[{"_id":{"$id":"575d1ddb6803fa770af58d1f"},"name":"desu","pwd":"4297f44b13955235245b2497399d7a93","role":"assistant"}],"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+<b>删除后台管理员</b>:<hr/>
+	&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/admin/del</br>
+	&nbsp;&nbsp;参数：        id:管理员id(直接删除)</br>
+	&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+<b>修改后台管理员信息</b>:<hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/admin/update</br>
+&nbsp;&nbsp;参数：        'id'管理员id，‘roles’：角色id（数组）密码为空时不修改密码</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+<b>获取单个管理员信息：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/admin/one</br>
+&nbsp;&nbsp;参数：        id:用户id</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+<b>验证手机号是否唯一：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/admin/checkOnlyMobile</br>
+&nbsp;&nbsp;参数：       </br>
+&nbsp;&nbsp;返回（json）:;存在返回状态为3；正常返回时候status=0,其他视为异常</br></br>
+
+<h2>角色管理</h2>
+<b>1:添加角色：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/Role/add</br>
+&nbsp;&nbsp;参数：       name:角色名字 ,powers:权限id(数组),</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>2:得到角色列表：</b><hr/>
+&nbsp;&nbsp;地址（GET）：http://h5test.huimeibest.com:8082/Role/all</br>
+&nbsp;&nbsp;参数：       p页数 </br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>3:删除角色：</b><hr/>
+&nbsp;&nbsp;地址（GET/POST）：http://h5test.huimeibest.com:8082/Role/del?id='24212xhqweh1hruqwhwfddca8'</br>
+&nbsp;&nbsp;参数：        id：角色id</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>4:修改角色数据：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/Role/update</br>
+&nbsp;&nbsp;参数：        id：角色id</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>5:获取单个角色详情：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/Role/one</br>
+&nbsp;&nbsp;参数：        id：角色id</br>
+&nbsp;&nbsp;返回（json）:格式{"data":{"_id":{"$id":"578caca26803fa38078b456a"},"name":"saler","powers":[{"_id":{"$id":"578c6a31b253c0330132e650"},"name":"del","parent":"578c86726803fa39078b456a","remark":"\u5220\u9664","status":1},{"_id":{"$id":"578c86726803fa39078b456a"},"name":"dcotor","parent":"0","remark":"\u533b\u751f\u7ba1\u7406","status":1}],"status":1},"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+
+<b>6:获取角色列表（无分页）：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/Role/listAll</br>
+&nbsp;&nbsp;参数：       </br>
+&nbsp;&nbsp;返回（json）:格式{"data":[{"_id":{"$id":"575e20306803fa750af58d23"},"name":"admin","powers":["578c6a31b253c0330132e650","578c86726803fa39078b456a"],"status":1},{"_id":{"$id":"578caca26803fa38078b456a"},"name":"saler","powers":["578c6a31b253c0330132e650","578c86726803fa39078b456a"],"status":1},{"_id":{"$id":"578d899a6803fa87078b4567"},"name":"yunying","powers":["578c6a31b253c0330132e650","578c86726803fa39078b456a"],"status":1}],"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+
+
+<h2>权限管理</h2>
+<b>1:添加权限：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/power/add</br>
+&nbsp;&nbsp;参数：       （必须） 'name','parent'父类权限id,'remark'权限释义；</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>2:得到权限列表：</b><hr/>
+&nbsp;&nbsp;地址（GET）：http://h5test.huimeibest.com:8082/power/all</br>
+&nbsp;&nbsp;参数：        p页数(返回status=1 正常状态的所有权限)</br>
+&nbsp;&nbsp;返回（json）:格式
+{
+"data": {
+"page": 1,
+"date": [
+{
+"_id": {
+"$id": "578c86726803fa39078b456a"
+},
+"name": "dcotor",
+"parent": "0",
+"remark": "医生管理",
+"status": 1,
+"child": [
+{
+"_id": {
+"$id": "578c6a31b253c0330132e650"
+},
+"name": "del",
+"parent": "578c86726803fa39078b456a",
+"remark": "删除",
+"status": 1
+}
+]
+}
+]
+},
+"message": "ok",
+"status": 0
+}正常返回时候status=0,其他视为异常</br></br>
+
+<b>3:删除权限：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/power/del</br>
+&nbsp;&nbsp;参数：        id：权限id（存在子类权限不能删除）</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>4:修改权限数据：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/power/update</br>
+&nbsp;&nbsp;参数：        id：权限id</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b style="color: red;">5:获取单个权限：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/power/one</br>
+&nbsp;&nbsp;参数：        id：权限id</br>
+&nbsp;&nbsp;返回（json）:格式{
+"data": {
+"_id": {
+"$id": "578c86726803fa39078b456a"
+},
+"name": "dcotor",
+"parent": "0",
+"remark": "医生管理",
+"status": 1
+},
+"message": "ok",
+"status": 0
+}正常返回时候status=0,其他视为异常</br></br>
+
+<b>4:修改权限数据：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/power/update</br>
+&nbsp;&nbsp;参数：        id：权限id</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b style="color: red;">6:获取子类权限：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/power/getSecondPower</br>
+&nbsp;&nbsp;参数：        id：权限id</br>
+&nbsp;&nbsp;返回（json）:格式{
+"data": [
+{
+"_id": {
+"$id": "578c6a31b253c0330132e650"
+},
+"name": "del",
+"parent": "578c86726803fa39078b456a",
+"remark": "删除",
+"status": 1
+}
+],
+"message": "ok",
+"status": 0
+}正常返回时候status=0,其他视为异常</br></br>
+
+
+
+
+<h2>患者信息</h2>
+<b>1：//医生端患者列表  </b><hr/>
+&nbsp;&nbsp;地址（GET）：http://h5test.huimeibest.com:8082/patient/all</br>
+&nbsp;&nbsp;参数：       p页数 </br>
+&nbsp;&nbsp;返回（json）:格式{"data":[{"_id":{"$id":"570f117cb7ef6a7d6f8b45be"},"_uref":{"$ref":"user","$id":{"$id":"56fb6e2783cdf8722c8f839b"}},"age":0,"avatar":"http:\/\/h5test.huimeibest.com\/ui\/patient\/avatar\/201604\/9f91c1260eecd3520248106c298f979a.png","created_at":{"sec":1460605307,"usec":0},"fid":"oV5DDvv0hfJK1rKwIbnFN7LpvYIw","follow":[],"from":"weixin","gender":"male","mobile":"13811296821","name":"\u5f90\u5065","updated_at":{"sec":1460605307,"usec":0}},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+<b>2：患者APP 患者列表（weibo,QQ,weixin）</b><hr/>
+&nbsp;&nbsp;地址（GET）：http://h5test.huimeibest.com:8082/patient/chatAll</br>
+&nbsp;&nbsp;参数：       p页数 </br>
+&nbsp;&nbsp;返回（json）:格式{"data":[{"_id":{"$id":"570f117cb7ef6a7d6f8b45be"},"_uref":{"$ref":"user","$id":{"$id":"56fb6e2783cdf8722c8f839b"}},"age":0,"avatar":"http:\/\/h5test.huimeibest.com\/ui\/patient\/avatar\/201604\/9f91c1260eecd3520248106c298f979a.png","created_at":{"sec":1460605307,"usec":0},"fid":"oV5DDvv0hfJK1rKwIbnFN7LpvYIw","follow":[],"from":"weixin","gender":"male","mobile":"13811296821","name":"\u5f90\u5065","updated_at":{"sec":1460605307,"usec":0}},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+
+
+<h2>其他相关：</h2>
+	登录接口(如果没有登录，其他接口均禁止访问，目前均开放)(前端开发完成请告知后台)</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/login/index</br>
+		&nbsp;&nbsp;参数        ：mobile:手机号，pwd:密码</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':""}正常返回时候status=0,其他视为异常</br></br>
+
+	退出接口(如果没有登录，其他接口均禁止访问，目前均开放)(前端开发完成请告知后台)</b>:<hr/>
+	&nbsp;&nbsp;地址（GET）：http://h5test.huimeibest.com:8082/login/out</br>
+	&nbsp;&nbsp;参数        </br>
+	&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':""}正常返回时候status=0,其他视为异常</br></br>
+
+	导出活动信息</b>:<hr/>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/store/getActInfo</br>
+		&nbsp;&nbsp;参数        <br>
+
+	活动信息接口：</br>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/actlog/getLogList</br>	
+		&nbsp;&nbsp;参数        ：where:条件</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+
+<h2>用户管理</h2>
+<b>1:添加用户：</b><hr/>(医生或患者)
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/user/add</br>
+&nbsp;&nbsp;参数：       name,mobile,password(后台自主添加用户)</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>2:得到所有用戶列表：</b><hr/>(医生APP通过找名医公众号关注的用户)
+&nbsp;&nbsp;地址（GET）：http://h5test.huimeibest.com:8082/user/all</br>
+&nbsp;&nbsp;参数：      p页数  </br>
+&nbsp;&nbsp;返回（json）:格式{'data':[{"_id":{"$id":"570b3167b7ef6a7b6f8b45b5"},"mobile":"","img":"http:\/\/h5test.huimeibest.com\/ui\/patient\/avatar\/201604\/3fda687082d9444a9ced68cec1bb596e.png","nickname":"\u4e1c\u4e1c","gender":2,"regtime":"1460351335","st":1}],'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>3:删除用户：</b><hr/>(医生APP通过找名医公众号关注的用户)
+&nbsp;&nbsp;地址（GET）：http://h5test.huimeibest.com:8082/user/del?id='24212xhqweh1hruqwhwfddca8'</br>
+&nbsp;&nbsp;参数：        id：用户id</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>4:修改用户数据：</b><hr/>(医生APP通过找名医公众号关注的用户)
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/user/update</br>
+&nbsp;&nbsp;参数：        id,nickname,mobile</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+<b>5：单个用户数据：</b><hr/>(医生APP通过找名医公众号关注的用户)
+&nbsp;&nbsp;地址（GET）：http://h5test.huimeibest.com:8082/user/one?id='24212xhqweh1hruqwhwfddca8'</br>
+&nbsp;&nbsp;参数：        id：用户id</br>
+&nbsp;&nbsp;返回（json）:格式{"data":[{"_id":{"$id":"562a3a98f154d6532b8b457f"},"gender":1,"img":"http:\/\/wxqlogocnmopenbbBiacnC23Vssuib1YZ8RBQ2V8bAzicicwiaL9SLEzAJptC08cC1vYeVEPH1UMcu74QDnfCtibOF0QGgk5zotkmeWcvAY3Sx5rvrhn\/0","mobile":"1833833333","nickname":"\u83ab\u4e91","regtime":"1445608088","st":0}],"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+
+<h2>评论管理</h2>
+<b>1:添加评论：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/ArticleComment/add</br>
+&nbsp;&nbsp;参数：        'article_id':评论文章id,'content'评论内容,'uid'：用户id后台添加时可任意选择,'nickname'：用户名,'avatar'头像,'role':角色,'comment_type'：评论类型（”1“为顶级评论，”2“为子级评论）</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>2:得到评论列表：</b><hr/>
+&nbsp;&nbsp;地址（GET）：http://h5test.huimeibest.com:8082/ArticleComment/all</br>
+&nbsp;&nbsp;参数：        p页数</br>
+&nbsp;&nbsp;返回（json）:格式{"data":[{"_id":{"$id":"575fbd706803fa770af58d25"},"article_id":"574d6e5ac2f9d446db1e6b29","content":"562a3a98f154d6532b8b457f","status":1,"uid":"574d5e5ab7ef6aab3b8b45c9","created_at":{"sec":1465892208,"usec":0},"nickname":"guaker","avatar":"http:\/\/qzapp.qlogo.cn\/qzapp\/1105427836\/8C06744D9627CA34F15066C8AC777008\/100"}],"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+
+<b style="color: red">3:删除评论：</b><hr/>
+&nbsp;&nbsp;地址（GET/POST）：http://h5test.huimeibest.com:8082/ArticleComment/del</br>
+&nbsp;&nbsp;参数：        id：评论id；body_id:子评论id</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>4:修改评论数据：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/ArticleComment/update</br>
+&nbsp;&nbsp;参数：        id：评论id,content,status(可选)</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>5:单个评论数据：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/ArticleComment/one</br>
+&nbsp;&nbsp;参数：        id：评论id</br>
+&nbsp;&nbsp;返回（json）:格式{"data":[{"_id":{"$id":"575fbd706803fa770af58d25"},"article_id":"574d6e5ac2f9d446db1e6b29","content":"\u8fd9\u662f\u4e00\u4e2aige","created_at":{"sec":1465892208,"usec":0},"uid":"574d5e5ab7ef6aab3b8b45c9","status":1}],"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+
+<h2>拓展医生管理</h2>
+<b>1:拓展医生下载：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/newDoctor/download</br>
+&nbsp;&nbsp;参数：  </br>
+&nbsp;&nbsp;返回（json）:返回文件</br>
+
+
+
+<h1>前端开发完成后请告知后端</h1>
+
+
+
+<h2>上传图片统一接口：</h2>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/util/ossUploadFile</br>
+&nbsp;&nbsp;参数      	：(msg(图片),class['avatar','doctor_article_icon','pat_article_icon','site_article_icon'](上传类型),dataname(可选),type(图片类型)))</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+</div>
+</body>  
+</html>

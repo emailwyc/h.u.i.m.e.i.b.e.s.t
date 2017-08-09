@@ -1,0 +1,365 @@
+connected to: 10.172.241.100:27017
+Wed Aug  3 13:31:06.971 all dbs
+Wed Aug  3 13:31:06.972 DATABASE: backend	 to 	/Server/cron/store/20160803/backend
+Wed Aug  3 13:31:06.973 	backend.system.indexes to /Server/cron/store/20160803/backend/system.indexes.bson
+Wed Aug  3 13:31:06.976 		 65 objects
+Wed Aug  3 13:31:06.977 	backend.hospital to /Server/cron/store/20160803/backend/hospital.bson
+Wed Aug  3 13:31:06.992 		 52 objects
+Wed Aug  3 13:31:06.992 	Metadata for backend.hospital to /Server/cron/store/20160803/backend/hospital.metadata.json
+Wed Aug  3 13:31:07.000 	backend.user to /Server/cron/store/20160803/backend/user.bson
+Wed Aug  3 13:31:07.013 		 1029 objects
+Wed Aug  3 13:31:07.013 	Metadata for backend.user to /Server/cron/store/20160803/backend/user.metadata.json
+Wed Aug  3 13:31:07.019 	backend.doctor to /Server/cron/store/20160803/backend/doctor.bson
+Wed Aug  3 13:31:07.038 		 728 objects
+Wed Aug  3 13:31:07.039 	Metadata for backend.doctor to /Server/cron/store/20160803/backend/doctor.metadata.json
+Wed Aug  3 13:31:07.051 	backend.captcha to /Server/cron/store/20160803/backend/captcha.bson
+Wed Aug  3 13:31:07.052 		 0 objects
+Wed Aug  3 13:31:07.052 	Metadata for backend.captcha to /Server/cron/store/20160803/backend/captcha.metadata.json
+Wed Aug  3 13:31:07.076 	backend.session to /Server/cron/store/20160803/backend/session.bson
+Wed Aug  3 13:31:07.077 		 0 objects
+Wed Aug  3 13:31:07.077 	Metadata for backend.session to /Server/cron/store/20160803/backend/session.metadata.json
+Wed Aug  3 13:31:07.080 	backend.feedback to /Server/cron/store/20160803/backend/feedback.bson
+Wed Aug  3 13:31:07.080 		 0 objects
+Wed Aug  3 13:31:07.080 	Metadata for backend.feedback to /Server/cron/store/20160803/backend/feedback.metadata.json
+Wed Aug  3 13:31:07.083 	backend.doctor_timetable to /Server/cron/store/20160803/backend/doctor_timetable.bson
+Wed Aug  3 13:31:07.092 		 1220 objects
+Wed Aug  3 13:31:07.092 	Metadata for backend.doctor_timetable to /Server/cron/store/20160803/backend/doctor_timetable.metadata.json
+Wed Aug  3 13:31:07.105 	backend.doctor_private to /Server/cron/store/20160803/backend/doctor_private.bson
+Wed Aug  3 13:31:07.109 		 59 objects
+Wed Aug  3 13:31:07.109 	Metadata for backend.doctor_private to /Server/cron/store/20160803/backend/doctor_private.metadata.json
+Wed Aug  3 13:31:07.112 	backend.order to /Server/cron/store/20160803/backend/order.bson
+Wed Aug  3 13:31:07.117 		 241 objects
+Wed Aug  3 13:31:07.117 	Metadata for backend.order to /Server/cron/store/20160803/backend/order.metadata.json
+Wed Aug  3 13:31:07.124 	backend.h5_setting to /Server/cron/store/20160803/backend/h5_setting.bson
+Wed Aug  3 13:31:07.127 		 3 objects
+Wed Aug  3 13:31:07.127 	Metadata for backend.h5_setting to /Server/cron/store/20160803/backend/h5_setting.metadata.json
+Wed Aug  3 13:31:07.129 	backend.user_weixin to /Server/cron/store/20160803/backend/user_weixin.bson
+Wed Aug  3 13:31:07.172 		 9645 objects
+Wed Aug  3 13:31:07.173 	Metadata for backend.user_weixin to /Server/cron/store/20160803/backend/user_weixin.metadata.json
+Wed Aug  3 13:31:07.213 	backend.user_msg to /Server/cron/store/20160803/backend/user_msg.bson
+Wed Aug  3 13:31:07.220 		 373 objects
+Wed Aug  3 13:31:07.220 	Metadata for backend.user_msg to /Server/cron/store/20160803/backend/user_msg.metadata.json
+Wed Aug  3 13:31:07.225 	backend.patient to /Server/cron/store/20160803/backend/patient.bson
+Wed Aug  3 13:31:07.231 		 362 objects
+Wed Aug  3 13:31:07.231 	Metadata for backend.patient to /Server/cron/store/20160803/backend/patient.metadata.json
+Wed Aug  3 13:31:07.236 	backend.release to /Server/cron/store/20160803/backend/release.bson
+Wed Aug  3 13:31:07.240 		 1 objects
+Wed Aug  3 13:31:07.240 	Metadata for backend.release to /Server/cron/store/20160803/backend/release.metadata.json
+Wed Aug  3 13:31:07.243 	backend.patient_family to /Server/cron/store/20160803/backend/patient_family.bson
+Wed Aug  3 13:31:07.246 		 213 objects
+Wed Aug  3 13:31:07.246 	Metadata for backend.patient_family to /Server/cron/store/20160803/backend/patient_family.metadata.json
+Wed Aug  3 13:31:07.248 	backend.hx_history to /Server/cron/store/20160803/backend/hx_history.bson
+Wed Aug  3 13:31:07.269 		 2207 objects
+Wed Aug  3 13:31:07.269 	Metadata for backend.hx_history to /Server/cron/store/20160803/backend/hx_history.metadata.json
+Wed Aug  3 13:31:07.292 	backend.doctor_fans to /Server/cron/store/20160803/backend/doctor_fans.bson
+Wed Aug  3 13:31:07.305 		 742 objects
+Wed Aug  3 13:31:07.305 	Metadata for backend.doctor_fans to /Server/cron/store/20160803/backend/doctor_fans.metadata.json
+Wed Aug  3 13:31:07.309 	backend.region to /Server/cron/store/20160803/backend/region.bson
+Wed Aug  3 13:31:07.313 		 21 objects
+Wed Aug  3 13:31:07.313 	Metadata for backend.region to /Server/cron/store/20160803/backend/region.metadata.json
+Wed Aug  3 13:31:07.316 	backend.tag to /Server/cron/store/20160803/backend/tag.bson
+Wed Aug  3 13:31:07.321 		 277 objects
+Wed Aug  3 13:31:07.321 	Metadata for backend.tag to /Server/cron/store/20160803/backend/tag.metadata.json
+Wed Aug  3 13:31:07.325 	backend.template to /Server/cron/store/20160803/backend/template.bson
+Wed Aug  3 13:31:07.327 		 31 objects
+Wed Aug  3 13:31:07.327 	Metadata for backend.template to /Server/cron/store/20160803/backend/template.metadata.json
+Wed Aug  3 13:31:07.330 	backend.hx_push_log to /Server/cron/store/20160803/backend/hx_push_log.bson
+Wed Aug  3 13:31:07.334 		 346 objects
+Wed Aug  3 13:31:07.334 	Metadata for backend.hx_push_log to /Server/cron/store/20160803/backend/hx_push_log.metadata.json
+Wed Aug  3 13:31:07.338 	backend.department-delete to /Server/cron/store/20160803/backend/department-delete.bson
+Wed Aug  3 13:31:07.342 		 67 objects
+Wed Aug  3 13:31:07.342 	Metadata for backend.department-delete to /Server/cron/store/20160803/backend/department-delete.metadata.json
+Wed Aug  3 13:31:07.344 	backend.department to /Server/cron/store/20160803/backend/department.bson
+Wed Aug  3 13:31:07.348 		 55 objects
+Wed Aug  3 13:31:07.349 	Metadata for backend.department to /Server/cron/store/20160803/backend/department.metadata.json
+Wed Aug  3 13:31:07.351 	backend.doctor_article to /Server/cron/store/20160803/backend/doctor_article.bson
+Wed Aug  3 13:31:07.357 		 278 objects
+Wed Aug  3 13:31:07.357 	Metadata for backend.doctor_article to /Server/cron/store/20160803/backend/doctor_article.metadata.json
+Wed Aug  3 13:31:07.361 	backend.traffic to /Server/cron/store/20160803/backend/traffic.bson
+Wed Aug  3 13:31:07.367 		 122 objects
+Wed Aug  3 13:31:07.368 	Metadata for backend.traffic to /Server/cron/store/20160803/backend/traffic.metadata.json
+Wed Aug  3 13:31:07.375 	backend.inline to /Server/cron/store/20160803/backend/inline.bson
+Wed Aug  3 13:31:07.375 		 0 objects
+Wed Aug  3 13:31:07.375 	Metadata for backend.inline to /Server/cron/store/20160803/backend/inline.metadata.json
+Wed Aug  3 13:31:07.377 	backend.order_comment to /Server/cron/store/20160803/backend/order_comment.bson
+Wed Aug  3 13:31:07.380 		 12 objects
+Wed Aug  3 13:31:07.380 	Metadata for backend.order_comment to /Server/cron/store/20160803/backend/order_comment.metadata.json
+Wed Aug  3 13:31:07.385 	backend.doctor_rqcode to /Server/cron/store/20160803/backend/doctor_rqcode.bson
+Wed Aug  3 13:31:07.395 		 2000 objects
+Wed Aug  3 13:31:07.395 	Metadata for backend.doctor_rqcode to /Server/cron/store/20160803/backend/doctor_rqcode.metadata.json
+Wed Aug  3 13:31:07.403 	backend.relation to /Server/cron/store/20160803/backend/relation.bson
+Wed Aug  3 13:31:07.409 		 8 objects
+Wed Aug  3 13:31:07.409 	Metadata for backend.relation to /Server/cron/store/20160803/backend/relation.metadata.json
+Wed Aug  3 13:31:07.412 	backend.user_scan to /Server/cron/store/20160803/backend/user_scan.bson
+Wed Aug  3 13:31:07.418 		 290 objects
+Wed Aug  3 13:31:07.418 	Metadata for backend.user_scan to /Server/cron/store/20160803/backend/user_scan.metadata.json
+Wed Aug  3 13:31:07.422 	backend.doctor_location to /Server/cron/store/20160803/backend/doctor_location.bson
+Wed Aug  3 13:31:07.426 		 280 objects
+Wed Aug  3 13:31:07.426 	Metadata for backend.doctor_location to /Server/cron/store/20160803/backend/doctor_location.metadata.json
+Wed Aug  3 13:31:07.431 	backend.doctor_assistant to /Server/cron/store/20160803/backend/doctor_assistant.bson
+Wed Aug  3 13:31:07.433 		 18 objects
+Wed Aug  3 13:31:07.433 	Metadata for backend.doctor_assistant to /Server/cron/store/20160803/backend/doctor_assistant.metadata.json
+Wed Aug  3 13:31:07.435 	backend.user_coupons to /Server/cron/store/20160803/backend/user_coupons.bson
+Wed Aug  3 13:31:07.438 		 26 objects
+Wed Aug  3 13:31:07.438 	Metadata for backend.user_coupons to /Server/cron/store/20160803/backend/user_coupons.metadata.json
+Wed Aug  3 13:31:07.440 	backend.user_exchange to /Server/cron/store/20160803/backend/user_exchange.bson
+Wed Aug  3 13:31:07.459 		 1500 objects
+Wed Aug  3 13:31:07.459 	Metadata for backend.user_exchange to /Server/cron/store/20160803/backend/user_exchange.metadata.json
+Wed Aug  3 13:31:07.464 	backend.doctor_copy to /Server/cron/store/20160803/backend/doctor_copy.bson
+Wed Aug  3 13:31:07.479 		 387 objects
+Wed Aug  3 13:31:07.479 	Metadata for backend.doctor_copy to /Server/cron/store/20160803/backend/doctor_copy.metadata.json
+Wed Aug  3 13:31:07.488 	backend.other_rqcode to /Server/cron/store/20160803/backend/other_rqcode.bson
+Wed Aug  3 13:31:07.498 		 136 objects
+Wed Aug  3 13:31:07.498 	Metadata for backend.other_rqcode to /Server/cron/store/20160803/backend/other_rqcode.metadata.json
+Wed Aug  3 13:31:07.502 	backend.voip_log to /Server/cron/store/20160803/backend/voip_log.bson
+Wed Aug  3 13:31:07.506 		 46 objects
+Wed Aug  3 13:31:07.506 	Metadata for backend.voip_log to /Server/cron/store/20160803/backend/voip_log.metadata.json
+Wed Aug  3 13:31:07.510 	backend.article_hot to /Server/cron/store/20160803/backend/article_hot.bson
+Wed Aug  3 13:31:07.513 		 3 objects
+Wed Aug  3 13:31:07.513 	Metadata for backend.article_hot to /Server/cron/store/20160803/backend/article_hot.metadata.json
+Wed Aug  3 13:31:07.515 	backend.act_log to /Server/cron/store/20160803/backend/act_log.bson
+Wed Aug  3 13:31:07.518 		 190 objects
+Wed Aug  3 13:31:07.519 	Metadata for backend.act_log to /Server/cron/store/20160803/backend/act_log.metadata.json
+Wed Aug  3 13:31:07.521 	backend.act_code to /Server/cron/store/20160803/backend/act_code.bson
+Wed Aug  3 13:31:07.525 		 88 objects
+Wed Aug  3 13:31:07.526 	Metadata for backend.act_code to /Server/cron/store/20160803/backend/act_code.metadata.json
+Wed Aug  3 13:31:07.528 	backend.act_free to /Server/cron/store/20160803/backend/act_free.bson
+Wed Aug  3 13:31:07.530 		 10 objects
+Wed Aug  3 13:31:07.530 	Metadata for backend.act_free to /Server/cron/store/20160803/backend/act_free.metadata.json
+Wed Aug  3 13:31:07.533 	backend.order_qrcode to /Server/cron/store/20160803/backend/order_qrcode.bson
+Wed Aug  3 13:31:07.536 		 31 objects
+Wed Aug  3 13:31:07.536 	Metadata for backend.order_qrcode to /Server/cron/store/20160803/backend/order_qrcode.metadata.json
+Wed Aug  3 13:31:07.539 	backend.pat_user to /Server/cron/store/20160803/backend/pat_user.bson
+Wed Aug  3 13:31:07.543 		 19 objects
+Wed Aug  3 13:31:07.543 	Metadata for backend.pat_user to /Server/cron/store/20160803/backend/pat_user.metadata.json
+Wed Aug  3 13:31:07.545 	backend.pat_user_session to /Server/cron/store/20160803/backend/pat_user_session.bson
+Wed Aug  3 13:31:07.549 		 11 objects
+Wed Aug  3 13:31:07.549 	Metadata for backend.pat_user_session to /Server/cron/store/20160803/backend/pat_user_session.metadata.json
+Wed Aug  3 13:31:07.551 	backend.act_free_log to /Server/cron/store/20160803/backend/act_free_log.bson
+Wed Aug  3 13:31:07.555 		 35 objects
+Wed Aug  3 13:31:07.555 	Metadata for backend.act_free_log to /Server/cron/store/20160803/backend/act_free_log.metadata.json
+Wed Aug  3 13:31:07.558 	backend.website_article to /Server/cron/store/20160803/backend/website_article.bson
+Wed Aug  3 13:31:07.564 		 19 objects
+Wed Aug  3 13:31:07.564 	Metadata for backend.website_article to /Server/cron/store/20160803/backend/website_article.metadata.json
+Wed Aug  3 13:31:07.569 	backend.pat_article to /Server/cron/store/20160803/backend/pat_article.bson
+Wed Aug  3 13:31:07.589 		 47 objects
+Wed Aug  3 13:31:07.590 	Metadata for backend.pat_article to /Server/cron/store/20160803/backend/pat_article.metadata.json
+Wed Aug  3 13:31:07.618 	backend.pat_article_tags to /Server/cron/store/20160803/backend/pat_article_tags.bson
+Wed Aug  3 13:31:07.622 		 22 objects
+Wed Aug  3 13:31:07.623 	Metadata for backend.pat_article_tags to /Server/cron/store/20160803/backend/pat_article_tags.metadata.json
+Wed Aug  3 13:31:07.625 	backend.pat_article_comment to /Server/cron/store/20160803/backend/pat_article_comment.bson
+Wed Aug  3 13:31:07.628 		 8 objects
+Wed Aug  3 13:31:07.628 	Metadata for backend.pat_article_comment to /Server/cron/store/20160803/backend/pat_article_comment.metadata.json
+Wed Aug  3 13:31:07.630 	backend.pat_follow_doctor to /Server/cron/store/20160803/backend/pat_follow_doctor.bson
+Wed Aug  3 13:31:07.633 		 10 objects
+Wed Aug  3 13:31:07.633 	Metadata for backend.pat_follow_doctor to /Server/cron/store/20160803/backend/pat_follow_doctor.metadata.json
+Wed Aug  3 13:31:07.635 	backend.manage_admin to /Server/cron/store/20160803/backend/manage_admin.bson
+Wed Aug  3 13:31:07.637 		 17 objects
+Wed Aug  3 13:31:07.637 	Metadata for backend.manage_admin to /Server/cron/store/20160803/backend/manage_admin.metadata.json
+Wed Aug  3 13:31:07.639 	backend.manage_power to /Server/cron/store/20160803/backend/manage_power.bson
+Wed Aug  3 13:31:07.642 		 36 objects
+Wed Aug  3 13:31:07.642 	Metadata for backend.manage_power to /Server/cron/store/20160803/backend/manage_power.metadata.json
+Wed Aug  3 13:31:07.645 	backend.manage_role to /Server/cron/store/20160803/backend/manage_role.bson
+Wed Aug  3 13:31:07.648 		 15 objects
+Wed Aug  3 13:31:07.648 	Metadata for backend.manage_role to /Server/cron/store/20160803/backend/manage_role.metadata.json
+Wed Aug  3 13:31:07.651 	backend.pat_visit_follow_doctor to /Server/cron/store/20160803/backend/pat_visit_follow_doctor.bson
+Wed Aug  3 13:31:07.651 		 0 objects
+Wed Aug  3 13:31:07.651 	Metadata for backend.pat_visit_follow_doctor to /Server/cron/store/20160803/backend/pat_visit_follow_doctor.metadata.json
+Wed Aug  3 13:31:07.653 	backend.pat_system_msg to /Server/cron/store/20160803/backend/pat_system_msg.bson
+Wed Aug  3 13:31:07.655 		 1 objects
+Wed Aug  3 13:31:07.656 	Metadata for backend.pat_system_msg to /Server/cron/store/20160803/backend/pat_system_msg.metadata.json
+Wed Aug  3 13:31:07.661 DATABASE: backend_staging	 to 	/Server/cron/store/20160803/backend_staging
+Wed Aug  3 13:31:07.662 	backend_staging.system.indexes to /Server/cron/store/20160803/backend_staging/system.indexes.bson
+Wed Aug  3 13:31:07.664 		 71 objects
+Wed Aug  3 13:31:07.665 	backend_staging.user to /Server/cron/store/20160803/backend_staging/user.bson
+Wed Aug  3 13:31:07.668 		 119 objects
+Wed Aug  3 13:31:07.668 	Metadata for backend_staging.user to /Server/cron/store/20160803/backend_staging/user.metadata.json
+Wed Aug  3 13:31:07.671 	backend_staging.session to /Server/cron/store/20160803/backend_staging/session.bson
+Wed Aug  3 13:31:07.674 		 2 objects
+Wed Aug  3 13:31:07.674 	Metadata for backend_staging.session to /Server/cron/store/20160803/backend_staging/session.metadata.json
+Wed Aug  3 13:31:07.677 	backend_staging.doctor to /Server/cron/store/20160803/backend_staging/doctor.bson
+Wed Aug  3 13:31:07.682 		 81 objects
+Wed Aug  3 13:31:07.682 	Metadata for backend_staging.doctor to /Server/cron/store/20160803/backend_staging/doctor.metadata.json
+Wed Aug  3 13:31:07.685 	backend_staging.doctor_private to /Server/cron/store/20160803/backend_staging/doctor_private.bson
+Wed Aug  3 13:31:07.688 		 44 objects
+Wed Aug  3 13:31:07.688 	Metadata for backend_staging.doctor_private to /Server/cron/store/20160803/backend_staging/doctor_private.metadata.json
+Wed Aug  3 13:31:07.690 	backend_staging.patient to /Server/cron/store/20160803/backend_staging/patient.bson
+Wed Aug  3 13:31:07.695 		 62 objects
+Wed Aug  3 13:31:07.695 	Metadata for backend_staging.patient to /Server/cron/store/20160803/backend_staging/patient.metadata.json
+Wed Aug  3 13:31:07.698 	backend_staging.patient_family to /Server/cron/store/20160803/backend_staging/patient_family.bson
+Wed Aug  3 13:31:07.700 		 85 objects
+Wed Aug  3 13:31:07.700 	Metadata for backend_staging.patient_family to /Server/cron/store/20160803/backend_staging/patient_family.metadata.json
+Wed Aug  3 13:31:07.703 	backend_staging.feedback to /Server/cron/store/20160803/backend_staging/feedback.bson
+Wed Aug  3 13:31:07.706 		 68 objects
+Wed Aug  3 13:31:07.706 	Metadata for backend_staging.feedback to /Server/cron/store/20160803/backend_staging/feedback.metadata.json
+Wed Aug  3 13:31:07.709 	backend_staging.release to /Server/cron/store/20160803/backend_staging/release.bson
+Wed Aug  3 13:31:07.712 		 2 objects
+Wed Aug  3 13:31:07.712 	Metadata for backend_staging.release to /Server/cron/store/20160803/backend_staging/release.metadata.json
+Wed Aug  3 13:31:07.714 	backend_staging.captcha to /Server/cron/store/20160803/backend_staging/captcha.bson
+Wed Aug  3 13:31:07.714 		 0 objects
+Wed Aug  3 13:31:07.714 	Metadata for backend_staging.captcha to /Server/cron/store/20160803/backend_staging/captcha.metadata.json
+Wed Aug  3 13:31:07.717 	backend_staging.doctor_timetable to /Server/cron/store/20160803/backend_staging/doctor_timetable.bson
+Wed Aug  3 13:31:07.722 		 167 objects
+Wed Aug  3 13:31:07.722 	Metadata for backend_staging.doctor_timetable to /Server/cron/store/20160803/backend_staging/doctor_timetable.metadata.json
+Wed Aug  3 13:31:07.726 	backend_staging.department to /Server/cron/store/20160803/backend_staging/department.bson
+Wed Aug  3 13:31:07.729 		 81 objects
+Wed Aug  3 13:31:07.729 	Metadata for backend_staging.department to /Server/cron/store/20160803/backend_staging/department.metadata.json
+Wed Aug  3 13:31:07.733 	backend_staging.tag to /Server/cron/store/20160803/backend_staging/tag.bson
+Wed Aug  3 13:31:07.737 		 56 objects
+Wed Aug  3 13:31:07.737 	Metadata for backend_staging.tag to /Server/cron/store/20160803/backend_staging/tag.metadata.json
+Wed Aug  3 13:31:07.739 	backend_staging.user_coupons to /Server/cron/store/20160803/backend_staging/user_coupons.bson
+Wed Aug  3 13:31:07.744 		 37 objects
+Wed Aug  3 13:31:07.745 	Metadata for backend_staging.user_coupons to /Server/cron/store/20160803/backend_staging/user_coupons.metadata.json
+Wed Aug  3 13:31:07.747 	backend_staging.hx_push_log to /Server/cron/store/20160803/backend_staging/hx_push_log.bson
+Wed Aug  3 13:31:07.752 		 779 objects
+Wed Aug  3 13:31:07.752 	Metadata for backend_staging.hx_push_log to /Server/cron/store/20160803/backend_staging/hx_push_log.metadata.json
+Wed Aug  3 13:31:07.755 	backend_staging.order_comment to /Server/cron/store/20160803/backend_staging/order_comment.bson
+Wed Aug  3 13:31:07.758 		 3 objects
+Wed Aug  3 13:31:07.758 	Metadata for backend_staging.order_comment to /Server/cron/store/20160803/backend_staging/order_comment.metadata.json
+Wed Aug  3 13:31:07.760 	backend_staging.relation to /Server/cron/store/20160803/backend_staging/relation.bson
+Wed Aug  3 13:31:07.763 		 30 objects
+Wed Aug  3 13:31:07.763 	Metadata for backend_staging.relation to /Server/cron/store/20160803/backend_staging/relation.metadata.json
+Wed Aug  3 13:31:07.766 	backend_staging.doctor_location to /Server/cron/store/20160803/backend_staging/doctor_location.bson
+Wed Aug  3 13:31:07.769 		 68 objects
+Wed Aug  3 13:31:07.769 	Metadata for backend_staging.doctor_location to /Server/cron/store/20160803/backend_staging/doctor_location.metadata.json
+Wed Aug  3 13:31:07.772 	backend_staging.doctor_rqcode to /Server/cron/store/20160803/backend_staging/doctor_rqcode.bson
+Wed Aug  3 13:31:07.781 		 2000 objects
+Wed Aug  3 13:31:07.781 	Metadata for backend_staging.doctor_rqcode to /Server/cron/store/20160803/backend_staging/doctor_rqcode.metadata.json
+Wed Aug  3 13:31:07.790 	backend_staging.doctor_fans to /Server/cron/store/20160803/backend_staging/doctor_fans.bson
+Wed Aug  3 13:31:07.796 		 144 objects
+Wed Aug  3 13:31:07.796 	Metadata for backend_staging.doctor_fans to /Server/cron/store/20160803/backend_staging/doctor_fans.metadata.json
+Wed Aug  3 13:31:07.799 	backend_staging.pat_article_copy to /Server/cron/store/20160803/backend_staging/pat_article_copy.bson
+Wed Aug  3 13:31:07.812 		 531 objects
+Wed Aug  3 13:31:07.812 	Metadata for backend_staging.pat_article_copy to /Server/cron/store/20160803/backend_staging/pat_article_copy.metadata.json
+Wed Aug  3 13:31:07.825 	backend_staging.inline to /Server/cron/store/20160803/backend_staging/inline.bson
+Wed Aug  3 13:31:07.835 		 1 objects
+Wed Aug  3 13:31:07.835 	Metadata for backend_staging.inline to /Server/cron/store/20160803/backend_staging/inline.metadata.json
+Wed Aug  3 13:31:07.838 	backend_staging.h5_setting to /Server/cron/store/20160803/backend_staging/h5_setting.bson
+Wed Aug  3 13:31:07.841 		 3 objects
+Wed Aug  3 13:31:07.841 	Metadata for backend_staging.h5_setting to /Server/cron/store/20160803/backend_staging/h5_setting.metadata.json
+Wed Aug  3 13:31:07.843 	backend_staging.user_msg to /Server/cron/store/20160803/backend_staging/user_msg.bson
+Wed Aug  3 13:31:07.847 		 58 objects
+Wed Aug  3 13:31:07.847 	Metadata for backend_staging.user_msg to /Server/cron/store/20160803/backend_staging/user_msg.metadata.json
+Wed Aug  3 13:31:07.849 	backend_staging.hospital to /Server/cron/store/20160803/backend_staging/hospital.bson
+Wed Aug  3 13:31:07.855 		 72 objects
+Wed Aug  3 13:31:07.855 	Metadata for backend_staging.hospital to /Server/cron/store/20160803/backend_staging/hospital.metadata.json
+Wed Aug  3 13:31:07.865 	backend_staging.user_weixin to /Server/cron/store/20160803/backend_staging/user_weixin.bson
+Wed Aug  3 13:31:07.869 		 87 objects
+Wed Aug  3 13:31:07.869 	Metadata for backend_staging.user_weixin to /Server/cron/store/20160803/backend_staging/user_weixin.metadata.json
+Wed Aug  3 13:31:07.877 	backend_staging.hx_history to /Server/cron/store/20160803/backend_staging/hx_history.bson
+Wed Aug  3 13:31:07.893 		 1444 objects
+Wed Aug  3 13:31:07.894 	Metadata for backend_staging.hx_history to /Server/cron/store/20160803/backend_staging/hx_history.metadata.json
+Wed Aug  3 13:31:07.904 	backend_staging.order to /Server/cron/store/20160803/backend_staging/order.bson
+Wed Aug  3 13:31:07.919 		 152 objects
+Wed Aug  3 13:31:07.919 	Metadata for backend_staging.order to /Server/cron/store/20160803/backend_staging/order.metadata.json
+Wed Aug  3 13:31:07.929 	backend_staging.region to /Server/cron/store/20160803/backend_staging/region.bson
+Wed Aug  3 13:31:07.936 		 30 objects
+Wed Aug  3 13:31:07.936 	Metadata for backend_staging.region to /Server/cron/store/20160803/backend_staging/region.metadata.json
+Wed Aug  3 13:31:07.939 	backend_staging.template to /Server/cron/store/20160803/backend_staging/template.bson
+Wed Aug  3 13:31:07.941 		 37 objects
+Wed Aug  3 13:31:07.941 	Metadata for backend_staging.template to /Server/cron/store/20160803/backend_staging/template.metadata.json
+Wed Aug  3 13:31:07.943 	backend_staging.user_scan to /Server/cron/store/20160803/backend_staging/user_scan.bson
+Wed Aug  3 13:31:07.946 		 152 objects
+Wed Aug  3 13:31:07.947 	Metadata for backend_staging.user_scan to /Server/cron/store/20160803/backend_staging/user_scan.metadata.json
+Wed Aug  3 13:31:07.949 	backend_staging.doctor_article to /Server/cron/store/20160803/backend_staging/doctor_article.bson
+Wed Aug  3 13:31:07.953 		 135 objects
+Wed Aug  3 13:31:07.953 	Metadata for backend_staging.doctor_article to /Server/cron/store/20160803/backend_staging/doctor_article.metadata.json
+Wed Aug  3 13:31:07.958 	backend_staging.hx_history_local to /Server/cron/store/20160803/backend_staging/hx_history_local.bson
+Wed Aug  3 13:31:07.961 		 95 objects
+Wed Aug  3 13:31:07.962 	Metadata for backend_staging.hx_history_local to /Server/cron/store/20160803/backend_staging/hx_history_local.metadata.json
+Wed Aug  3 13:31:07.976 	backend_staging.doctor_assistant to /Server/cron/store/20160803/backend_staging/doctor_assistant.bson
+Wed Aug  3 13:31:07.979 		 14 objects
+Wed Aug  3 13:31:07.979 	Metadata for backend_staging.doctor_assistant to /Server/cron/store/20160803/backend_staging/doctor_assistant.metadata.json
+Wed Aug  3 13:31:07.982 	backend_staging.user_exchange to /Server/cron/store/20160803/backend_staging/user_exchange.bson
+Wed Aug  3 13:31:07.992 		 1500 objects
+Wed Aug  3 13:31:07.992 	Metadata for backend_staging.user_exchange to /Server/cron/store/20160803/backend_staging/user_exchange.metadata.json
+Wed Aug  3 13:31:08.001 	backend_staging.voip_log to /Server/cron/store/20160803/backend_staging/voip_log.bson
+Wed Aug  3 13:31:08.006 		 58 objects
+Wed Aug  3 13:31:08.006 	Metadata for backend_staging.voip_log to /Server/cron/store/20160803/backend_staging/voip_log.metadata.json
+Wed Aug  3 13:31:08.009 	backend_staging.other_rqcode to /Server/cron/store/20160803/backend_staging/other_rqcode.bson
+Wed Aug  3 13:31:08.011 		 11 objects
+Wed Aug  3 13:31:08.011 	Metadata for backend_staging.other_rqcode to /Server/cron/store/20160803/backend_staging/other_rqcode.metadata.json
+Wed Aug  3 13:31:08.013 	backend_staging.act_log to /Server/cron/store/20160803/backend_staging/act_log.bson
+Wed Aug  3 13:31:08.017 		 151 objects
+Wed Aug  3 13:31:08.017 	Metadata for backend_staging.act_log to /Server/cron/store/20160803/backend_staging/act_log.metadata.json
+Wed Aug  3 13:31:08.019 	backend_staging.article_hot to /Server/cron/store/20160803/backend_staging/article_hot.bson
+Wed Aug  3 13:31:08.022 		 23 objects
+Wed Aug  3 13:31:08.022 	Metadata for backend_staging.article_hot to /Server/cron/store/20160803/backend_staging/article_hot.metadata.json
+Wed Aug  3 13:31:08.026 	backend_staging.act_code to /Server/cron/store/20160803/backend_staging/act_code.bson
+Wed Aug  3 13:31:08.030 		 36 objects
+Wed Aug  3 13:31:08.030 	Metadata for backend_staging.act_code to /Server/cron/store/20160803/backend_staging/act_code.metadata.json
+Wed Aug  3 13:31:08.031 	backend_staging.act_free to /Server/cron/store/20160803/backend_staging/act_free.bson
+Wed Aug  3 13:31:08.033 		 8 objects
+Wed Aug  3 13:31:08.033 	Metadata for backend_staging.act_free to /Server/cron/store/20160803/backend_staging/act_free.metadata.json
+Wed Aug  3 13:31:08.038 	backend_staging.order_qrcode to /Server/cron/store/20160803/backend_staging/order_qrcode.bson
+Wed Aug  3 13:31:08.041 		 24 objects
+Wed Aug  3 13:31:08.041 	Metadata for backend_staging.order_qrcode to /Server/cron/store/20160803/backend_staging/order_qrcode.metadata.json
+Wed Aug  3 13:31:08.043 	backend_staging.doctor_bak to /Server/cron/store/20160803/backend_staging/doctor_bak.bson
+Wed Aug  3 13:31:08.052 		 389 objects
+Wed Aug  3 13:31:08.052 	Metadata for backend_staging.doctor_bak to /Server/cron/store/20160803/backend_staging/doctor_bak.metadata.json
+Wed Aug  3 13:31:08.060 	backend_staging.doctor_assistant_append to /Server/cron/store/20160803/backend_staging/doctor_assistant_append.bson
+Wed Aug  3 13:31:08.067 		 2 objects
+Wed Aug  3 13:31:08.067 	Metadata for backend_staging.doctor_assistant_append to /Server/cron/store/20160803/backend_staging/doctor_assistant_append.metadata.json
+Wed Aug  3 13:31:08.070 	backend_staging.pat_user to /Server/cron/store/20160803/backend_staging/pat_user.bson
+Wed Aug  3 13:31:08.073 		 38 objects
+Wed Aug  3 13:31:08.073 	Metadata for backend_staging.pat_user to /Server/cron/store/20160803/backend_staging/pat_user.metadata.json
+Wed Aug  3 13:31:08.076 	backend_staging.pat_user_session to /Server/cron/store/20160803/backend_staging/pat_user_session.bson
+Wed Aug  3 13:31:08.078 		 27 objects
+Wed Aug  3 13:31:08.078 	Metadata for backend_staging.pat_user_session to /Server/cron/store/20160803/backend_staging/pat_user_session.metadata.json
+Wed Aug  3 13:31:08.081 	backend_staging.pat_article to /Server/cron/store/20160803/backend_staging/pat_article.bson
+Wed Aug  3 13:31:08.097 		 461 objects
+Wed Aug  3 13:31:08.098 	Metadata for backend_staging.pat_article to /Server/cron/store/20160803/backend_staging/pat_article.metadata.json
+Wed Aug  3 13:31:08.098 	backend_staging.pat_article_comment to /Server/cron/store/20160803/backend_staging/pat_article_comment.bson
+Wed Aug  3 13:31:08.112 		 98 objects
+Wed Aug  3 13:31:08.112 	Metadata for backend_staging.pat_article_comment to /Server/cron/store/20160803/backend_staging/pat_article_comment.metadata.json
+Wed Aug  3 13:31:08.132 	backend_staging.website_article to /Server/cron/store/20160803/backend_staging/website_article.bson
+Wed Aug  3 13:31:08.138 		 11 objects
+Wed Aug  3 13:31:08.138 	Metadata for backend_staging.website_article to /Server/cron/store/20160803/backend_staging/website_article.metadata.json
+Wed Aug  3 13:31:08.142 	backend_staging.manage_power to /Server/cron/store/20160803/backend_staging/manage_power.bson
+Wed Aug  3 13:31:08.145 		 36 objects
+Wed Aug  3 13:31:08.145 	Metadata for backend_staging.manage_power to /Server/cron/store/20160803/backend_staging/manage_power.metadata.json
+Wed Aug  3 13:31:08.148 	backend_staging.manage_admin to /Server/cron/store/20160803/backend_staging/manage_admin.bson
+Wed Aug  3 13:31:08.152 		 13 objects
+Wed Aug  3 13:31:08.152 	Metadata for backend_staging.manage_admin to /Server/cron/store/20160803/backend_staging/manage_admin.metadata.json
+Wed Aug  3 13:31:08.155 	backend_staging.pat_follow_doctor to /Server/cron/store/20160803/backend_staging/pat_follow_doctor.bson
+Wed Aug  3 13:31:08.159 		 35 objects
+Wed Aug  3 13:31:08.159 	Metadata for backend_staging.pat_follow_doctor to /Server/cron/store/20160803/backend_staging/pat_follow_doctor.metadata.json
+Wed Aug  3 13:31:08.161 	backend_staging.fesco_user to /Server/cron/store/20160803/backend_staging/fesco_user.bson
+Wed Aug  3 13:31:08.164 		 6 objects
+Wed Aug  3 13:31:08.164 	Metadata for backend_staging.fesco_user to /Server/cron/store/20160803/backend_staging/fesco_user.metadata.json
+Wed Aug  3 13:31:08.167 	backend_staging.pat_article_tags to /Server/cron/store/20160803/backend_staging/pat_article_tags.bson
+Wed Aug  3 13:31:08.170 		 29 objects
+Wed Aug  3 13:31:08.170 	Metadata for backend_staging.pat_article_tags to /Server/cron/store/20160803/backend_staging/pat_article_tags.metadata.json
+Wed Aug  3 13:31:08.172 	backend_staging.manage_role to /Server/cron/store/20160803/backend_staging/manage_role.bson
+Wed Aug  3 13:31:08.174 		 12 objects
+Wed Aug  3 13:31:08.174 	Metadata for backend_staging.manage_role to /Server/cron/store/20160803/backend_staging/manage_role.metadata.json
+Wed Aug  3 13:31:08.177 	backend_staging.pat_visit_follow_doctor to /Server/cron/store/20160803/backend_staging/pat_visit_follow_doctor.bson
+Wed Aug  3 13:31:08.182 		 2 objects
+Wed Aug  3 13:31:08.182 	Metadata for backend_staging.pat_visit_follow_doctor to /Server/cron/store/20160803/backend_staging/pat_visit_follow_doctor.metadata.json
+Wed Aug  3 13:31:08.184 	backend_staging.client to /Server/cron/store/20160803/backend_staging/client.bson
+Wed Aug  3 13:31:08.188 		 20 objects
+Wed Aug  3 13:31:08.188 	Metadata for backend_staging.client to /Server/cron/store/20160803/backend_staging/client.metadata.json
+Wed Aug  3 13:31:08.192 	backend_staging.client_activity to /Server/cron/store/20160803/backend_staging/client_activity.bson
+Wed Aug  3 13:31:08.195 		 5 objects
+Wed Aug  3 13:31:08.195 	Metadata for backend_staging.client_activity to /Server/cron/store/20160803/backend_staging/client_activity.metadata.json
+Wed Aug  3 13:31:08.197 	backend_staging.pat_system_msg to /Server/cron/store/20160803/backend_staging/pat_system_msg.bson
+Wed Aug  3 13:31:08.200 		 14 objects
+Wed Aug  3 13:31:08.200 	Metadata for backend_staging.pat_system_msg to /Server/cron/store/20160803/backend_staging/pat_system_msg.metadata.json
+Wed Aug  3 13:31:08.203 	backend_staging.pat_app_record to /Server/cron/store/20160803/backend_staging/pat_app_record.bson
+Wed Aug  3 13:31:08.210 		 99 objects
+Wed Aug  3 13:31:08.210 	Metadata for backend_staging.pat_app_record to /Server/cron/store/20160803/backend_staging/pat_app_record.metadata.json
+Wed Aug  3 13:31:08.212 	backend_staging.pat_article_order to /Server/cron/store/20160803/backend_staging/pat_article_order.bson
+Wed Aug  3 13:31:08.216 		 1 objects
+Wed Aug  3 13:31:08.216 	Metadata for backend_staging.pat_article_order to /Server/cron/store/20160803/backend_staging/pat_article_order.metadata.json
+Wed Aug  3 13:31:08.218 DATABASE: admin	 to 	/Server/cron/store/20160803/admin
+Wed Aug  3 13:31:08.219 	admin.system.indexes to /Server/cron/store/20160803/admin/system.indexes.bson
+Wed Aug  3 13:31:08.222 		 3 objects
+Wed Aug  3 13:31:08.222 	admin.system.version to /Server/cron/store/20160803/admin/system.version.bson
+Wed Aug  3 13:31:08.225 		 1 objects
+Wed Aug  3 13:31:08.225 	Metadata for admin.system.version to /Server/cron/store/20160803/admin/system.version.metadata.json
+Wed Aug  3 13:31:08.229 	admin.system.users to /Server/cron/store/20160803/admin/system.users.bson
+Wed Aug  3 13:31:08.230 		 0 objects
+Wed Aug  3 13:31:08.230 	Metadata for admin.system.users to /Server/cron/store/20160803/admin/system.users.metadata.json
+back successfully!
+============== back end 20160803 ==============
+===20160727 ===

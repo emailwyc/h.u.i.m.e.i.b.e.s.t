@@ -1,0 +1,241 @@
+{% extends 'admin/layout.html' %}
+{% block title %}医生管理 | 惠每极致{% endblock %}
+
+{% block content %}
+{% if create %}<h3>添加医生</h3>{% else %}<h3>编辑医生</h3>{% endif %}
+<br>
+
+<div class="row">
+    <div class="col-md-9">
+        <form method="POST" action="" class="form-horizontal" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.mobile.label }}</span>
+                    {{ form.mobile(class="form-control") }}
+                </div>
+                {% if form.mobile.errors %}
+                <div class="alert alert-danger">
+                    {{ form.mobile.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.freeze.label }}</span>
+                    {{ form.freeze(class="form-control") }}
+                </div>
+                {% if form.freeze.errors %}
+                <div class="alert alert-danger">
+                    {{ form.freeze.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.name.label }}</span>
+                    {{ form.name(class="form-control") }}
+                </div>
+                {% if form.name.errors %}
+                <div class="alert alert-danger">
+                    {{ form.name.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.assistant.label }}</span>
+                    {{ form.assistant(class="form-control") }}
+                </div>
+                {% if form.assistant.errors %}
+                <div class="alert alert-danger">
+                    {{ form.assistant.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.mul_num.label }}</span>
+                    {{ form.mul_num(class="form-control") }}
+                </div>
+                {% if form.mul_num.errors %}
+                <div class="alert alert-danger">
+                    {{ form.mul_num.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.avatar.label }}</span>
+                    <input disabled="disabled" name="text-avatar" id="text-avatar" type="text" class="form-control" placeholder="只支持 jpg, png 格式">
+                    <span class="input-group-btn" onclick="document.getElementById('avatar').click()">
+                        <button class="btn btn-default" type="button">浏览 ...</button>
+                    </span>
+                </div>
+                <div style="display:none">
+                    {{ form.avatar(onchange="document.getElementById('text-avatar').value=this.value") }}
+                </div>
+                {% if form.avatar.errors %}
+                <div class="alert alert-danger">
+                    {{ form.avatar.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+                {% if form.avatar.data and not form.avatar.errors %}
+                <div class="row" style="margin: 15px 0 5px">
+                    <img src="{{ form.avatar.data | replace('@!256', '@!64') }}" class="img-responsive img-circle pull-right" style="max-width: 80%;">
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.hospital.label }}</span>
+                    {{ form.hospital(class="form-control") }}
+                </div>
+                {% if form.hospital.errors %}
+                <div class="alert alert-danger">
+                    {{ form.hospital.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.department.label }}</span>
+                    {{ form.department(class="form-control") }}
+                </div>
+                {% if form.department.errors %}
+                <div class="alert alert-danger">
+                    {{ form.department.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.department_id.label }}</span>
+                    {{ form.department_id(class="form-control") }}
+                </div>
+                {% if form.department_id.errors %}
+                <div class="alert alert-danger">
+                    {{ form.department_id.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.department_child_id.label }}</span>
+                    {{ form.department_child_id(class="form-control") }}
+                </div>
+                {% if form.department_child_id.errors %}
+                <div class="alert alert-danger">
+                    {{ form.department_child_id.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.position.label }}</span>
+                    {{ form.position(class="form-control") }}
+                </div>
+                {% if form.position.errors %}
+                <div class="alert alert-danger">
+                    {{ form.position.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.title.label }}</span>
+                    {{ form.title(class="form-control") }}
+                </div>
+                {% if form.title.errors %}
+                <div class="alert alert-danger">
+                    {{ form.title.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            {#
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon height-auto">{{ form.locations.label }}</span>
+                    {{ form.locations(class="form-control height-auto", rows=5) }}
+                </div>
+                <div class="alert alert-info">
+                    有多个门诊地点的，每行填写一个。
+                </div>
+                {% if form.locations.errors %}
+                <div class="alert alert-danger">
+                    {{ form.locations.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+            #}
+
+            <div class="form-group">
+
+                <div class="input-group">
+                    <span class="input-group-addon height-auto">{{ form.speciality.label }}</span>
+                    {{ form.speciality(class="form-control height-auto", rows=5) }}
+                </div>
+                {% if form.speciality.errors %}
+                <div class="alert alert-danger">
+                    {{ form.speciality.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon height-auto">{{ form.description.label }}</span>
+                    {{ form.description(class="form-control height-auto", rows=5) }}
+                </div>
+                {% if form.description.errors %}
+                <div class="alert alert-danger">
+                    {{ form.description.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+        </form>
+    </div>
+    <div class="col-md-1">
+        <button type="submit" class="btn btn-danger btn-lg">完 &nbsp; 成</button>
+        <br>
+        <br>
+        <a class="btn btn-warning btn-lg" href="/admin/doctor/list" role="button">取 &nbsp; 消</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(function($) {
+    $('button[type="submit"]').click(function() {
+        $(this).attr('disabled', 'disabled');
+        $(this).text('保 存 中 ...');
+        $("form").submit();
+    });
+    $('#department_id').change(function(){
+        $.getJSON('/admin/doctor/department_child', {parent: $(this).val()}, function(json) {
+            var dc = $('#department_child_id');
+            $('option', dc).remove();
+            $.each(json, function(k, v){
+                var option = '<option value="' + k + '">' + v + '</option>';
+                dc.append(option);
+            });
+        });
+    });
+});
+</script>
+{% endblock %}

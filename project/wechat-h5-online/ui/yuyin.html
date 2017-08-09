@@ -1,0 +1,62 @@
+﻿<!DOCTYPE=html>  
+<html>  
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link rel="shortcut icon" href="images/favicon.ico" />  
+<link href="css/style.css" rel="stylesheet" />
+<script src="js/jquery-1.10.2.min.js"></script>
+<title>无标题文档</title>
+<style>
+.yy span{ display:inline-block; width:1rem; height:1.6rem; background-image:url(images/audio-pic.png); background-size:100% 100%;}
+.yy.cur span{ background-image:url(images/audio-pic.gif);}
+</style>
+<script type="text/javascript">
+    var time;
+	$(function(){
+		var	audio=document.createElement("audio");
+		audio.load();
+		audio.addEventListener("canplay",function(){
+			var endtime=parseInt(audio.duration)
+			$(".yy em").text(endtime);
+			$(".yy").click(function(){
+				if (audio.paused){  
+					audio.play();
+					$(".yy").addClass("cur");
+					$(".yy em").text(0);
+					time=setInterval(function(){							
+						$(".yy em").text(parseInt(audio.currentTime)+1);
+					},1000)
+				}else{
+					clearInterval(time);
+					audio.pause();
+					audio.currentTime=0;
+					$(".yy em").text(endtime);
+					$(".yy").removeClass("cur");
+				}
+			})
+		})
+		audio.addEventListener("pause",function(){
+            if (audio.currentTime == audio.duration) {
+                clearInterval(time);
+				audio.pause();
+				audio.currentTime=0;
+				$(".yy em").text(parseInt(audio.duration))
+				$(".yy").removeClass("cur");
+            }
+        }, false);
+	})
+</script>
+</head>
+
+<body>
+<audio id="myaudio" src="http://h5test.huimeibest.com/ui/1.mp3"></audio>
+<div class="yy">
+  <span></span>
+  <em>12S</em>
+</div>
+</body>
+</html>

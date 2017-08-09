@@ -1,0 +1,54 @@
+ef="adminstat.php?ac=online" target="_self">在线用户</a></li>
+							<li><a href="rank.php?ac=arena" target="_self">竞技场排名</a></li>
+							<li><a href="rank.php?ac=battle" target="_self">副本进度排名</a></li>
+							<li><a href="rank.php?ac=level" target="_self">当前等级分布</a></li>
+							<li><a href="rank.php?ac=viplevel" target="_self">当前VIP等级分布</a></li>
+							<li><a href="user.php?ac=lock" target="_self">平台帐号管理</a></li>
+						</ul>
+					</li>
+					<li class="widget">
+						<h3 class="widget-title">奖品发放</h3>
+						<ul class="widget-title">
+							<li><a href="admingift.php?ac=list" target="_self">批量发放奖品</a></li>
+							<li><a href="gift.php?ac=vip" target="_self">充值进度发放</a></li>
+							<li><a href="admingift.php?ac=cdkset" target="_self">礼包配置</a></li>
+							<li><a href="admingift.php?ac=cdkbuild" target="_self">礼包码生成</a></li>
+							<li><a href="admingift.php?ac=cdklist" target="_self">礼包码列表</a></li>
+							<li><a href="testing.php?ac=list" target="_self">封测发奖</a></li>
+						</ul>
+					</li>
+					<li class="widget">
+						<h3 class="widget-title">会话管理</h3>
+						<ul class="widget-title">
+							<li><a href="adminchat.php?ac=notice" target="_self">公告管理</a></li>
+							<li><a href="sysmail.php?ac=list" target="_self">系统邮件</a></li>
+							<li><a href="adminchat.php?ac=bdc" target="_self">系统广播</a></li>
+							<li><a href="adminchat.php?ac=chat&type=1" target="_self">世界聊天</a></li>
+							<li><a href="adminchat.php?ac=chat&type=2" target="_self">私聊</a></li>
+						</ul>
+					</li>
+					<li class="widget">
+						<h3 class="widget-title">游戏商城</h3>
+						<ul class="widget-title">
+							<li><a href="adminshop.php?ac=list" target="_self">商品列表</a></li>
+							<li><a href="adminshop.php?ac=chesttools" target="_self">宝箱配置工具</a></li>
+							<!--
+							<li><a href="adminshop.php?ac=buylist" target="_self">商品购买记录</a></li>
+							<li><a href="adminshop.php?ac=use" target="_self">商品使用情况统计</a></li>
+							-->
+						</ul>
+					</li>
+					<li class="widget">
+						<h3 class="widget-title">活动配置</h3>
+						<ul class="widget-title">
+							<li><a href="act.php?ac=ttl" target="_self">七天乐</a></li>
+							<li><a href="act.php?ac=hero" target="_self">限时豪杰</a></li>
+							<li><a href="act.php?ac=task" target="_self">任务活动(成长之路)</a></li>
+							<li><a href="act.php?ac=reward" target="_self">竞技活动奖励配置</a></li>
+						</ul>
+					</li>
+					<li class="widget">
+						<h3 class="widget-title">审核管理</h3>
+						<ul class="widget-title">
+							<li><a href="adminaudit.php?ac=cdkbuild" target="_self">礼包码生成审核</a></li>
+							<li><a href="adminaudit.php?ac=vip" targ

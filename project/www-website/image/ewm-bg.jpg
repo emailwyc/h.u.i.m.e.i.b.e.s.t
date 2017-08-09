@@ -1,0 +1,532 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started With CodeIgniter &mdash; CodeIgniter 3.0.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/ci-icon.ico"/>
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="CodeIgniter 3.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="CodeIgniter Overview" href="index.html"/>
+        <link rel="next" title="CodeIgniter at a Glance" href="at_a_glance.html"/>
+        <link rel="prev" title="CodeIgniter Overview" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> CodeIgniter</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/welcome.html">Welcome to CodeIgniter</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation Instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/downloads.html">Downloading CodeIgniter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/upgrading.html">Upgrading From a Previous Version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CodeIgniter Overview</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="at_a_glance.html">CodeIgniter at a Glance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="features.html">Supported Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appflow.html">Application Flow Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mvc.html">Model-View-Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="goals.html">Architectural Goals</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial/index.html">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/static_pages.html">Static pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/news_section.html">News section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/create_news_items.html">Create news items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorial/conclusion.html">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/index.html">General Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general/urls.html">CodeIgniter URLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/controllers.html">Controllers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/reserved_names.html">Reserved Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/helpers.html">Helpers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/libraries.html">Using CodeIgniter Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/creating_libraries.html">Creating Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/drivers.html">Using CodeIgniter Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/creating_drivers.html">Creating Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/core_classes.html">Creating Core System Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/ancillary_classes.html">Creating Ancillary Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/hooks.html">Hooks - Extending the Framework Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/autoloader.html">Auto-loading Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/common_functions.html">Common Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/compatibility_functions.html">Compatibility Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/routing.html">URI Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/errors.html">Error Handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/caching.html">Caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/profiling.html">Profiling Your Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/cli.html">Running via the CLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/managing_apps.html">Managing your Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/environments.html">Handling Multiple Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/alternative_php.html">Alternate PHP Syntax for View Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/security.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/styleguide.html">PHP Style Guide</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">Libraries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/benchmark.html">Benchmarking Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/caching.html">Caching Driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/calendar.html">Calendaring Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/cart.html">Shopping Cart Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/config.html">Config Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/email.html">Email Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/encrypt.html">Encrypt Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/encryption.html">Encryption Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/file_uploading.html">File Uploading Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/form_validation.html">Form Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/ftp.html">FTP Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/image_lib.html">Image Manipulation Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/input.html">Input Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/javascript.html">Javascript Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/language.html">Language Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/loader.html">Loader Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/migration.html">Migrations Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/output.html">Output Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/pagination.html">Pagination Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/parser.html">Template Parser Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/security.html">Security Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/sessions.html">Session Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/table.html">HTML Table Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/trackback.html">Trackback Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/typography.html">Typography Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/unit_testing.html">Unit Testing Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/uri.html">URI Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/user_agent.html">User Agent Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/xmlrpc.html">XML-RPC and XML-RPC Server Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/zip.html">Zip Encoding Class</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Database Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../database/examples.html">Quick Start: Usage Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/configuration.html">Database Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/connecting.html">Connecting to a Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/queries.html">Running Queries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/results.html">Generating Query Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/helpers.html">Query Helper Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/query_builder.html">Query Builder Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/metadata.html">Getting MetaData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/call_function.html">Custom Function Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/caching.html">Query Caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/forge.html">Database Manipulation with Database Forge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/utilities.html">Database Utilities Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/db_driver_reference.html">Database Driver Reference</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/array_helper.html">Array Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/captcha_helper.html">CAPTCHA Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/cookie_helper.html">Cookie Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/date_helper.html">Date Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/directory_helper.html">Directory Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/download_helper.html">Download Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/email_helper.html">Email Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/file_helper.html">File Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/form_helper.html">Form Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/html_helper.html">HTML Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/inflector_helper.html">Inflector Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/language_helper.html">Language Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/number_helper.html">Number Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/path_helper.html">Path Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/security_helper.html">Security Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/smiley_helper.html">Smiley Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/string_helper.html">String Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/text_helper.html">Text Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/typography_helper.html">Typography Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/url_helper.html">URL Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/xml_helper.html">XML Helper</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">CodeIgniter</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">CodeIgniter Overview</a> &raquo;</li>
+      
+    <li>Getting Started With CodeIgniter</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="getting-started-with-codeigniter">
+<h1>Getting Started With CodeIgniter<a class="headerlink" href="#getting-started-with-codeigniter" title="Permalink to this headline">Â¶</a></h1>
+<p>Any software application requires some effort to learn. We&#8217;ve done our
+best to minimize the learning curve while making the process as
+enjoyable as possible.</p>
+<p>The first step is to <a class="reference internal" href="../installation/index.html"><em>install</em></a>
+CodeIgniter, then read all the topics in the <strong>Introduction</strong> section of
+the Table of Contents.</p>
+<p>Next, read each of the <strong>General Topics</strong> pages in order. Each topic
+builds on the previous one, and includes code examples that you are
+encouraged to try.</p>
+<p>Once you understand the basics you&#8217;ll be ready to explore the <strong>Class
+Reference</strong> and <strong>Helper Reference</strong> pages to learn to utilize the
+native libraries and helper files.</p>
+<p>Feel free to take advantage of our <a class="reference external" href="http://forum.codeigniter.com/">Community
+Forums</a> if you have questions or
+problems, and our <a class="reference external" href="https://github.com/bcit-ci/CodeIgniter/wiki">Wiki</a> to see code
+examples posted by other users.</p>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="at_a_glance.html" class="btn btn-neutral float-right" title="CodeIgniter at a Glance">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="CodeIgniter Overview"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014 - 2015, British Columbia Institute of Technology.
+      Last updated on Mar 30, 2015.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'3.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.company</groupId>
+	<artifactId>DataSystem</artifactId>
+	<name>DataSystem</name>
+	<version>1.0.0</version>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<outputDirectory>build</outputDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<excludes>
+						<exclude>**/*.*</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<properties>
+		<sonar.dynamicAnalysis>false</sonar.dynamicAnalysis>
+	</properties>
+</project>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             qù®¢Š ãôO…¾ğæ±­¤èßg¾ƒw—/Ú¦}»”©áœƒÁ#‘F‰ğ·Á¾Ö Õ´ì÷ĞnòåûTÏ·r•<3x$r+°¢€9ü:ğŠ¯æ±¢A=Ğë23ÄïÀ3!°»8íŠ§oğ›Àöz¥®¥m Çİ£ÄğºO(
+ÑãiÛ»ü ’AÉÉ9$×iE qz‡Âoê·\^h1É<÷\Ë Ug’BCŒŒ…è2pNw<=á]Â–f×CÓ ²¾ù@KÉ‚HÜç,ØÜq’qœ+bŠ *½ı¾§§\Ø^GæZİDğÌ›ˆÜŒa‘ÈÈ'¥X¢€<ÿ ş—ÃÏú¿òvãÿ VÇ†şøWÂ:Œ—ú•öK©"0³ı¢Y2„‚Fˆê£ò®¢Š ãôO…¾ğæ±­¤èßg¾ƒw—/Ú¦}»”©áœƒÁ#‘F‰ğ·Á¾Ö Õ´ì÷ĞnòåûTÏ·r•<3x$r+°¢€9ü:ğŠ¯æ±¢A=Ğë23ÄïÀ3!°»8íŠ±á¿økÂ>aĞôˆ-$“!¦ËI!]îKmùAÛœdg®‚Š åüCğëÂ>*¼šÆ‰÷C¬ÈÏ¿ |Ì„ÀPìã¶*¾›àOø+½_Gğæn ‰¥P{‰ÎÕo–-ìHfŒ)²®ÂŠ ù£IÓl®<Câ«ßü7ñ^¡k©êk±é²,‘ò’ƒ).@$¾Â½ÿ ÃŞĞ¼)fmt=2(Ûï”¼˜$ÎrÍÇ'Àâ¶( ?ø?@ñ…¼kÚlw‰—ˆ—dd$`á”ƒƒÆFpp=Sğ÷Ã¯øVğŞhú$]“;<®œò³’W!ˆ;qù®¢Š áïşxSÔnoï4/2êêWšgû\ãs±%àd“Ò¬hŸ|áÍb[IÑ¾Ï}ï._µLûw)SÃ9‚G"»
+(—ñÃ¯øªğ^k$İ³#<Nüó2[@³Ø­xWBğ¥™µĞôÈ,£o¾Pò`’79Ë67dœgŠØ¢€8ıáoƒ|9¬A«i:7Ùï İåËö©Ÿnå*xg ğHäQ¢|-ğo‡5ˆ5m'Fû=ô¼¹~Õ3íÜ¥Oä	Šì( Š( ?âW‚?á=ğ“iQİ}šê)EÍ³°ÊYB¿ÚC‘ÈàóŒ“IúÆ-RhçÔŞ5º–1…yBì8Éè>‚®Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@féŸòÖ¿ëñôD5¥Yºgü„5¯úü_ı5Ô‰o_ÑšTQE"ÂŠ( Š( Š( Š( Š( Š( Š( İOşB/ı~7şˆš´«7Sÿ †‹ÿ _ÿ ¢&­*lˆï/_ÑQH°¢Š( ¢Š( ª÷ö¿nÓ®lşÑ=¿ŸÅç[¾É#ÜÜÙ†rcV( Ÿ<£x›Äş5ñF‹/<A‹£Ş´NË|ÆêBTŒ<(Â±lpH_—¡^¯Ãš¾»áŠ©àMcYŸYÓoíçLà,m²¹Á<$ƒ?7DÆĞH‡ƒ4ÿ Oñ;ÇwşÔlašÛU’;‹M@?‘p$ø'g;”¨Æ1÷ d7¡øcáæ¥Œ_Æ~.ÕcÔ5ÍŒ–ĞZ†[{5;—	Xml @Áf'sÔÇüJ¶×¼/ã¯>ƒâ}fIõ­MÏÙ/ïÜÚ#y±mM‰‚"Ì„ÏÊ1]‡‡|âıÄF©yâû½HH“jŞâv0a˜Å¼{p¡[©Êğ8 µÏø“Á_|Q¬èZ¥ìş}ãíËÜ…vÜ‡Ê’Fcêk¼ğßü'ŸÚ2ÂQÿ çØ|£³û3Ïó<ÌŒgÌãn7{çÇü_Ñ/4Ïk>-°ñOˆí.£ò6YÁ¨í—/gFA'¯Sšï<<×^ğõÅÄ²M<ºe³É$ŒYŒJI$òI<æ¸¿xoâ?‹´ÍSCxR="ê_İ9k8d›
+îùW8ëŠÔğv›ñFV—«7†E²·[vkCpn
+¤{PÀ.r<3Š ãì-µ/|pÓ´½_Äş ºÑo­Øé­y~Ï“ÚRmØRs»A9h½jÇ†¥ãÏ‹:ö³i¯ë0ø_L¸‰-ã·¼e‚âdØ nGˆìv`$H‡øvü7Œü?
+iÓÇk­XÜ%Å…Û9O-†õRÀcŸ—2¡íZğ¤>ğu†Œ‚3:&û©¼™¹sœF~PHÎÕPzPãM{ÃGÅPë?u]>8ğ °Ñ7GöbÙY#GŞÅ“;[2xÁ©>x§RÖÓÄ:Uæ­&¯i¥Ü ³¿XK4nÒrÛ‰8ù ò7œ áß øÛÀ¨ÙøJ_\i÷7j\j‰0º+´ c!yÇ¹'v xÆ^ñ­}y¨è×ú~­pÓ^M‰áÈó
+² PŠK>Xd€8Š äüQá_;ö‰Ñôïíír?íIn¾Ò—˜šÛ?ho.ÇÉÛ€¼ğÇÖ½ƒÃÿ „gí_ñ>×5_´lÿ ­çŸåmÏÜàc;¹õÀô®Æ^Ö/¼i£øËÃWV+«éñ5±ƒRä<dH7eíÃÌn:˜Ã\Ğ¬>!Ëâï¼G­hĞiñ&Ó§ivìëpHo™A½%ƒ·äÉ øeãsQ½ñ'5_i1Êé¦éúZIÅ0òº#ƒÀß1lm¿ğãâˆ§Â‘x–h—q;é÷w°¤)+8Vo”8ÏÍœ&6Œ¨è ğ‹<®j7^Õ4£¦j2¼Òiz¤n°Û9Á/+ş:.(;°ÜĞ¬>!Ëâï¼G­hĞiñ&Ó§ivìëpHo™A½%ƒ·ä´¢Š(Éş/è—šg‡5ŸØx§Äv—Qù,àÔvË—3„# “×©Íwk¯øzââY&]2Ùä’F,ÎÆ%$’y$s\_<7ñÅÚf©¡‰<)‘u/îœµÀœF²MÇw|«œuÅjx;Møƒ£+KÕ›Ã¢Ù[­»5¡¸7R=¨Fà9Å yş•£kW_uÏ¯<Nš]¥’ÌÒ5ñyÜa\ğ‡s˜.v‚¿ÄMuŸ	5ÍRëVñ‡/ïç¿·Ğõ­ÍÛïÉ(Ã¿ñ«qÜ˜?ø+ÆÖ?.|a­Oáò—öæŞî;'›!B Seëº4ÎIà·¶ x+ÆŞñ­ªj3ø~K=já®/Öİæ2#~ñ”E¹@tœî'ë@ŸŠ<+ç~Ñ:>ı½®Gı¡i-×ÚRó[gíåÂØù#pú×°xcÂ¿ğŒı«ş'Úæ«öŸò¼óü­¹ûœgw>¸•ÏøËÁÅ÷4xjêÅu}>&¶0jAü‡Œ‰ì İ¸yÇC‘Ókš‡Ä9|A÷ˆõ­>$Útí.İn	ó3È7¡¡àvãœ€v”QE y?ÅıóLğæ³âÛøÒê?#eœÙrñÆp€ddzõ9®óÁsÍuà_\\K$ÓË¦[<’HÅ™ØÄ¤’O$“Îk‹ñÇ†ş#ø»LÕ41'…#Ò.¥ıÓ–¸ˆÖ@é¸à®ï•s¸­Oi¿ta¥iz³xa´[+u·f´7àªGµÜç!sÀã8 OÂ®ü]¼ÕuËjºFow%¶Ÿg¥Ê-¦è‡t¬3Ÿ”¯·ÌÍ `çü5ÓõM+ã÷ˆl5GûJúßJµÙ2 6şYoö¶mÎsÎyn§¤°øyâ¯j—à-WMm&õË¶™¬	J[·Ë‚Œ™,~ğÉÇAŞ@#?Âß¼}áßˆ2xšãXÑµ'¾D‹P–á¥ó
+1¤¨P]›Sœ`•z LñVŸªj¾Ôlt]Gû;Rš"°]cîò29\Œ®áÊç#(ğ®Ÿªi^Ó¬u­GûGR† ³İcïœğ2yl.ãËc'’k›øÚÖ¦ú'…¼?w¦Şj—,÷Ğ)ÄĞ¨2Ëó),ñŒ~RÀ{ˆ![kx C!HĞ"™$gb Ç,Ä–>ä’{Ğ”QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE ›¦ÈCZÿ ¯Åÿ ÑÖ•féŸòÖ¿ëñôD4×R%¼}FiQE‹
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€3u?ùh¿õøßú"jÒ¬İOşB/ı~7şˆš´©²#¼½DQE"ÂŠ( Š( «ßØÛêzuÍ…ä~e­ÔOÉ¸ÈÀ†Œ‚zUŠ¯5Å¾s5¯Úî£‰Ş0Gæ¸ªn<.NOLĞÿ 
+Káçıßù;qÿ Ç+Ğ+ÇôßÎ­®]ø~ËÀsÍ­ÛJÑ½²jI±n UÃ¨;ºƒ€İg„>!Ãâ]fûÃ÷úUŞâ/se1»wc) á†HŞ6îĞiQÏ<6¶òÜ\K0D…ä’F
+¨ d’O ÎkÎô/‰zÎ­âcÃW^û¯§iïv-ÿ ´’O5ÀB‘î
+wy‹ódã¸«ñÃxöãÄZ>©áèìLuµº·’ånVBÆEt?(„w4Öišî­ù¿Ù:­ÿ “3ì—	.ÌçÚN3ƒ×ĞÖ…|éà_]øcâ7ôoxbMVîëSq¬¥¼PC“d– …r(œdêşø‡‰u›ïßéWz?ˆ,½Í”Ä:íİŒ¤ƒ†d9 gxÛ¸s@—Ş,ğŞ™y%ÿ ˆ4«K¨ñ¾ïc× •'# ƒøÖ¤ÃuoÅ¼±Í¨9#`ÊêFApAæ¼Ïãn…£ÿ Â¸×uì«í?ôôß³§şº5ûøİ÷xëÓŠì<	ÿ $óÃ_ö
+µÿ ÑK@×özeœ——÷pZZÇóO $–<’ãRA<7Vñ\[ËĞJã’6®¤dGÎkÌş)x‹Q±Ñõkm[ÀŸÚO'Ì¼ş×X<Ì²ò(Ş1!¸ÏC]Ç„æ·¸ğn‡5¯Ù-dÓíŞ0Éå!J¦ãË``dõÅ lQ^wwñ:î÷Ä·ú„|-w¯\i®É}+\%¤Q0!p¬àî;·Œ}ÂFáÈ“Â?®<Iã+¿ßxr}&şÊÑçºY®ìq"¨UÂÊUÕƒñœğÃ@¢ŠÏÖôM;Äz<úN­oö‹öù‘odİµƒT‚9 ğhBŠùÓö}Ôµ-.è[Ê²K£ë7ÛÄT3.¡‰eËrCÆÌ8Ë1ŒtšÇ¼çÇ,/µ.KëM^Ê{½;K’g·f#œ@…³û²í|©+óîèH ¨è¯7ğ§Ä½gÄ^4¸ğİß„?³&³É½i5$g„`•aPdRvË‘ó©ÎÎ}¿Ä=gÄ¾(»ğ.£à/.Fˆ&¤ŸÛ|›i‡|ªØYAÂ¶yã€±E|Áá­áí§ˆ|Š ƒìºMÛ>Õ¯Z)æÊF<Å26$óy¯Sğ/4Í+ÅV¾-ğİ¬vZ£¡"­´“Hóù²:É¸†, ØpİGNôé”WŸÙüEÔfø Ş½ğ×Ø¿ÖIä·ËûèT1I
+û°>UbWæÏÜl¾"ê>:ÔuŸÃ_a±²Ìo|—ËqLıÚ 7¶å$ï€zçw®ï|K¡xGÂ×zõÆšì—ÒµÂZE
+Îã»xÁÇÜ$n‰<#ñ*ãÄ2»ğ½÷‡'Òoì­{¥šà>Ç*…\(Ü¥]X?Ï Œ1 ô
++Îîş']Şø–ÿ Bğ…®õë5Ù/¥k„´Š&.œÇvñƒ¸HÜ9<=ñ!µÛ_F}îËÅ:e»ÌúTÒ®ÙH8P“c9æ œ¸ĞyExş›ñ£YÕµË¿Ùxyµ»iZ7¶MI6 MÂBÒ
+¸` uwPp¬ğ‡Ä8|K¬ßx~ÿ J»ÑüA`…îl¦!×nìe$0Ã!É;ÆİÃš í(¯ŸüQ«ø‰?hæ/ù·ÖÖ’Åegöø×í´.üb<‚ÇiçåÇzöjş"Õ>Õı¿áì?/g“şŸÏœîû€mÆ¯]ŞÔ±}g¦YÉyw¥¬xß4òÑr@cÀÉ ~5$ÃuoÅ¼±Í¨9#`ÊêFApAæ¼Ïâ—ˆµV¶Õ¼	ı©ádò|ËÏíuƒÌË!"ã8ëŒô5ÜxNk{èsYÚı’ÖM>İá·óRÔªn<¶O\PÅçw®ï|K¡xGÂ×zõÆšì—ÒµÂZE
+Îã»xÁÇÜ$n|C‡ÄºÍ÷‡ïô«½Ä^æÊbvîÆRAÃ23¼mÜ9 ÒŠò{‹~"ŸÅ~ÿ …}9ÖàˆIöhµ8İFB·Ï&Ğ¨»;²~m«Œ·g‚<qŒR·–ÆM?VÒî½õ“H%6æ ¬€ ÀíaÇBlÖUxoìî/.lá»‚K«]¿h…$âÜ2»”r¹Œõ¬x“şêšàÌ’Ö/İ!\ƒ#‰¸d|»™sƒœg×7ğc@m'ÀpêW‹#jšÓ›ë©æew1&2\rA\6	$n™"€=ŠùÒãSğŞ»ñ{ÄV?d».¾•o4³Gkî¸á²…Õc}Ü!˜ÿ z_Ã¯	[èÇˆuM+S‚ÿ BÔşÌ4÷èÜ2$JèP¾1µIØ¸-…P	È @¢¾ñF¯â$ı¢t{˜¼/æß[ZK•ŸÛã_¶B>Ğ»ñˆò§Ÿ—ëØ<1«ø‹TûWöÿ …ÿ °ü½Oú|w>vs»î·^½w{PAEy‰ş,j>ñ­–¿áO±é—Wo:‡öŠÉºp_-°Â²¶ÓÏ8«øw¬øƒH²¼ğµŞ›a­¤ï¥^KpŒÓ¬Cv^ @Wrs‘Œƒº€;Ëëû=2ÎKËû¸--cÆù§F‹’ ËIñ© «x®-åh%@ñÉWR2#‚ç5æ¼E¨Øèúµ¶­àOíO'“æ^k¬fYùoÇ\g¡®ãÂs[Üx7CšÎ×ì–²iöï¿˜dòÆ¥Sqå°02zâ€6(¯'·ø·â)üQwáøWÓn„Ÿf‹SÔd+|òm
+‹±³»'æÚ¸ËqÖx#ÇøÁ5+yldÓõm.àÛßY4‚Qn`
+È Öt öÁ eçw®ï|K¡xGÂ×zõÆšì—ÒµÂZE
+Îã»xÁÇÜ$nŒ¿|cÔ|SâÕĞ,<:IÓzÓß,oj¡•%%v3Œî8è@ õŠ(¬ınïQ±Ñç¹Òt¿íKäÛåÙı¡`ó2À¸zãèBŠñ½?ã­İ÷‡æ×‡‚®Æ—ep±_Ü­ê‰X ]›”,r£ùr~n64¯‹s¬èĞjŞ»ÒtÍuİ4›ÙgWiÈe	¾ 2·.Hù†2¹`é”WİüN»½ñ-ş…á]ë×k²_J×	iL\+8;íãp‘¸r4<!ñë7Ş¿Ò®ôX!{›)ˆuÛ»I0Èr@Îñ·pæ€;J+ƒ×~"]ÛxÆOxoÃ²kº¥µ¿Ú/İ¥ªÂ§nĞÆáÔœtÈëÎÛñ½ÇŠuoL¼Ğ§Òn´!fyC±y‹ ©ÚÀÊCqœPaEpzïÄK»oÉáoøvMwT¶·ûEâ´µXTíÚ8Ã:“™yÛsÁ¾7¸ñN±­é—šúMÖ‘ä,ÑÏ(v/"±`01´;X¹Hn3Š ì(®?[ñ_ˆ­µ‰ôíÁÚ·Ù¶ù×3]GinPËå3çÌş ØÆÒ=èğíüsgz„ún§§Ëå^ØÍ’b$°_˜œí`A ‚¤ĞÂŠó»¿‰×w¾%¿Ğ¼#ák½zãMvKéZá-"‰…gqİ¼`ãî7F_†¾1ê>)ñjè$‹i½iï–7µPÊ’’Œƒ;ˆÆwt  zÅçw®ï|K¡xGÂ×zõÆšì—ÒµÂZE
+Îã»xÁÇÜ$n|C‡ÄºÍ÷‡ïô«½Ä^æÊbvîÆRAÃ23¼mÜ9 ÒŠ( 
+÷×özeœ——÷pZZÇóO $–<’ãRA<7Vñ\[ËĞJã’6®¤dGÎkÌş)x‹Q±Ñõkm[ÀŸÚO'Ì¼ş×X<Ì²ò(Ş1!¸ÏC]Ç„æ·¸ğn‡5¯Ù-dÓíŞ0Éå!J¦ãË``dõÅ lQ^OoñoÄSø¢ïÃğ¯§:Ü	>Í§¨ÈVùäÚcgvOÍµq–ã¬ğG!ñ‚jVòØÉ§êÚ]Á·¾²i¢&ÜÀ ¬8èAí‚@:Ê+çÿ jş"OÚ'G¹‹Âşmõµ¤±YYı¾5ûd#í K¿ ±ÚyùqŞ½ƒÃ¿ˆµOµoø_ûËÙäÿ §Çsçg;¾àq…ë×wµ tQE W¾¿³Ó,ä¼¿»‚ÒÖ<ošyh¹ ±àd?’	áº·ŠâŞXæ‚T‘°eu# ‚8 s^gñKÄZ«[jŞşÔğ²y>eçöºÁæe‘Fñ‰uÆzî<'5½Çƒt9¬í~Ék&ŸnğÛù†O)jU7['®(b²ôßè:ÍÃ[ézŞ›}:¡vÖé%`¹$)' gÜWwñ:î÷Ä·ú„|-w¯\i®É}+\%¤Q0!p¬àî;·Œ}ÂFáÈàşßÙêµë«û¥lm?ÊıEku‘v€1ó†ì	ê@9ïßÙÜ^\ÙÃw—V»~Ñ
+HÅ¸ew(år9ëV+Æş)ÈŞñç‡|g‚	\Øê¢2 L˜Ê‚ ©w*‰ ÅqŸd Š( ç[yn.%"BòI#TP2I'€ ç4A<7Vñ\[ËĞJã’6®¤dGÎkÉÿ h©æ‡áÍªE,ˆ“jq$ª¬@uòäl7¨Üªp{€{WªXXÛéšuµ…œ~]­¬I)¸¨ <œ :ĞŠ(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+ÍÓ?ä!­×âÿ èˆkJ³tÏùk_õø¿ú"k©Ş>¿£4¨¢ŠE…Q@Q@Q@Q@Q@Q@Q@ºŸü„4_úüoı5iVn§ÿ !ş¿ÿ DMZTÙŞ^¿¢
+(¢‘aEPEPE^ÿ íŸÙ×?ÙŞGÛ¼§û?Ú3åù˜;wã¹ÆqÎ(À<ã;Á¼wı³ñé·º¬ˆ×é:A"É9E` ŸœÆ9ùzc%wôIo> üm±ñ–™§O‡t«G¶úåJÎ&]Ñ‚9ùœñØ'Í‚BÔğWÄßë:î©e?„dŸZ¸ûEÊÌ÷%Q·;a0 ™Rz
+öJ ñ;ÍRÓÀ¿´µ¯x‘ä±Òõ=1RÎäÄò,Ì¢ Àl‚
+6AéÇ÷†rşøÏFÓ<sãÙuYgÓä¿»’î+{‹wó"7Ê(;YW¨'¨ÀÉ¯ ( œ>üGÑ¼=ãï_Ş‰ÿ ±5}A¤MI"vHù0ÊpŞ¥±ÜméŒ•éôIo> üm±ñ–™§O‡t«G¶úåJÎ&]Ñ‚9ùœñØ'Í‚B×´Q@/ñƒâ'…uëşµÕ|Í]eHM¿ÙåxçBãq]¼mnüãŠè>|Dğ®¡¢øsÃVº¯™«®Ÿ&ßìòŒ<p‚ãq]¼mnüãŠôŠ(Åş0|Dğ®¡àÃVº¯™«¬©	·û<£è\n+·­ßœq]ÃˆÔ4_xj×Uó5uÓá„ÛıQ‡\n+·­ßœq^‘E x?Ã¿Eğ†-KÂŞ6·ŸNW»{›]Eby`¹ùcR¨Urp¶Ú!¶‘ƒÜh>:ÒüYãH›Ãúİbx.¼Bğy) ®"VeÜùv ¡Û¼× Q@gëzŞáÍ}[V¸û=Œ|Év3íÜÁG
+	<8¡E |ÁğâÓÃ¾1øyqà+İSìzİÖª×¶?èòI·lI–ã
+r‹*á›¾qœV…×¼oñ£Âš¶›¨mğö•¥}ˆËäÌ|¬$ê«†]íÃ Î^½kèú¯öÏìëŸìï#íŞSıŸíòüÌ»ñÎÜã8çåÿ Wş­cJø¥E »†_±ê<¯·Bë€	Ü72íã
+Çî±cÅh|6ĞÁ¾Õ<MâIñ©ê›µMNS)‰—ÚÈŞ]ÎH
+9b¼í°üUà¯‰¾0¸ÒŸTŸÂ&:ãíhsäNÙJŒ¤0À#·Ã½z¦‰ı±ıöÿ Ø´şo;ìüŸ¼víßó}İ¹Ï|ĞÎ×>İø‡Çòx¢x>Ë«]¹ÓîšÉ¥‘Şl¼gËcaò8ãŠõ?øïLÕ|Uká/İG{ éÚ2ÜÉ‰?›¬{I` …OÔõí^™E |ÿ âÿ hß<_¥x?G»‚ŞÖ/2uÕfµv’G’b‰N\¶â¹)Çİ]ıÁÏˆú5ægàÙú•¦è-ZÖ'Ş¢†c*åAV!K6ğ2Nz’«ìPƒü;ñ_bÔ¼-ãkyôå{·¹µÔV'–Ÿ–5*…W' +gı¢i=Æƒã­/Å4‰¼9áéï­Ö'‚ëÄ/’‘ 
+â%f]Ï—`
+¸ûÀÍzó&¤ÚxTÔôx‡ÅŞ·ö7ºtï­ê£;çÚP’	À;NÒ¿7Wà¸¼©üLÓ¯ômcÆ^#¾´‰‡ö…çïm­Ã$ $¬è®¹¶ã‚XsÖ½Â«ßı³û:çû;Èûw”ÿ gûF|¿3nüs·8Î9Å xƒ<s§x/âwÿ ¶b=6÷U‘ı#gH$Y'(¬ó‚øÇ?/Ld®ş‰-çÄ¶>2Ó4éáğî•höÑß\©AyÄËº0G?3;ù°HZ“Ã~
+ø›á}g]Õ,§ğŒ“ëWh¹Yäª6çl&3!êOA^É@7ãé—Ã_</âİXIo Çdö¯z#gU—løB	Ş¸ãq÷N;â~âG¥h1jZ‚İ-ôVl¶öçBÈÍ‚¤ì8ã3×¥âÿ >"xWPğN¿á«]WÌÕÖT„ÛıQ‡t.7ÛÆÖïÎ8®ƒáÇÄO
+ê/‡<5kªùšºéğÂmşÏ(ÃÇ.7ÛÆÖïÎ8¯H¢€</ÀZõ§Á÷Õü+âè®ì­ÚöK‹Q­İ¢»]¨¸P°v„n	ÆâçC@y¾!|i·ñ•…•İ¿‡ô›'·¶¼š"«|Ù‘2™Á29ã8Ø7m-ì”Pƒø/Å:6±ûHkWöu®§§ˆmÊuóc„°Á Œ¤ë»î2|ñN'Ä¯Â—™“[ÔÚxòŸ÷È­<„ôù~RÍÎ½âŠ ãş)è×šÿ Ã=oN°O2é¢YR0	/åºÈU@–!¹"£øO­Ã®|2Ğæ‹ËW¶·[9cY”h†Ï›Ğ²…|‡^§´®ÃÒü)yªK¤yğ[ê2¬Íe¿÷8cåİÆyì ` (Ìî¾#x_WÖuİâ&‹h¶vw·Vz~ lŞEeV
+èd”ŒYê>éº?ƒZ4QxûÄš¿‡RúË•gö ê.™uB’€IÜ¡À<–¯p¢€<oÇÓ/†¾8x_Åº°’ßAÉí^ôFÎ«.Ùğ„($½qÇ<ãîœvÄıÄş JĞbÔµ)º[è¬ÙmíÎ…‘›IØqÆ	 g®;J(çˆÿ <+¯xËÀ—úf«çÚézšñşÏ*ùIæBs†POİ3Ò½Ã<+âíFKUû]Ôq™>Ï,x@@'. uaù×QE x¿ÆˆÔ<¯øj×Uó5u•!6ÿ g”aãÅvñµ»ó+ øqñÂº†‹áÏZê¾f®º|0›³Ê0ñÂÅvñµ»ó+Ò( ğ_ŠtmcöÖ¯ì/<ë]OOÚ?”ëæ:Ç	a‚I×wÜdø9âO‰^3…/3&·¨´ñå?ï‘Zy	éòü¤›{Åá~×­>¾¯á_Ewen×²\XêníÚíEÂ„ƒ´#pN7pG1ü5×¿á'øıâdYOeŞ”(g,pŒŞP­ÆGÍÁ#“ê$ÿ „óûF?øEÿ áû”7ÿ iùşg™“œy|mÆß|æ²üà}KIñ.­âÏ_Z]ëÚšØZFË¼`ıÅ$ÀªÅÉPFÎ§$ò³õ½oNğæ>­«\}Æ¾d»öî`£…H
+Ğ¢€>Pğö·§Ã?ø³@ûGüLş×ï‘±¿Ôù¶©»v6ıî1œûVÆ½âãNøEæë]"T†ùü§SÄ-ƒË`w9íšú^Š ùsÂöúg…^çOñ‰|]¡i·n´½GN–Hmoâ*˜}ŠŒC•(Ç“€v¶Ò¼ö~‹ÁÚŸÄÍ:ÿ FÖ<eâ;ëH˜h^~öÚÜ2JJÎŠë‘»n8%‡=kÜ( <Wªü=ñg‹uhü_¥ßh3YİÉi³fí ½01FF2 È~ëm€ 7OğƒTñçˆu¸–÷UÕ¼óIa©ê¨Şc¸p #1Ë.ç
+ƒ„,TûóÇŠõ_‡¾,ñn­‹ô»ík;¹-"Ölİ¤¦(ÈÀF@`İc ° éşj ¼ñ·Şêº·ƒşi,5=UÌwf9eÀ|ñÁPp…ŠŸ`¢€>t¶ñ9½Õ5Añ'Ç^ ğæ­opaKÒ„$QıíÙ8;ğ¤äáAÜÀŒ[ø­éÖ>9ñV“sq|—Ú•Øû$Z‚1¹“Ë3³ù¤	 9l‘“œWĞP…ø^´ø>ú¿…|]İ•»^Éqcª5»´Wkµ
+6ĞÁ8ÜAÁÇğ×^ÿ „Ÿã÷ˆu‘e=”wzPx¡œaü°mÂ1ÿ yB·7O¨x“şÏíÿ áÿ „sì>Pßı§çùfNqåñ·}óšËğWõ-'Äº·‹<I}iw¯jh#ai,Vñƒ÷’7«%A:œ’@<ƒFÒm<ªjz‹¼Câï[‹‡{İ:wŠÖõFÑˆóí(Ià§i_›«ğ\^Ôş&i×ú6±ã/ßZDÃûBó÷¶Öá’PVtW\ÛqÁ,9ë^áE cø«Ä6şğ¾£®].øí".$yN2Ææ*33“ÅIá½VmsÃZn­=´v¯{n—”Ê\nQ¸ªäí#<pr9êsüiá%ñ—g¦O{%½š^Åqw†ÅÔIœÂØe AÏ8*2t”âÿ >"xWPğN¿á«]WÌÕÖT„ÛıQ‡t.7ÛÆÖïÎ8®ƒáÇÄO
+ê/‡<5kªùšºéğÂmşÏ(ÃÇ.7ÛÆÖïÎ8¯H¢€<Á~)ÑµÚCZ¿°¼ó­u=<ChşS¯˜ë%†`E'\}ßq“àçŠti>%xÎ¼ÌšŞ fÓÇ”ÿ ¾Eiä'§Ëò~l~uïPøúeğ×Çø·V[è1Ù=«ŞˆÙÕeÛ>…‚w®8çœ}ÓÃBøŸ xŸÄéZZ– …7K}›-½¹Ã²3`©;8Á$õÇiE QE x¿ÆˆÔ<¯øj×Uó5u•!6ÿ g”aãÅvñµ»ó+ øqñÂº†‹áÏZê¾f®º|0›³Ê0ñÂÅvñµ»ó+Ò( øwâ¾Å©x[ÆÖóéÊ÷osk¨¬O,?,jU
+®N VÏûD6Ò0hx+Ç:uçÇíSY¿Š}2=bÒ;[(g‹»9€E ãz¨lıÑŸ¼F	úŠ ñ¿Æmyü3à­:8åÔ5ß?ï’aURTïr[°‰ºód®~iqøÒçÅrù÷:œ±,0›‡Ş–ˆ…qòîä½[ÜÙè( ¢Š(Äÿ h­6´mÄJÒË[Õ·Hä"H
+²³’b`TœÆ;r8l€1í•âi~.ĞæÒ5x<Ûy9V^'f?™H746F±ÒíÚF‚ÊŞ;xÚBE
+	À8‚€.QE QE QE QE QE QE QE QE Vn™ÿ !kş¿ÿ DCZU›¦ÈCZÿ ¯Åÿ ÑÓ]H–ñõı¥ER,(¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š ÍÔÿ ä!¢ÿ ×ãè‰«J³u?ùh¿õøßú"jÒ¦ÈòõıQE‹
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€3õ=wGÑ<¯ímVÆÃÎÏ—ö»„‹~1œn#8Èéê*K-[MÔD°Ô-.4İ`™\ªºîBpx¼ƒÜr+Æü_áÍgRø‹©ø‹ÃIáÏíŠ;)´›ùc§‘×äg
+¿4lzƒ™mêkSá=æ‹Œ|W¦E İø{\‘Òk-åÀˆœn‰‚.isFJ¼ Dµñg†ï¼ÿ ±øƒJ¸ò"iæòoc.5ûÎØ<(ÈÉ<
+’ÏÄº¡ouqe­é·0Z&û™!ºGXWåÈ8Q…''ĞúW“ø_IÓm¿hßépiö‘içGmXŠ²Ûn ÆNF9É©>XYÿ Âeñ;Nû$aşĞ}›Ë_—æ\.Í½6ãŒtÅ z`ñ§…ZİîÄº1QäñmV`J‚w`ˆöŸJÔ±¿³Ôìã¼°»‚îÖLìš	ˆØ$0àà‚?
+ğO†ğÎ­ñ_Æ«¨ÙZLtëÙVËOu_(!–Efò±‚²ïgiút6>ı£bÑ|:cŠÃX²g¾³I2JIÕ
+pŠ@9À•±€F =sS×t}ÊşÖÕll<ìùk¸H·ãÆâ3Œ¢¬XßÙêvqŞX]Áwk&vM‚DlppA…|áàím{\ñ·}ğşêò]´wQŞê1D,½#L—Úç6Œa³×øÃ>*Ñ>(Kª[øGû@Ôbd¾µşÒŠâ8ÜÊñª˜ ÖÚñ€@PPÿ „³ÃÚ?Ùßği_nó|³}¶?3ÌÎİ›sÙãsV-uİûQŸN³Õln/ İç[Cp${NÖÜ ä`zñ¿Œ^ÓWÇ^K+hôéõ-MÅÍİ‚,3³4°|ûÀÉpXNpNkĞ4…¾Ğoô+í6ŞK{%T‘vî¹2&Öi›n\Œ’0@ q@eıõ¾™§\ßŞIåÚÚÄóLûIÚŠ	cÉÀ¥p<]©ë~ÔüaâkÛM;G¹¸Ûao#F‘ÛD§ac) ±g;~lr¹  Iñ·şI»ÿ nÿ úQhxÃGÔşx~ÌÚXİØI§ÁæÂcI"i ÷/BÂ@ÄçÀçš Ø‡Å¸û?‘â*_´Ê`ƒeìmæÈ6åæoxüÃÔU‹]wG¾ÔgÓ¬õ[‹è7yÖĞÜ#ÉÓµ·(9$†¾`Ğ4=.OÙïÅZÜ–I©¦¡1İ:nxĞ<)?wıcçÎps]%æ•cáë‚÷:E´vW¯İOË$æCn_{õ`|Ç' 1(Şõ=wGÑ<¯ímVÆÃÎÏ—ö»„‹~1œn#8Èéê*Åı§gå…Üv²gdĞH$FÁ á‡øWÎşÖ×µÏkwßàñ>¯%ÛGuî£BËÒ1Á™q¡phÆ=¼3â­â„º¥¿„°4F&Kë_í(®#À,¯¡ù€ mm¡ß õO]ÑôO+û[U±°ó³åı®á"ßŒgˆÎ2:zŠ’ËVÓu'‘,5K§#wX&W*®»œ/ ÷Šñ¿øsYÔ¾"ê~"ğÒxsÅûbÊm&şD˜éäuùÂ¯Í æGzšÔøOy¢Áãé‘h7~×$tšçKyD°"'¢`‹€Z\ã‘†R‡o Ó5=wGÑ<¯ímVÆÃÎÏ—ö»„‹~1œn#8Èéê*K-[MÔD°Ô-.4İ`™\ªºîBpx¼ƒÜr+Æü_áÍgRø‹©ø‹ÃIáÏíŠ;)´›ùc§‘×äg
+¿4lzƒ™mêkSá=æ‹Œ|W¦E İø{\‘Òk-åÀˆœn‰‚.isFJ¼ LÔõİDò¿µµ[;>_Úî-øÆq¸Œã#§¨«7özœw–p]ÚÉ“A ‘ƒ†Gá^7·¥xÇÄ¶±á…Ñø™Ò+­KQ8UİU¬Á€“§‘¹G>	­µŸiÍm%Œ×±ìÓÍÁ•m[tÊÊ8b*–ş-‚€=sS×t}ÊşÖÕll<ìùk¸H·ãÆâ3Œ¢«xm¯!³ ÒÔÛ<¨Eì{äŞM«œÁ”ŒuÈÇZò„z—ãÏø‹ÅV^ø…µ†{;ÔóªaH'É^C İœöŒa³ŸàxNı ¼C¥ØÁİ……¡–ÔM¶"PğµpÈÌÊŞÁ9Í {†§®èú'•ı­ªØØyÙòş×p‘oÆ3Äg=EX±¿³Ôìã¼°»‚îÖLìš	ˆØ$0àà‚?
+ùÃÀÿ ÚÚö¹â-nûáü'Õä»hî£½ÔbˆYzF ˜3.1´1ÎmÃg¯ğ7†|U¢|P—T·ğö¨ÄÉ}kı¥Äq¸•ãT#0 ­´;ã € &­âİ_Âÿ tı/Tš9¼;¯¢ÇdÆ0­kp¸RƒnYÃ1L– 0`€ŸD¯ı¤~Çÿ n“¿Èûwö‡î·cÌòü·ß·¾ÜùyÇÛÕíóÃko-ÅÄ±ÃH^I$`ªŠI$ğ æˆ'†êŞ+‹ycš	P<rFÁ•ÔŒ‚à‚9ÍcøÃNÑuo	ßØx†æ;m.dUšwœB#;FŞx6Üg‚p9ÅIá]KĞ|/§iº+ùšlQ¾o™æ†;‹îÅ‹qÇ< 0(bŠ( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( ³tÏùk_õø¿ú"Ò¬İ3şB×ı~/şˆ†šêD·¯èÍ*(¢‘aEPEPEPEPEPEPEPn§ÿ !ş¿ÿ DMZU›©ÿ ÈCEÿ ¯Æÿ ÑV•6Dw—¯è‚Š(¤XQE QE QE QE QE QE QEçs|ÑN³{¬Yë> ÓuÛ‰§âÂôDÌ$`Æ>î¯<“Ï
+xBğ|·V1Ïq©]gí:…ä¦YæË9nƒ$ó€3€NHÍh\x§F´ñE§†§¼Ù«İÄf‚ßÊs½ bNà6¸İOo¥lPâ‡:^½®n+ıWGÔÌ^L×ZMÏÙŞá8ÀàçGäÎz?Ã_|<¿¼ñ%–­¬ÚYÀ’\\Ú}£u¹Qød¹Â%rIÈîzèx_âV›âŸÜø~-'YÓõksq,zºÄUrƒÜH'z‘‘Ò»J ùSBÔ<}ã_êÚ×ˆµ-!äÔŞãJ¿Ó¼Ô”Æí6ñÂ6ĞU“9 öşğ?AøSÀƒå¸º±{Jë?iÔ/%2Ï6X±Ët'œœrFkCÅ>$³ğ‡.õËøç’Ö×fôAs¹Õ uaŞ®i:”:Îcª[¬‹í¼w¬€
+ê‚Fp}M rz·Â½Q×%Ö¬nõ]R¸İö™ô{³ŸvÒwÕrqŒ’IÉæ¤Ğ¾é7ˆ#×§ÔucT…6[Üê—¦fpÀ…À ‚¸lã¶9®ÒŠ ó;Ï‚Ún¡qkq{âß\Ïhûí¤›QWh[ å	L©Êƒ‘è=+¤ğß‚ÿ áÔd¼ÿ „›Äz¦øŒ^N§çÆ¹ î´a¸Æ}	õ®¢Š ¯co©é×6‘ù–·Q<3&â7#dr2	é^wà¯ëúg„õoj÷·vÖ÷´İ_M¸Xex™¼ÆU BÛ³Ÿ0€H ÓÅ>$³ğ‡.õËøç’Ö×fôAs¹Õ uaŞ®i:”:Îcª[¬‹í¼w¬€
+ê‚Fp}M yı—ÁÇDÔthµ¯>ı –İ®“``ñ¾õ_/ÿ v«’¤“üÑîtí*Î_x¿²¥yl¦7ˆd‡"0[gÊ«å)P1‚OáéÅø_âV›âŸÜø~-'YÓõksq,zºÄUrƒÜH'z‘‘Ò€)Ü|!Ğšò;ûO\Òõ/+Ê¹¾ÓïŒS^p¹iN,Jn$¹‰'&®h_ôÄëÓê:Î±ªB›-îuKÓ3@¸`Bà AÜ6qÛ×iE yÜßtS¬ŞëzÏˆ4İBöâiç¸°½3	1…û†@ëÏ$àcsÂ Ğ¼-ÅÕŒsÜjWYûN¡y)–y²Å[ É<àà’3]Eçs|ÑN³{¬Yë> ÓuÛ‰§âÂôDÌ$`Æ>î¯<“Ï
+xBğ|·V1Ïq©]gí:…ä¦YæË9nƒ$ó€3€NHÍuPŸ¿ÂM.+Ë©tÄz½Ì¦f²Ò¯üˆÈ •M§ÀïÇA€ xcá>‹àÿ >«£jZÌîÌö?jİÁYvå‚ï;wAç&ºOø’ÏÂ>»×/ãK[]›ÒÎçTÕ‡z¹¤êPë:5©n²,¶ñÜF² +¨`	Áõ4å~:Óşh^-7wŞ Õ|1­ŞDfMåŒÜ#¶2ÛQ”|Ñ’qŒœ““ƒYü=iÄo]ğıµÜ~[%³³¸»GV»l i‘†¡˜Ü£hè=Ò¸¿üJÓ|Sâ[ŸÅ¤ë:~¡mnn%Q·XŠ®Pc‰ïR2:Pz·Â½Q×%Ö¬nõ]R¸İö™ô{³ŸvÒwÕrqŒ’IÉæ¤Ğ¾é7ˆ#×§ÔucT…6[Üê—¦fpÀ…À ‚¸lã¶9®ÒŠ ó½[ÂZ¿Š>,éú¦©pøw@E’ÉLšêá°ÅÆÜ2`™H>XÀ!Û‰EÅøïÂSxÖÿ @Òî¡¼?Ä—šƒy…$fDÛkpÆGİÀáxe8ÏiE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE Vn™ÿ !kş¿ÿ DCZU›¦ÈCZÿ ¯Åÿ ÑÓ]H–ñõı¥ER,(¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š ÍÔÿ ä!¢ÿ ×ãè‰«J³u?ùh¿õøßú"jÒ¦ÈòõıQE‹
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€>ñF‘â'ı¢t{h¼Qå_\ÚK-•çØ#o±Â~ĞD[3‰0ÇŸ›=«Ø<1¤x‹KûWöÿ Š?·<ÍOúvŞN3»î»9^½6û×'ãokñüHĞ¼s éñêïcnö’éÆámÛeÃ‡n1ûÃ‘××'nÆ…ªøÿ TñmªxoMÑ4XÓ$·Ÿi¸•ˆlÚ?” vd0gö ó¶´×o¿i[h¤]Ãéñy·’Û‰Ú8ÄvçäCò–,|Ü,z]§Ãêúİï‰tjhï.ôÓoöõŒDn¼ŠF¼)YéØà“‡á=ÆCãEÿ Šõo
+ÿ gØêvŸf“ş&Ëö}©å9l˜€ÀóÛ“á¦ã-Ç> ½Õ¼+ö[~í®dŸûBû&®j’_&@¹ÇZ Ğø¥/Œ¼9£êŞ'Ò|aö{<Ÿ/MşÌ…öîdŒşõ²O$·#Ú»	ß\j~Ğïï$ó.®´ûy¦} nvKI=+Ïş"Ÿø«AÖ<5gà\ZÍ(Hoÿ µ ùÑ%VWòÎÜpOö­_øÊÎ×EĞ5oıŠÆÒÑ-¤Ô?µa—\Xå¯?1P0½¨—ñçÄ=SOø‹7‡äñü"Ze­¢ËñÓ>Øo]¶¯
+2àİ$äë>ê$ÔoõÖÖ5­7YÓ!x!Óïtæ„Ç!|ÂBUÎc,­À$íùq\ıä_¤ÖuUÖ|#¦ø«A{ÙŸeu-´mnŠß»!‘ÈÁË|§;ŠÇÃ/kZŠµŸßÚÚh–š’C´˜È±ùÄ™ mÈıã` ùhÕ(®_Çÿ ğ—Â.ÿ ğ…ùÚŞjgÍÙ»ËÏÍ³É»8ûÜmİq]‡Û?³­¿´|·yIö³çËó07lÏ;sœgœP›üR—Æ^Ñõoé>0û=ŒO—¦ÿ fBûw2FzÙ'’[‘í]Ç„ï®5?èw÷’y—WZ}¼Ó>Ğ7;F¥$•çÿ OüU ë³ğ.-f”$7ÿ ÚĞ|è’«+ùgn
+8'ŒûVÇ¯üegk¢è·‚~Åcih–ÒjÚ°Ë.,ò×Ÿ˜¨ŞÔ‡£x‹ÆŸuMNëÃšÕ¦á»‡··º[5¹–í†ÜY1´mùº.7óHÃøkıº>?x…<Kä^=(Gpğcd›Mº«ŒyB·A÷º/A±áÿ øÛáeåõ‡ôÈ<Máë¹Zh"k¸í§·|(Ë³·Œç`?&H9şĞ~#é_n|Q­ø~ÏíX’ŞæX/b-‘ŒD¹,ŞZ¦ÜwÛ÷›© ÷
+Ï×^â?jrYŞAet¶’˜n®Âá×rAAÁ9Ò´*½ı¾§§\Ø^GæZİDğÌ›ˆÜŒa‘ÈÈ'¥ x?ö×Ä?ú+¾ÿ À»ş3]‚u?\x¾Æ-[â7…5{ó<ËˆZivØÚ%<1Á]ü)/‡Ÿô/äíÇÿ ­áoƒ|9¬A«i:7Ùï İåËö©Ÿnå*xg ğHäPaEP—üR—Æ^Ñõoé>0û=ŒO—¦ÿ fBûw2FzÙ'’[‘í]Ç„ï®5?èw÷’y—WZ}¼Ó>Ğ7;F¥$•çÿ OüU ë³ğ.-f”$7ÿ ÚĞ|è’«+ùgn
+8'ŒûVÇ¯üegk¢è·‚~Åcih–ÒjÚ°Ë.,ò×Ÿ˜¨ŞÔ‡£x‹ÆŸuMNëÃšÕ¦á»‡··º[5¹–í†ÜY1´mùº.7óHÃøkıº>?x…<Kä^=(Gpğcd›Mº«ŒyB·A÷º/A±áÿ øÛáeåõ‡ôÈ<Máë¹Zh"k¸í§·|(Ë³·Œç`?&H9şĞ~#é_n|Q­ø~ÏíX’ŞæX/b-‘ŒD¹,ŞZ¦ÜwÛ÷›© õnÿ Â/¨ÿ Â5älùGì¾~6îÏ8Ï±»¾]ØÏ£Â¿Û¿ğ‹éßğ’ùÛ>PûW‘»³ÆqÆìcvß—vqÆ+Ÿø­ë¶qhú…n ‡_Ö.Ìp¼ÈHcRò¾H*1òç ’	Ú	éÚACoO4“º V–@¡œ÷ĞO^ €P”QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE ›¦ÈCZÿ ¯Åÿ ÑÖ•féŸòÖ¿ëñôD4×R%¼}FiQE‹
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€3u?ùh¿õøßú"jÒ¬İOşB/ı~7şˆš´©²#¼½DQE"ÂŠ( Š( Š( Šñÿ Ïq¤i>ñ>y=®§§j+wŒŒ$d¶Aÿ ª,9¯` Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( ÌµÂ\4Q™ÑB£r«XÔUIöJ’Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¬İ3şB×ı~/şˆ†´«7Lÿ †µÿ _‹ÿ ¢!¦º‘-ãëú3JŠ(¤XQE QE QE QE QE QE QE›©ÿ ÈCEÿ ¯Æÿ ÑV•fêòÑëñ¿ôDÕ¥M‘åëú ¢Š)QE QE QE yí"§Ã›Uhc¾§«1lÆ|¹åÁ8s‘†<gzG‡4Ûí#Ãöz~¥ªÉªİÀ…öHö4£'nFO!p2I'<šÃñ¿€-üuy£FşxôË	^[‹òÑ Ë6ãgáØ¹Ív QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE Vn™ÿ !kş¿ÿ DCZU›¦ÈCZÿ ¯Åÿ ÑÓ]H–ñõı¥ER,(¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š ÍÔÿ ä!¢ÿ ×ãè‰«J³u?ùh¿õøßú"jÒ¦ÈòõıQE‹
+(¢€
+(¢€
+(ª÷ö¿nÓ®lşÑ=¿ŸÅç[¾É#ÜÜÙ†rc@(¯Ÿ<£x›Äş5ñF‹/<A‹£Ş´NË|ÆêBTŒ<(Â±lpH_—¡^¯Ãš¾»áŠ©àMcYŸYÓoíçLà,m²¹Á<$ƒ?7DÆĞH ±Uïæ¸·Ó®f³µû]Ôq;Ãoæü× •MÇ…ÉÀÉéšñ¿
+ÛjPüeñOƒåñ?ˆ.´øôr"’æıXÙÄzÇ˜Ø qZo5&ñWô»İcRÔ`ÓoRŞÙ¯îZfUWsÏ £88 “À>?¸ñ£¯X^hŸÙWZ<©Éö±>\™…ƒéœæ»ŠùãÁÕ<Kñ;ÇpÛx†ûHÓ!Õd’ïû>_*yŸÌœFã…rzçzÿ júï„>*§5f}gM¿´k2{€x°]¶Êçğ’üİA  lxÛÇ¾"ğwÛ¯áûf‰kåÿ ÄÃûR8÷nÚ?Õí,0í·ğÏJì4-OûoÃÚf­äù?n´ŠçÊİ»fô·8Æqœ
+ãş6ÿ É!×íßÿ J#®ƒÀŸòO<5ÿ `«_ı´cÅ:ÅæƒáË½NÃIŸVº‡fË(3¾\º©Æ “Ğô«šMäÚc{qi%œ÷ñË%´™İ2‚PäN:yŸÅıóLğæ³âÛøÒê?#eœÙrñÆp€ddzõ9®óÁsÍuà_\\K$ÓË¦[<’HÅ™ØÄ¤’O$“ÎhrŠñ
+6»ñvóU×.<Qªé½Ü–Ú}—(¶›¢Ò°Î~R¼ß366ƒĞxGÃ1ğÿ Ä;±©k—Ú·†—Ot²šæçs2«‘s–ã~W#î€H¢Š(Å:ÅæƒáË½NÃIŸVº‡fË(3¾\º©Æ “Ğô«šMäÚc{qi%œ÷ñË%´™İ2‚PäN:yŸÅıóLğæ³âÛøÒê?#eœÙrñÆp€ddzõ9®óÁsÍuà_\\K$ÓË¦[<’HÅ™ØÄ¤’O$“ÎhrŠğ=+FÖ®¾2ë_x4»K%™¤kâó¸"Â¹áç0\íˆšë>kš¥Ö­âÿ _ßÏo¡ê[›·ß;!’Q‡âÿ Vã¹0 Y{ã]6ÇÇšwƒå‚ìêöæâ)Ê
+‡wg?»n€õ‡I_?ø£Â¾wí£éßÛÚäÚ’İ}¥/15¶~ĞŞ\-’1·yá­{†<+ÿ ÏÚ¿â}®j¿hÙÿ ![Ï?ÊÛŸ¹ÀÆwsëé@Q@âşmwâíæ«®\x£UÒ4{¹-´û=.Qm7D;¥aœü¥x%¾flm/ÁÖ&—ãMÿ ‡5ïë7I£ÛÇr†Şí£à!‡`‘A7¤çæ<’ï”WÎ|F²ñ†¹¨Şø“Çš¯‡´˜åtÓtı-$Šb‡y]Áà	o˜¶6ŒßøqñÇÄSáH¼K?‰4K¸ôû»ˆXOÒ•œ+7ÊgæÎFT zeïtÛiŞ–³¨_Û›ˆ¤T_((1İœşíºÔ~%|ÿ â
+ùß´N§ok‘ÿ hZKuö”¼ÄÖÙûCyp¶>HÆÜç†>µìğ¯ü#?jÿ ‰ö¹ªı£gü…o<ÿ +n~çİÏ®¥ rz—Æ7F·[SÂ^.±œ"Éu§,J[àp3€N=tñ§ü$zŒ–ğŒøKÙ—ÎÔì<ˆÛ¡··9Ç >•ÃşÑßòO4ÿ û
+Çÿ ¢¥¯` ¼ÿ Âu{Ç7şÕ¼5ı‘}eiö™?Ó–ã¼x_•@äHA>•ËøQµß‹·š®¹qâWHĞ-îä¶Óìô¹E´İî•†sò•à–ù™±´ÿ †º~©¥|~ñ†³¨ÿ i_[éB6»#TßË-şÖÍ¹ÎyÏ-Ô€{År~
+ñÄ>9}ZãO±‘4›;omzòİ6Ü¹òñ”*Fz† SøÁ}q§ü(×æµ“Ë‘¢HIÚRI7ú«0öÏÕÏ†:l:WÃ/ÛÀÒ2=’\äºQæ°à79ÛzĞ <q?Á·ö2[O5ºÜi÷"@ët»Ip@Œ‚®zì=2 õ•ã´$mc£xwÄv³I¡¦êamØ*)}ÄrCB˜í× ööJ (¢Š æüsã;øjMbú9&%Ä6ğ'iH$.q…RI= 8à&òmGF±½¸´’Î{‹xå’ÚLî…™A(rÈ'N‚¼öŠÔ¡—FÑ|:« ¼º½[„’@#€*«!V!AÌƒ¿–À#>Ù@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@féŸòÖ¿ëñôD5¥Yºgü„5¯úü_ı5Ô‰o_ÑšTQE"ÂŠ( Š( Š( Š( Š( Š( Š( İOşB/ı~7şˆš´«7Sÿ †‹ÿ _ÿ ¢&­*lˆï/_ÑQH°¢Š( ¢Š( ¢Š¯co©é×6‘ù–·Q<3&â7#dr2	é@àÍ?Å“üNñİÿ …5f¶ÕdâÓPä\#É>	ÙÎå*1Œ}ãÈè~øy©GãñŸ‹µXõsc%´¡–ŞÍNåÂg–[ 0Y‰ÜÇuIÿ 
+Káçıßù;qÿ Ç+Ğ(ÍõŸx’Çâ-×Œ¼#u¥5Ö¡iök¸5a&ÄÇ–FcäF¼˜=s…Ëğ<}àÿ k÷Ñê>¿MYäšI®«#Ê¦&(ªAwÀ'!O½rŠ ñ=á×Ä¯x—Uñ±áõ¼Ôn[‹&iÚÖ`åØ“ò†X¸ÉÁl°Ôxcáæ¥Œ_Æ~.ÕcÔ5ÍŒ–ĞZ†[{5;—	Xml @Áf'sÕè”P—øãÃü]¦jš“Â‘éRşéË\	Äk tÜpWwÊ¹ÀÇ\V§ƒ´ßˆ:0Ò´½Y¼0Ú-•ºÛ³ZƒpU#Ú„ns¹àqœWyE y<7ñÅÚf©¡‰<)‘u/îœµÀœF²MÇw|«œuÅjx;Møƒ£+KÕ›Ã¢Ù[­»5¡¸7R=¨Fà9Åw”P•Ø|<ñWµKÇğ«¦¶“zåÛLÖ¥-ÛåÁFL–?xdã€ ï ¹ øÆ³ø-kÅ^#€Go¼A¤é*Élw"®é°ÏüGkg0Zî( Š( /ñÇ†ş#ø»LÕ41'…#Ò.¥ıÓ–¸ˆÖ@é¸à®ï•s¸­Oi¿ta¥iz³xa´[+u·f´7àªGµÜç!sÀã8®òŠ ò¿ø+ÆÖ?.|a­Oáò—öæŞî;'›!B Seëº4ÎIà·¶ x+ÆŞñ­ªj3ø~K=já®/Öİæ2#~ñ”E¹@tœî'ë^©E yÿ Œ¼¬_xÓGñ—†®¬WWÓâkc¤ÈxÈnÊÛ‡˜Üt91†¹¡X|C—ÄßxZÑ ÓâM§NÒíÙÖàß3<ƒzJ	n09ÏiE QE y|ñgƒõÍFëÀÚ¦”tÍFWšM/TÖg8 ÅåÀ‡EÂ…v¿Âİ?T¶øåâc©j?Ú÷Péû/oâŒNÍóĞm*èF~UÆ¤xÇÁ^	ÖåşÛñ]¬èñ,&ê{É DMÇh$:¯Şs××©áxsÃÚZ/†ìm ´ÄĞæu9e&BIqóNãŠ âàğ‹<®j7^Õ4£¦j2¼Òiz¤n°Û9Á/+ş:.(;°ÜĞ¬>!Ëâï¼G­hĞiñ&Ó§ivìëpHo™A½%ƒ·ç´¬½7Äº³pÖú^·¦ßN¨]£µºIX.@É
+IÆH÷ÉøËÁÅ÷4xjêÅu}>&¶0jAü‡Œ‰ì İ¸yÇC‘Ókš‡Ä9|A÷ˆõ­>$Útí.İn	ó3È7¡¡àvãœö”Pø×Á_|y£C¥ê“øF"¸[…kW¹V,—r°Æöô®óÃğhÉÿ 	Gü#ŸaòÏìÏ?Ìó21Ÿ3¸İïœWQE y]‡ÃÏxT¼jºki7®]´Í`JRİ¾\dÉc÷†N8
+òşøuãïüA“Ä×Æ©=ò$Z„·/˜QŒm B€
+ìÚœã |«Ğ{%â¯[ø¯Âú‡tÛ#»ˆ |å¸9GÀ#;X)ÆyÆÇüÔï?áŸÃ¼3Á¬ø~_³\E;o-‰h˜cn2ª#j8"½"Š ñÿ Ø¿ÄOŠG„bwÒ4l]ë.¬Â<¸#aòüÅF)$	Xòµ{PEP•şĞUö§ğåÆÚIÅ•ê]\lä¤B9¾:ã É<G¤i:”:Îcª[¬‹í¼w¬€
+ê‚Fp}M\¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+ÍÓ?ä!­×âÿ èˆkJ³tÏùk_õø¿ú"k©Ş>¿£4¨¢ŠE…Q@Q@Q@Q@Q@Q@Q@ºŸü„4_úüoı5iVn§ÿ !ş¿ÿ DMZTÙŞ^¿¢
+(¢‘aEPEPEPEPEPEPEP—øŸâÆ£àïÚÙkşû™uvñC¨h¬›¡W¥òÑ++m<óŠ¹áß‰×zÏˆ4‹+Ï]é¶ÚNúUä·Í:Ä7eâ y'9È;«Ï>#üDğ®½ã/_éš¯Ÿk¥êkÇû<«å'™	ÎA<#tÏJõÿ üDğ¯‹µ,4=WíwQÄfdû<±á œºÕ‡ç@w®ï|K¡xGÂ×zõÆšì—ÒµÂZE
+Îã»xÁÇÜ$n|C‡ÄºÍ÷‡ïô«½Ä^æÊbvîÆRAÃ23¼mÜ9¯Ñ´›Ojšâïø»ÃÖâáŞÆ÷Nâµ½Q´gb#üûJA8iÚWæêüƒµ?‰šuş¬xËÄwÖ‘0şĞ¼ıíµ¸d”•×#vÜpKzĞŠ5'í£ÜÅá6úÚÒX¬¬şßı²ö€%ßŒGXí<ü¸ï^Áá_ÄZ§Ú¿·ü/ı‡åìòÓã¹ó³ßp¸Âõë»Ú¼ïÇÓ/†¾8x_Åº°’ßAÉí^ôFÎ«.Ùğ„($½qÇ<ãîœvÄıÄş JĞbÔµ)º[è¬ÙmíÎ…‘›IØqÆ	 g® 2ô/‰zÎ­âcÃW^û¯§iïv-ÿ ´’O5ÀB‘î
+wy‹ódã¸­ øşãÆz½ay¢e]hò¤3'ÚÄùrd2g¦sšâï5KOşĞ:Ö½âG’ÇKÔôÅK;“È³2ˆ°(Ù§Ş§ğsÄÚwü,¯ÚÜ™ìïµ@Ëiiq,Ÿ+Nî¯€B2ƒÈ'¯4ÔxŸâÆ£àïÚÙkşû™uvñC¨h¬›¡W¥òÑ++m<óŠ¹áß‰×zÏˆ4‹+Ï]é¶ÚNúUä·Í:Ä7eâ y'9È;«Ï>#üDğ®½ã/_éš¯Ÿk¥êkÇû<«å'™	ÎA<#tÏJõÿ üDğ¯‹µ,4=WíwQÄfdû<±á œºÕ‡ç@}¿Å¿Oâ‹¿Â¾œëpD$û4Zœn£![ç“hT]Ù?6ÕÆ[³Á8‡Æ	©[Ëc&Ÿ«iwŞúÉ¤ˆ›s V@ `v°ã¡¶	ó?ø§FÖ?ijşÂóÎµÔôñ£ùN¾c¬p– q÷}ÆOƒ)Ñ¤ø•ã8Ró2kz›OSşù§Ÿ/ÊAù±ùĞ¼QEåÿ ¼E¨Øèúµ¶­àOíO'“æ^k¬fYùoÇ\g¡®ãÂs[Üx7CšÎ×ì–²iöï¿˜dòÆ¥Sqå°02zâ¼¿ãÄO
+ê	×ü5kªùšºÊ›³Ê0ñÎ…Æâ»xÚİùÇĞ|8ø‰á]CEğç†­u_3W]>M¿ÙåxáÆâ»xÚİùÇ%ßÄë»ßßè^ğµŞ½q¦»%ô­p–‘DÀ…Â³ƒ¸îŞ0q÷	‡#ƒøOg©ür×®¬tìhN•±´ÿ (Göy­ÖEÚ ÇÎ°'© äU‡~ ‹áZ—…¼mo>œ¯v÷6ºŠÄòÁsòÆ¥Pªäàlÿ ´Cm#‡‚¼s§^|~Õ5›ø§Ó#Ö-#µ²†xØ»³˜YÚ7ª†ÏİûÄ`oñV½ÿ Ç…õkìSŞı#'‘ ù›œr{(ÎY¹Â‚pqŠ<+¯ÂOá};Zûö_lˆIäN>eçêq•n2¤â³üyãøB´8/£Ó'Ôî®®ã³¶´…°d‘ò@Î	è§“r:HÍo\Gs”DËª¶9ˆŒ÷ÀÏ  	(¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š (¢Š +7Lÿ †µÿ _‹ÿ ¢!­*ÍÓ?ä!­×âÿ èˆi®¤KxúşŒÒ¢Š)QE QE QE QE QE QE QE fêòÑëñ¿ôDÕ¥YºŸü„4_úüoı5iSdGyzşˆ(¢ŠE…Q@Q@Q@æÿ ¼]®ø-\ÓZ	4ÑvÖ÷Ör›Ë”Ãm%pNAêW!†EzE QE QE QE QE QE QE QE QE QE QE QE QE eŞè:‡ˆ4½jádk½-'[\6L¡U˜çjàvùÁ”Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@Q@féŸòÖ¿ëñôD5¥Yºgü„5¯úü_ı5Ô‰o_ÑšTQE"ÂŠ( Š( Š( Š( Š( Š( Š( İOşB/ı~7şˆš´«7Sÿ †‹ÿ _ÿ ¢&­*lˆï/_ÑQH°¢Š( ¢Š( ¢Š(Èÿ h¡	øsje’Eq©Äb
+ƒ7—'r6»Fy cœHğåÖ¯yáû9õí>=?Td"æÚ9DŠ¬	0@Œœg8Íq¼#®øæ-CÓVôÓv××’›}«„Âî²N ê%FMzE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE ›¦ÈCZÿ ¯Åÿ ÑÖ•féŸòÖ¿ëñôD4×R%¼}FiQE‹
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€3u?ùh¿õøßú"jÒ¬İOşB/ı~7şˆš´©²#¼½Ds~%ñÎ‹á-SH±Ö%’Üj"Ep@ò¢)·ıaÎTê3‚S€3]%yíÓ|9µx¢‘ÒN'••I¾\‹–ô™FOrzõ+U±×4»}OL¹æÎá7Å*taüÁ ƒÈ ƒ‚)\¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¢Š( ¬İ3şB×ı~/şˆ†´«7Lÿ †µÿ _‹ÿ ¢!¦º‘-ãëú3JŠ(¤XQE QE QE QE QE QE QE›©ÿ ÈCEÿ ¯Æÿ ÑV•ek.aŸK¸1LñÃvZO&&¨0Ê¹Â‚q–§zöí§üñÔ?ğ]qÿ ÄS³fJQ‹wÕ‘å¿´TË7…t]$º…æ¦¯oolÍ Te8ÀëºDêwqk×,l,ôË8ìì- ´µ;!‚1.I'
+8$ŸÆ³f¾Ò./-¯&Ó®dºµİöyŸJ˜¼[†kò¹u«Û¶ŸóÇPÿ ÁuÇÿ E™^ÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İTVoöí§üñÔ?ğ]qÿ ÄQı»iÿ <uü\ñY‡´‡tiQY¿Û¶ŸóÇPÿ ÁuÇÿ Göí§üñÔ?ğ]qÿ ÄQfÒÑ¥Efÿ nÚÏCÿ ×üEÛ¶ŸóÇPÿ ÁuÇÿ E˜{HwF•›ı»iÿ <uü\ñnÚÏCÿ ×üEaí!İU›¦ÈCZÿ ¯Åÿ ÑÑı»iÿ <uü\ñÍÌÓê—)’9®ÃGçDÑ–—8`2¤tíNÍå5gıYš´QEI¨QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QEÄÂÓĞÿ ç×Pÿ ¿iÿ ÅÑÿ OCÿ Ÿ]Cşı§ÿ ^EEu{Ÿ?ı£_ÈõßøZzüúê÷í?øº?áièóë¨ß´ÿ âëÈ¨£ØÄ?´kù»ÿ OCÿ Ÿ]Cşı§ÿ Gü-=ş}uûöŸü]y{‡ö#×áièóë¨ß´ÿ âèÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹¯"¢cşÑ¯äzïü-=ş}uûöŸü]ğ´ô?ùõÔ?ïÚñuäTQìbÚ5ü]ÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹£ş‡ÿ >º‡ıûOş.¼ŠŠ=ŒCûF¿‘ë¿ğ´ô?ùõÔ?ïÚñtÂÓĞÿ ç×Pÿ ¿iÿ Å×‘QG±ˆh×ò=wş‡ÿ >º‡ıûOş.øZzüúê÷í?øºò*(ö1íşG®ÿ ÂÓĞÿ ç×Pÿ ¿iÿ ÅÑÿ OCÿ Ÿ]Cşı§ÿ ^EEÆ!ı£_ÈõßøZzüúê÷í?øº?áièóë¨ß´ÿ âëÈ¨£ØÄ?´kù»ÿ OCÿ Ÿ]Cşı§ÿ Gü-=ş}uûöŸü]y{‡ö#×áièóë¨ß´ÿ âèÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹¯"¢cşÑ¯äzïü-=ş}uûöŸü]ğ´ô?ùõÔ?ïÚñuäTQìbÚ5ü]ÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹£ş‡ÿ >º‡ıûOş.¼ŠŠ=ŒCûF¿‘ë¿ğ´ô?ùõÔ?ïÚñtÂÓĞÿ ç×Pÿ ¿iÿ Å×‘QG±ˆh×ò=wş‡ÿ >º‡ıûOş.øZzüúê÷í?øºò*(ö1íşG®ÿ ÂÓĞÿ ç×Pÿ ¿iÿ ÅÑÿ OCÿ Ÿ]Cşı§ÿ ^EEÆ!ı£_ÈõßøZzüúê÷í?øº?áièóë¨ß´ÿ âëÈ¨£ØÄ?´kù»ÿ OCÿ Ÿ]Cşı§ÿ Gü-=ş}uûöŸü]y{‡ö#×áièóë¨ß´ÿ âèÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹¯"¢cşÑ¯äzïü-=ş}uûöŸü]ğ´ô?ùõÔ?ïÚñuäTQìbÚ5ü]ÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹£ş‡ÿ >º‡ıûOş.¼ŠŠ=ŒCûF¿‘ë¿ğ´ô?ùõÔ?ïÚñtÂÓĞÿ ç×Pÿ ¿iÿ Å×‘QG±ˆh×ò=wş‡ÿ >º‡ıûOş.øZzüúê÷í?øºò*(ö1íşG®ÿ ÂÓĞÿ ç×Pÿ ¿iÿ ÅÑÿ OCÿ Ÿ]Cşı§ÿ ^EEÆ!ı£_ÈõßøZzüúê÷í?øº?áièóë¨ß´ÿ âëÈ¨£ØÄ?´kù»ÿ OCÿ Ÿ]Cşı§ÿ Gü-=ş}uûöŸü]y{‡ö#×áièóë¨ß´ÿ âèÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹¯"¢cşÑ¯äzïü-=ş}uûöŸü]ğ´ô?ùõÔ?ïÚñuäTQìbÚ5ü]ÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹£ş‡ÿ >º‡ıûOş.¼ŠŠ=ŒCûF¿‘ë¿ğ´ô?ùõÔ?ïÚñtÂÓĞÿ ç×Pÿ ¿iÿ Å×‘QG±ˆh×ò=wş‡ÿ >º‡ıûOş.øZzüúê÷í?øºò*(ö1íşG®ÿ ÂÓĞÿ ç×Pÿ ¿iÿ ÅÑÿ OCÿ Ÿ]Cşı§ÿ ^EEÆ!ı£_ÈõßøZzüúê÷í?øº?áièóë¨ß´ÿ âëÈ¨£ØÄ?´kù»ÿ OCÿ Ÿ]Cşı§ÿ Gü-=ş}uûöŸü]y{‡ö#×áièóë¨ß´ÿ âèÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹¯"¢cşÑ¯äzïü-=ş}uûöŸü]ğ´ô?ùõÔ?ïÚñuäTQìbÚ5ü]ÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹£ş‡ÿ >º‡ıûOş.¼ŠŠ=ŒCûF¿‘ë¿ğ´ô?ùõÔ?ïÚñtÂÓĞÿ ç×Pÿ ¿iÿ Å×‘QG±ˆh×ò=wş‡ÿ >º‡ıûOş.øZzüúê÷í?øºò*(ö1íşG®ÿ ÂÓĞÿ ç×Pÿ ¿iÿ ÅÑÿ OCÿ Ÿ]Cşı§ÿ ^EEÆ!ı£_ÈõßøZzüúê÷í?øº?áièóë¨ß´ÿ âëÈ¨£ØÄ?´kù»ÿ OCÿ Ÿ]Cşı§ÿ Gü-=ş}uûöŸü]y{‡ö#×áièóë¨ß´ÿ âèÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹¯"¢cşÑ¯äzïü-=ş}uûöŸü]ğ´ô?ùõÔ?ïÚñuäTQìbÚ5ü]ÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹£ş‡ÿ >º‡ıûOş.¼ŠŠ=ŒCûF¿‘ë¿ğ´ô?ùõÔ?ïÚñtÂÓĞÿ ç×Pÿ ¿iÿ Å×‘QG±ˆh×ò=wş‡ÿ >º‡ıûOş.øZzüúê÷í?øºò*(ö1íşG®ÿ ÂÓĞÿ ç×Pÿ ¿iÿ ÅÑÿ OCÿ Ÿ]Cşı§ÿ ^EEÆ!ı£_ÈõßøZzüúê÷í?øº?áièóë¨ß´ÿ âëÈ¨£ØÄ?´kù»ÿ OCÿ Ÿ]Cşı§ÿ Gü-=ş}uûöŸü]y{‡ö#×áièóë¨ß´ÿ âèÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹¯"¢cşÑ¯äzïü-=ş}uûöŸü]ğ´ô?ùõÔ?ïÚñuäTQìbÚ5ü]ÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹£ş‡ÿ >º‡ıûOş.¼ŠŠ=ŒCûF¿‘ë¿ğ´ô?ùõÔ?ïÚñtÂÓĞÿ ç×Pÿ ¿iÿ Å×‘QG±ˆh×ò=wş‡ÿ >º‡ıûOş.øZzüúê÷í?øºò*(ö1íşG®ÿ ÂÓĞÿ ç×Pÿ ¿iÿ ÅÑÿ OCÿ Ÿ]Cşı§ÿ ^EEÆ!ı£_ÈõßøZzüúê÷í?øº?áièóë¨ß´ÿ âëÈ¨£ØÄ?´kù»ÿ OCÿ Ÿ]Cşı§ÿ Gü-=ş}uûöŸü]y{‡ö#×áièóë¨ß´ÿ âèÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹¯"¢cşÑ¯äzïü-=ş}uûöŸü]ğ´ô?ùõÔ?ïÚñuäTQìbÚ5ü]ÿ …§¡ÿ Ï®¡ÿ ~Óÿ ‹£ş‡ÿ >º‡ıûOş.¼ŠŠ=ŒCûF¿‘ë¿ğ´ô?ùõÔ?ïÚñtÂÓĞÿ ç×Pÿ ¿iÿ Å×‘QG±ˆh×ò=wş‡ÿ >º‡ıûOş.øZzüúê÷í?øºò*(ö1íşG®ÿ ÂÓĞÿ ç×Pÿ ¿iÿ ÅÑÿ OCÿ Ÿ]Cşı§ÿ ^EEÆ!ı£_È(¢ŠÔá
+(¢€
+(¢€
+(¢€
+(¢€
+(¢€
+*ş±p^Æ‘ E6¶î@õhP“ø’OãT(C’³h(¢ŠQE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE QE Tövs_\‹{uS!Vo™Õ 
+K  É©Î‘|×bÖŞŞK™¼˜çÛnŒä+ª°ÈÑ€>ô\j-«¤Q¢¬İÙ=–Á$Öîí“¶–]£±%I^yã9ã23*é­&™ou›æåíÒİP—bF:òàc¯Lgœ+Ø£EiëJï¥^F‘£Hï$,Šª ’I €Õk->ëPyÖ/0ÄdŸ0P«O 2{“À&•ĞrJö±ZŠÕoİ–q¶·	¡šX§_.pHVrBç‚2	ÀÎN*Õ¸µ”F.!™¶åŒ$­İsŒ=W#Ğš.ÂKVˆ(«–V"òÙuˆZÛùß2’ïUÛÇBwuüğ9¶Óï/ ¹šÚÚIb¶O2fUÈEÏSşzzNâåej(¢=­Åô¦+XšiBî§,Ãı‘Õ|ğ	è9¬™tÈïŒ±…’f…cçy*ªIéŒ|Ëß<ô¢ãåv¹ZŠòÎâÂäÛİÄĞÌª¬Èİ@`gĞà;U´Ğ¯$€LY‰íšæ&-´J¨~u\ã,¼äz)##WCP“v±›EY¹²kX-¤’XËÎg’3¾5ÏÊ[#pärx ÷"±–{®¢hÙ`Á•7€è¤€¨%±Æqßw+½ŠÔV…Öqh·­+Â¥Á·oŸF†ÙœnŒã‘¹N1QØi—zœ¾]¤jÍ¹W/" ,~ê‚ÄÇ©Áô4®‡É+ÚÚ”è©ç¶14†)âeS<JÁ2A |Àx=GcNÔ,›NÔn,XåxÆívî@Èƒ‘Óµ;‹•îV¢¬ŞÙ5Œ‘FòÆí$1ÌBgä¡€9œxÈç­¶Mc$Q¼±»Is™ù¨`@ç29ëEÁÅ¢µQ@‚Š( Š( Š( Š( Š( Š( Š( Š( -wşB×¯şˆ³jö«qÕärBÛ”[[ÆN1ó,H¬?0j%±Sw“
+(¢™!EPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEPEP¿†Fík#|Û\²¾ÔoÜ?r0=NGÔWKmös,§V°ÓãK›8aY`ºs_9#Pçy¨ˆ¶†B6OR¼~Ÿt–mq)ekwŠ,—.66ïmŒøÇ|vÍkÇªi¿ØV6÷HÓ˜XmÑŠ™B¼¥ì|£÷¯»³òc¶Ø’w:¨Î*6~äUÕ–´ËPÚ\67²K#:¡—"5!C¹ÁŞ$uùNû“O,~Ó¤k»[{¹šâa°… ¨v1 `² GËó‰Ÿ—°u=Vkí7×©"jà«D”ëÓ	Ê0È#9c+\ÚêZb>¡¨ywòyæT„´æ,|¨á:«d\™éE¶¸)¤åËÕzL³{û¯¶ë‡íÑÛÖY8Ÿh?Â¸™9ÉóÕ[Ã‹½ueòmæÍ˜ù.eòã?¾‹«n\~cŸÊ¹ksft»ûftj~ÈÑ ÓZ·\äãxc÷À=FÜTV{t³{8$d7–yShò†6p¹8É,ËÏİLdŠ,íb\£Ì¤Ÿü?õø—çN‚ÎûÍ¶SËf;+…Uóİ¼Í­‡·=NXdóÎUıªÛø’[-7ıÚLÑÇ,·²1ùË’ªc äòj_]$Ë½¸eµ·R©¸aœ“’ìØ*Œœd»Z¸Šï]Ô.`mğÍs$ˆØ#*Xp}©¤)Í5ıy³®‹PšãÃöÃûBòé£¼”ı¥µXíX°PÊmÃ° Ô’à7Š¦wM-I¤&İ¥-5÷ÚLŒ¿|˜Âº¾HªqjÆÏE¶µ€[É/,Òy¶É(PÁNÈIÇ+Îx½{mzÖÚ_0Emå¹û2Á†ó$ll_”pÃ¡ısIFÌÒuT Õú/ÓæV½Òn¬,lo&òÌ¨Ï$ºqĞ8÷ÇP@£VgÕìmbŠÓÊ¸?˜[ÎÉÊü½:Õj´sJ×ĞÕÑİ~İup“1µ·Y¢0Må:¿›‚æ=çÈè&‡Ïq,–°Ê¾§‰uYË<bGÌa'j®ÌÉ;”â¹‹ˆ¡³Ôã‘°ÓÛ,qŒ™¼èÛ’“øU¸õå.†[UÛ‹V¹Q#H#òü¢BùKlö5;›ÓœTRÖ¯È}ñÓ…ö‘{$mp}ÒÉ7™$Ÿ¿6[åä…öüù­+íé ‰-OåÚË¶5 —ĞÂrä“‚IÇ5‘©İ[¤šré·S8³·
+')å6ó#ÉÀààg=AÇ5{Kñ%äbî[İsSŞ¶ò,yâGe*2w|¥KÎİ=ñ‘§aÆQS³·áóRîÚâÚ÷ìVxcIu/!Ó`
+]•mP0*–ô›™/l'–ßJ’aoöx>ÏgD¸(ÛšBbbà´a°xƒÔ\ÕŞ£}¨lûmåÅÎÌìó¥gÛ¸Éã ü«NÂmU[¨äcó1{F;NT¸\Œ÷#45 £RóºÓğÿ ?ÔÙº½¾Ó´ã©6›uosÂGjpÇ)%–C¹XÄ¬2†êrÌI“š>hî¼Eng³µ;nw¸*àÆK¨PªŒ«‚å@ùN7dğ)ú« Şİ]Ï
+In÷.ìïı%|1$r ó÷•Túc¥cèº‡Ù5=?Î—e¤W‘Ï&Ñ‡''8ã'NRZ)Ú¤nî‹W‘„šk{7³V¹†4H¬7Ê—
+ÎbÌ®/Ê@û§§§Ölï-¼ay"­ªÉ-ÜíÜ¼Dcq9es…Àg ŒñYêºŒVfÎ=Bé-J•0¬Ì¨Ûœ`äşu&«=½çˆ¯®Fû,×r8‘S'arrãœ‡…UÌœâã§—êuWSÅ>±mdu(|Ù­íÂG•‘;Snwíù‰ár0¡ñ•€Ï×/íï´ŸµAw"+ùvËö|P™Œh›²èÄí+m<d¨åÈÎ¼“K»º7Ou7“QB±4›"EÉäª)ÚyËÇÊjÖ±ªéŞ!2ŞÜ4ÖW‘«ùpG¼Ne@#iVË1bsHÇR–Æ²©Ì¤¯øÿ Áÿ ‡9Ê(¢´8ÂŠ( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( Š( ÿÙ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

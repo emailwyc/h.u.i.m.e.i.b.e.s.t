@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>修改文章</title>
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
+  <link href="../../umeditor/themes/default/css/umeditor.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-default"></nav>
+<div class="container">
+  <form>
+    <div class="row page-header">
+      <div class="col-md-6 col-xs-6">
+        <h1>修改文章</h1>
+      </div>
+      <div class="col-md-6 col-xs-6 text-right">
+        <button type="button" id="submit" class="btn btn-default">提交</button>
+        <button type="button" id="return" class="btn btn-default">返回</button>
+      </div>
+    </div>
+    <div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon"><label for="title">标题</label></span>
+          <input class="form-control uploadtext" id="title" name="title" type="text" placeholder="新闻标题（必填项）"
+                 data-error="标题不能为空">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon"><label for="class">分类</label></span>
+          <select class="form-control" id="class">
+            <option value="1">惠每极致</option>
+            <option value="2">海外转诊</option>
+            <option value="3">找明医</option>
+            <option value="4">转诊实例</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon"><label for="order">排序</label></span>
+          <input class="form-control" id="order" name="order" type="number" placeholder="从大到小排序，默认为0">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon"><label for="icon">参考图片</label></span>
+          <input class="form-control" id="icon" name="icon" type="file" capture="camera" accept="image/*">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon height-auto"><label for="description">描述</label></span>
+          <textarea class="form-control height-auto" id="description" name="description" rows="5"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon height-auto"><label>内容</label></span>
+          <script id="body" type="text/plain" style="width:100%;height:400px;"></script>
+        </div>
+      </div>
+      <div class="form-group  text-right"><button type="button" id="delete" class="btn btn-default">删除</button></div>
+    </div>
+  </form>
+</div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/style.js"></script>
+<script src="../../js/doctorcontent.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../umeditor/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../umeditor/umeditor.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../umeditor/lang/zh-cn/zh-cn.js"></script>
+<script>
+  var body = UM.getEditor('body');
+  $(document).ready(function () {
+    commonHtml.navbar("nav-article");
+    var json = {"_id": GetQueryString("id")};
+    art_con.loadArticle2(json);
+    $("#submit").click(function () {
+      art_con.updateArticle(json);
+    });
+    $("#return").click(function () {
+      window.location.href = "list.html";
+    })
+    $("#delete").click(function () {
+      art_con.deleteArticle(json);
+
+    })
+  })
+</script>
+</body>
+</html>

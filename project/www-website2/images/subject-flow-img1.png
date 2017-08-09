@@ -1,0 +1,35 @@
+bd8de5f6b4bb72ca5aa59dcc5375ece2c03104","timestamp":"1457489417","nonce":"1032022063"}
+ERROR - 2016-03-09 10:10:17 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwYQubfjl9ddGbQO6NINBLUY]]></FromUserName>
+<CreateTime>1457489417</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+<MenuId>403147524</MenuId>
+</xml>
+ERROR - 2016-03-09 10:10:40 --> {"signature":"8e159db40c481b1222568b128cd784e771b35729","timestamp":"1457489440","nonce":"1015127863"}
+ERROR - 2016-03-09 10:10:40 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwYQubfjl9ddGbQO6NINBLUY]]></FromUserName>
+<CreateTime>1457489440</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+<MenuId>403147524</MenuId>
+</xml>
+ERROR - 2016-03-09 10:11:10 --> {"signature":"d3ddf21e1c495265a92bed112a0c6fec21ce6ce3","timestamp":"1457489470","nonce":"752376446"}
+ERROR - 2016-03-09 10:11:10 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwYQubfjl9ddGbQO6NINBLUY]]></FromUserName>
+<CreateTime>1457489470</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+<MenuId>403147524</MenuId>
+</xml>
+ERROR - 2016-03-09 10:14:57 --> {"signature":"59113f1358536d0e3ab7da818738c681dc034bb6","timestamp":"1457489697","nonce":"1522042064"}
+ERROR - 2016-03-09 10:14:57 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwYQubfjl9ddGbQO6NINBLUY]]></FromUserName>
+<CreateTime>1457489697</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+<MenuId>4

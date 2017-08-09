@@ -1,0 +1,30 @@
+游戏接口文档：
+	测试环境地址：http://h5test.huimeibest.com
+	正式环境地址：http://h5.huimeibest.com
+	
+	说明：接口采用post请求方式向服务器提交数据。每个请求中必须加上签名,每个方法请求地址默认按照测试环境地址;
+
+	签名算法：
+
+		签名生成规则如下：
+		1、参与签名的字段包括post请求的所有字段(除去sign字段并且加上secret(该值可向管理员获取))。
+		2、对所有待签名参数按照字段中人值的ASCII 码从小到大排序（字典序）后，使用（&）符号将键值（即value1&value2…）拼接成字符串string1。
+		3、对string1作sha1加密。
+		4、即sign=sha1(string1)。
+
+
+	1、赠送优惠券接口:
+				请求地址：http://h5test.huimeibest.com/gameApi/giveCoupons
+				
+				POST发送参数:
+					openid:维信openid 
+					type:优惠券类型(1,2,3,4,5,6,7,8,9,10)目前十种
+					timestamp:时间戳
+					orderid:订单id
+					sign:签名
+
+				返回：返回json数据，例如：
+						失败时错误{"st":10102,"msg":"Orders already exist!"} 
+						成功时候st的状态为1
+	
+

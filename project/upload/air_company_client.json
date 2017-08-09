@@ -1,0 +1,272 @@
+[
+  {
+    "company": "就医160",
+    "name": "朴桂花",
+    "client_source": "刘圣琎",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "是"
+  },
+  {
+    "company": "桃谷科技",
+    "name": "熊宇红、卓贵华、丁全峰",
+    "client_source": "屈总",
+    "manager": "刘圣琎",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "私银贵族",
+    "name": "席锐",
+    "client_source": "屈总",
+    "manager": "暂停跟进",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "是"
+  },
+  {
+    "company": "涵翔",
+    "name": "戚美萍",
+    "client_source": "屈总",
+    "manager": "刘圣琎",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "是"
+  },
+  {
+    "company": "始美医疗",
+    "name": "钟丞、史",
+    "client_source": "惠每",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "普蕊斯",
+    "name": "杨宏伟",
+    "client_source": "朱总",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "FESCO（上海）",
+    "name": "Monica",
+    "client_source": "刘圣琎",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "待签"
+  },
+  {
+    "company": "微医",
+    "name": "Emma、Irien",
+    "client_source": "屈总",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "是"
+  },
+  {
+    "company": "正元健康咨询",
+    "name": "张总",
+    "client_source": 400,
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "鼎扬医药科技",
+    "name": "刘扬",
+    "client_source": "朱总",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "百度医疗",
+    "name": "杨海瑞",
+    "client_source": "屈总",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "待签"
+  },
+  {
+    "company": "360国际医疗网",
+    "name": "Francis Li",
+    "client_source": 400,
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "抗癌卫士",
+    "name": "韩佳芮",
+    "client_source": "屈总",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "是"
+  },
+  {
+    "company": "众信奇迹旅行",
+    "name": "王明颖、马文婷",
+    "client_source": "陈晨",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "待签"
+  },
+  {
+    "company": "健康之路",
+    "name": "戈悦",
+    "client_source": "屈总",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "中青旅耀悦",
+    "name": "吕鑫",
+    "client_source": "陈晨",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "待签"
+  },
+  {
+    "company": "轻盈医学",
+    "name": "殷积磊",
+    "client_source": "刘圣琎",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "众品会",
+    "name": "张洪超",
+    "client_source": "陈晨",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "生命汇",
+    "name": "李伟佳",
+    "client_source": "陈晨",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "豫健健康",
+    "name": "王云亮",
+    "client_source": 400,
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "Q康国际",
+    "name": "王萍",
+    "client_source": "屈总",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "GLAM TOUR",
+    "name": "关鑫_",
+    "client_source": "陈晨",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "世界邦旅行网",
+    "name": "段孟华",
+    "client_source": "屈总",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "门路",
+    "name": "张林",
+    "client_source": "网站",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "吾界",
+    "name": "唐芳",
+    "client_source": "陈晨",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "名医主刀",
+    "name": "翁继源",
+    "client_source": "陈晨",
+    "manager": "陈晨",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "新视野",
+    "name": "李培培",
+    "client_source": "屈总",
+    "manager": "刘圣琎",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "是"
+  },
+  {
+    "company": "蓝卡",
+    "name": "任宇",
+    "client_source": "屈总",
+    "manager": "刘圣琎",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "是"
+  },
+  {
+    "company": "四川卫视",
+    "name": "邱蓉",
+    "client_source": "邹倩",
+    "manager": "刘圣琎",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  },
+  {
+    "company": "传祺健康",
+    "name": "佟雪艳",
+    "client_source": "屈总",
+    "manager": "刘圣琎",
+    "type": "company",
+    "section_id": 2,
+    "is_sign": "否"
+  }
+]

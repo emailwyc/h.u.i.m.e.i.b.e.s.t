@@ -1,0 +1,199 @@
+<!DOCTYPE=html>  
+<html>  
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link rel="shortcut icon" href="images/favicon.ico" />  
+<title>与aosi5450聊天中</title>
+<link href="css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/strophe-custom-2.0.0.js"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript" src="js/easemob.im-1.0.5.js"></script>
+<script type="text/javascript">  
+var user="aosi5451";
+var pwd="aosi5451";
+var appKey="guaker#doctortest";
+var to="aosi5450";
+var fileInputId="fileInputId";
+$(function(){
+	var conn = null;
+	conn = new Easemob.im.Connection();
+	conn.init({
+		wait:'60',//非必填，连接超时，默认：60，单位seconds
+		onOpened : function() {
+			conn.setPresence();
+		},
+		onClosed : function() {
+			//处理登出事件
+		},
+		onTextMessage : function(message) {
+			var from = message.from;//消息的发送者
+			var messageContent = message.data;//文本消息体
+			$(".lt-content").append("<div class=\"item ys\"><div class=\"tx\"><img src=\"images/1.jpg\" alt=\"\" /></div><div class=\"xx cfix\"><div class=\"rq fl\"><div class=\"zx\">"+messageContent+"</div></div><div class=\"arrow\"></div></div></div>").scrollTop($(".lt-content")[0].scrollHeight);
+		},
+		
+		onPictureMessage : function(message) {
+			var filename = message.filename;//文件名称，带文件扩展名
+			var from = message.from;//文件的发送者
+			var mestype = message.type;//消息发送的类型是群组消息还是个人消息
+			var contactDivId = from;
+			var options = message;
+			// 图片消息下载成功后的处理逻辑
+			options.onFileDownloadComplete = function(response, xhr) {
+				var objectURL = window.URL.createObjectURL(response);
+				img = document.createElement("img");
+				img.onload = function(e) {
+					img.onload = null;
+					window.URL.revokeObjectURL(img.src);
+				};
+				img.onerror = function() {
+					img.onerror = null;
+					if (typeof FileReader == 'undefined') {
+						img.alter = "当前浏览器不支持blob方式";
+						return;
+					}
+					img.onerror = function() {
+						img.alter = "当前浏览器不支持blob方式";
+					};
+					var reader = new FileReader();
+					reader.onload = function(event) {
+						img.src = this.result;
+					};
+					reader.readAsDataURL(response);
+				}
+				img.src = objectURL;
+				var pic_real_width = options.width;
+			   $(".lt-content").append("<div class=\"item ys\"><div class=\"tx\"><img src=\"images/1.jpg\" alt=\"\" /></div><div class=\"xx cfix\"><div class=\"rq fl\"><div class=\"tp\"><img src=\""+img.src+"\" alt=\"\" /></div></div><div class=\"arrow\"></div></div></div>").scrollTop($(".lt-content")[0].scrollHeight);
+			};
+			options.onFileDownloadError = function(e) {
+				alert("下载失败")
+			};
+			Easemob.im.Helper.download(options);
+		},
+		//收到联系人信息的回调方法
+		onRoster : function (message){
+			/**
+				[{
+					groups: [{0: "default",
+							length: 1}],
+					jid: "easemob-demo#chatdemoui_l2@easemob.com",
+					name: "l2",
+					subscription: "to"
+				}]
+			*/
+		},
+		onError : function(e) {
+			//异常处理
+			alert(e.msg);
+		}
+	});
+	$(function() {
+		conn.open({
+			user : user,
+			pwd : pwd,
+			appKey : appKey
+		});
+	});
+	$(".send").on('click',function(){
+		var msg = $('.text-add textarea').val();
+		if(msg.length==0)
+		{
+			alert("发送内容不能为空，请重新输入")
+		}
+		else
+		{
+			sendText(msg);
+			$('.text-add textarea').val("");
+		}
+	})
+	$("#fileInputId").on("change",function(){
+		sendPic();
+	})
+	function sendText(msg) {
+		
+		var options = {
+			to : to,
+			msg : msg,
+			type : "chat"
+		};
+		conn.sendTextMessage(options);
+		$(".lt-content").append("<div class=\"item hz\"><div class=\"tx\"><img src=\"images/1.jpg\" alt=\"\" /></div><div class=\"xx cfix\"><div class=\"rq fr\"><div class=\"zx\">"+msg+"</div></div><div class=\"arrow\"></div></div></div>").scrollTop($(".lt-content")[0].scrollHeight);;
+	};
+	function sendPic() {
+	  var fileObj = Easemob.im.Helper.getFileUrl(fileInputId);
+	  if (fileObj.url == null || fileObj.url == '') {
+		  return;
+	  }
+	  var filetype = fileObj.filetype;
+	  var filename = fileObj.filename;
+	  if (filetype in  {
+					  "jpg" : true,
+					  "gif" : true,
+					  "png" : true,
+					  }) {
+		  var opt = {
+			  fileInputId : fileInputId,
+			  to : to,
+			  onFileUploadError : function(error) {
+			  },
+			  onFileUploadComplete : function(data) {
+				  $(".lt-content").append("<div class=\"item hz\"><div class=\"tx\"><img src=\"images/1.jpg\" alt=\"\" /></div><div class=\"xx cfix\"><div class=\"rq fr\"><div class=\"tp\"><img src=\""+fileObj.url+"\" alt=\"\" /></div></div><div class=\"arrow\"></div></div></div>").scrollTop($(".lt-content")[0].scrollHeight);
+			  }
+			 // ext:{"extmsg":"extends messages"}//用户自扩展的消息内容（群聊用法相同）
+		  };
+		  conn.sendPicture(opt);
+		  
+		  return;
+	  }
+	  alert("不支持此图片类型" + filetype);
+  };
+});
+$(window).on("load resize",function(){
+	$(".lt-content").height($(window).height()-$(".lt-input").outerHeight())
+});
+</script>  
+</head>
+<style>
+html{ overflow:hidden;}
+
+</style>  
+<body>
+  <!-- 聊天-内容 -->
+  <div class="lt-content">
+    <!--div class="item ys">
+      <div class="tx">
+        <img src="images/1.jpg" alt="" />
+      </div>
+      <div class="xx cfix">
+        <div class="rq fl">
+          <div class="zx">您好，我已经详细看过您的病情了，您属于老胃病，需要到医院来详细检查。您好，我已经详细看过您的病情了，您属于老胃病，需要到医院来详细检查。您好，我已经详细看过您的病情了，您属于老胃病，需要到医院来详细检查。</div>
+        </div>
+        <div class="arrow"></div>
+      </div>
+    </div>
+    <div class="item hz">
+      <div class="tx">
+        <img src="images/1.jpg" alt="" />
+      </div>
+      <div class="xx cfix">
+        <div class="rq fr">
+          <div class="zx">您好，我已经详细看过您的病情了，您属。</div>
+        </div>
+        <div class="arrow"></div>
+      </div>
+    </div-->
+  </div>
+  <!-- 聊天-内容 end -->
+  <!-- 聊天-输入 -->
+  <div class="lt-input bb">
+    <div class="img-add"><input id="fileInputId" type="file" capture="camera" accept="image/*"></div>
+    <div class="text-add"><textarea id="text" maxlength="500"></textarea></div>
+    <div class="send fs14 tc">发送</div>
+  </div>
+  <!-- 聊天-输入 end -->
+</body>  
+</html> 

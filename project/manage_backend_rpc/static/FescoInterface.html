@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<h2>所有接口返回４０３状态，均为授权失败，重新登陆(如果在本地测试，请联系开发人员，关闭登陆验证)</h2>
+	<hr/>
+<h2>用户管理</h2>
+<b>1:添加用户：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/FescoUser/add</br>
+&nbsp;&nbsp;参数：       'name','mobile','ticket_overplus':剩余使用券（添加用户默认状态为正常用户status=1）</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>2:得到所有用戶列表：</b><hr/>
+&nbsp;&nbsp;地址（GET）：http://h5test.huimeibest.com:8082/FescoUser/all</br>
+&nbsp;&nbsp;参数：      p页数  </br>
+&nbsp;&nbsp;返回（json）:格式{"data":{"page":1,"date":[{"_id":{"$id":"577635436803fa4f078b456a"},"created_at":1467364675,"mobile":"18338355701","name":"name","ticket_overplus":5,"ticket_consume":25}]},"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+
+<b>3:删除用户：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/FescoUser/del</br>
+&nbsp;&nbsp;参数：        id：用户id</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+
+<b>4:修改用户数据：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/FescoUser/update</br>
+&nbsp;&nbsp;参数：        'id','name','mobile','ticket_num'(添加或者增加使用次数),'status'</br>
+&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"ok"}正常返回时候status=0,其他视为异常</br></br>
+<b>5：单个用户数据：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/FescoUser/one</br>
+&nbsp;&nbsp;参数：        id：用户id</br>
+&nbsp;&nbsp;返回（json）:格式{"data":{"_id":{"$id":"577635436803fa4f078b456a"},"created_at":1467364675,"mobile":"18338355701","name":"name","status":"1","ticket_overplus":5,"ticket_total":30},"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+
+<b>6:得到所有fesco订单列表：</b><hr/>
+&nbsp;&nbsp;地址（GET）：http://h5test.huimeibest.com:8082/FescoUser/orderList</br>
+&nbsp;&nbsp;参数：      p页数  </br>
+&nbsp;&nbsp;返回（json）:格式{"data":{"page":1,"date":[{......}]},"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+
+<b>5：管理员登陆：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/FescoAdmin/index</br>
+&nbsp;&nbsp;参数：        'name','pwd'（默认用户名和密码：Fescoadmin）</br>
+&nbsp;&nbsp;返回（json）:格式{"data":{"login_status":1},"message":"ok","status":0}正常返回时候status=0,其他视为异常</br></br>
+
+<b>5：管理员退出登陆：</b><hr/>
+&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/FescoAdmin/loginOut</br>
+&nbsp;&nbsp;参数：      </br>
+&nbsp;&nbsp;返回（json）:格式{{},"message":"退出成功","status":0}正常返回时候status=0,其他视为异常.</br></br>
+</body>
+</html>

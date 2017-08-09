@@ -1,0 +1,157 @@
+<?php $this->load->view('common/header');?>
+<title>预约挂号</title>  
+<script type="text/javascript">  
+function checkFormat(form) {
+	if(form.patient.value=='') { $.alert("就诊人不能为空!"); form.patient.focus();return false; }
+	if(form.message.value=='') { $.alert("病情描述不能为空!"); form.message.focus(); return false; }
+    if(form.message.value.length>300||form.message.value.length<10) { $.alert("病情描述输入文字范围:10~300字!"); form.message.focus(); return false; }
+    $(".mask").show();$(".btn1").hide();
+	return true;
+}
+</script>  
+</head>
+<body class="blue">
+<!-- 医生-信息 -->
+  <div class="ys-info">
+    <div class="top">
+      <div class="left tc">
+        <a href="javascript:void(0)"><img class="tx" src="<?=@$doctor['avatar']?>"  onerror="this.onerror=null;this.src=\'/ui/images/doctor.jpg\'" alt="" /></a>
+		<?php if($doctor['level']==3){?>
+        <img class="jb" src="/ui/images/sanjia.png" alt="" />
+		<?php }?>
+      </div>
+      <div class="right cw8">
+        <p class="xm fs16 cw1"><?=@$doctor['name']?></p>
+        <p class="zw"><?=@$doctor['position']?></p>
+        <p class="sc"><?=@$doctor['hospital']?></p>
+      </div>
+      <div class="zxgh cw8"><img src="/ui/images/ico3-dh.png" alt="" /><span>咨询量 <em><?=@$doctor['reg_num']?></em></span></div>
+    </div>
+  </div>
+  <!-- 医生-信息 end -->
+  <!-- 就诊人-表单 -->
+  <form method="post" action="/subscribe/order/<?=@$day['_id']?>" name="addsubscribe" enctype="multipart/form-data">
+  <div class="jzr-form pb35 pt35">
+    <div class="name cfix">
+      <div class="left fl fs14">就诊人：</div>
+      <div class="right">
+	  <span id="patient_name" class="fs14"><?=@$patient[0]['name']?></span>
+	  <em id="patient_age" class="ch4"><?=@$patient[0]['age']?>岁</em>
+	  <img id="patient_sex" src="/ui/images/<?php if($patient[0]['gender']=="male"){?>sex-nan.png<?php }else{?>sex-nv.png<?php }?>" alt="" /></div>
+	  <input name="patient" id="patient" type="hidden" value="<?=@$patient[0]['_id']?>">
+	  <input name="doctor" type="hidden" value="<?=@$doctor['_id']?>">
+    </div>
+    <div class="info fs14 ch7 lh15">
+      <div id="patient_tel">接听电话：123456789</div>
+      <div>咨询时间：<?=@$day['date']?>  <?=@$week?>  <?php if($day['interval']=="08:00,12:00"){?>上午<?php }else{?>下午<?php }?></div>
+    </div>
+    <div class="tit fs14">病情描述</div>
+    <div class="textarea">
+      <textarea class="lh15 fs13" name="message" placeholder="请详细描述您的病情，症状，治疗经过，既往疾病以及想要获得的帮助等，方便医生匹配专家团队（请输入10-300字）"></textarea>
+    </div>
+    <div class="image cfix">
+      <div class="left fl">
+        <div class="img-add">
+          <input type="file" capture="camera" accept="image/*" name="file0">
+        </div>
+      </div>
+      <div class="right fl lh15">
+        <div class="fs13">添加图片（不超过5张）</div>
+        <div class="ch4">症状部位，检查报告，诊断报告单，以及病例等其他病情资料</div>
+      </div>
+    </div>  
+    <div class="yuan lh15">
+      <div class="fs13"><?=@$doctor['service_provided']['clinic']['price']?>元／次</div>
+      <div class="ch4">支付完成后，请直接找医生就诊，由医生安排加号</div>
+    </div>
+  </div>
+  <!-- 就诊人-表单 end -->
+  <div class="yes bb">
+	<input type=submit name="btn1" style="width:100%;" value="确 定" class="btn1" onClick="return checkFormat(this.form)" />
+  </div>
+  </form>
+  <!-- 就诊人-选择 -->
+  <div class="jzr-select bb zi10 fs14 tc">
+    <div>
+      <p>选择就诊人</p>
+	  <?php foreach($patient as $v){?>
+      <a class="soone" href="javascript:void(0)" dataid="<?=@$v['_id']?>" datasex="<?=@$v['gender']?>" dataage="<?=@$v['age']?>" datatel=""><?=@$v['name']?></a>
+	  <?php }?>
+    </div>
+    <div><a href="/user/addpatient">添加家庭成员</a></div>
+    <div><a href="javascript:void(0)" class="ch8 close">取消</a></div>
+  </div>
+  <!-- 就诊人-选择 end -->
+  <div class="mask"></div>  
+<script type="text/javascript">  
+$(document).ready(function(){
+	$("input[type=file],textarea").val("");
+	$(".soone").click(function(){
+		$("#patient").attr("value",$(this).attr("dataid"));
+		$("#patient_name").html($(this).html());
+		$("#patient_age").html($(this).attr("dataage")+"岁");
+		$("#patient_tel").text($(this).attr("datatel"));
+		var gender = $(this).attr("datasex");
+		var gender_str = gender=="male"?"/ui/images/sex-nan.png":"/ui/images/sex-nv.png";
+		$("#patient_sex").attr('src',gender_str);
+		$(".jzr-select,.mask").hide();
+	});
+	$(".jzr-form .name").click(function(){
+		$(".jzr-select,.mask").show();
+	});
+	$(".jzr-select .close,.mask").click(function(){
+		$(".jzr-select,.mask").hide();
+	})
+	var img_num=1;
+	$(document).on("change",".jzr-form .img-add input[type=file]",function(){
+		var length=$(".jzr-form .img-add").length;
+		var num=$(this).index(".jzr-form .img-add input[type=file]")
+		img_num = img_num+1;
+		if(length<=4)
+		{
+			$(this).parent(".img-add").after("<div class=\"img-add\"><input type=\"file\" capture=\"camera\" accept=\"image/*\" name='file"+img_num+"'></div>")
+		}
+		if(length>=1)
+		{
+			$(".jzr-form .image .right").hide();
+		}
+		var url="";
+		var ua = window.navigator.userAgent.toLowerCase(); 
+		if(ua.match(/MicroMessenger/i)=="micromessenger") {
+			url=window.webkitURL.createObjectURL(this.files[0]);
+		}else{
+			url=window.URL.createObjectURL(this.files[0]);
+		}
+		$(".jzr-form .img-add").eq(num).append("<img src=\""+url+"\" alt=\"\" />")
+	})
+	$(document).on("click",".jzr-form .img-add img",function(){
+		var length=$(".jzr-form .img-add img").length;
+		var mes=confirm("您确定要删除图片吗？");
+		if(mes==true)
+		{	
+		    $(this).parent(".img-add").remove();
+			if(length==5)
+			{
+				$(".jzr-form .image .left").append("<div class=\"img-add\"><input type=\"file\" capture=\"camera\" accept=\"image/*\"></div>")
+			}
+			if(length==1)
+			{
+				$(".jzr-form .image .right").show();
+			}
+			
+		}
+	})
+});
+wx.ready(function () {  
+	wx.onMenuShareAppMessage({
+		title: '<?=@$doctor['name']?>-<?=@$doctor['position']?>[找明医]', // 分享标题
+		desc: '<?=@$doctor['description']?>', // 分享描述
+		imgUrl: '<?=@$doctor['avatar']?>', // 分享图标
+		success: function () { 
+		},
+		cancel: function () {
+		}
+	});  
+});    
+</script>  
+<?php $this->load->view('common/footer');?>

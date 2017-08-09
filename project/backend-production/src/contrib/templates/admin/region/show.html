@@ -1,0 +1,15 @@
+{% extends 'admin/layout.html' %}
+{% block title %}查看医院区域 | 惠每极致{% endblock %}
+
+{% block content %}
+<h3>查看医院区域</h3>
+<br>
+<div class="row">
+    <div class="col-md-9">
+        {{ widgets.Region(region) }}
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-danger btn-lg" href="/admin/region/update/{{ region.id }}" role="button">更 &nbsp; 新</a>
+    </div>
+</div>
+{% endblock %}

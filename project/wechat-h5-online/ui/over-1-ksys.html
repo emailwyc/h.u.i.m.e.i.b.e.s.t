@@ -1,0 +1,132 @@
+<!DOCTYPE=html>  
+<html>  
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link rel="shortcut icon" href="images/favicon.ico" />  
+<title>科室医生</title>
+<link href="css/style.css" rel="stylesheet" />
+<script src="/ui/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">  
+$(document).ready(function(){
+	var url="http://www.huimeibest.com/home/doctor/2/1?kw="
+	$("#kw").keyup(function(){
+		var text=$(this).val();
+		var e = window.event || arguments.callee.caller.arguments[0];
+		if (e && e.keyCode == 13 ) {
+			if(text.length!=0&&text!=$(this).attr("placeholder"))
+			{
+				location.href = url+escape(text);
+			}
+			else
+			{
+				alert("请输入搜索关键词")
+			}
+		}
+	});
+}); 
+</script>  
+</head>  
+<body>
+  <!-- 医生-搜索 -->
+  <div class="ys-search">
+    <div>
+      <input name="kw" id="kw" type="text" placeholder="搜索医生，医院，疾病" />
+    </div>
+  </div>
+  <!-- 医生-搜索 end -->
+  <!-- 科室-标题 -->
+  <div class="ks-title cfix">
+    <div class="left fl">
+      <img src="images/man.png" alt="" />
+    </div>
+    <div class="right fl">
+      <h1 class="fs14 cg1">科室医生</h1>
+      <h2 class="fs11">全部为三甲 主治医生</h2>
+    </div> 
+  </div>
+  <!-- 科室-标题 end -->
+  <!-- 科室-列表 -->
+  <div class="ks-list cfix fs14">
+    <div class="item line">
+      <a href="#">
+        <img src="images/ico-1.png" alt="" />
+        <span>皮肤科</span>
+      </a>
+    </div>  
+    <div class="item line">
+      <a href="#">
+        <img src="images/ico-2.png" alt="" />
+        <span>外科</span>
+      </a>
+    </div>  
+    <div class="item">
+      <a href="#">
+        <img src="images/ico-3.png" alt="" />
+        <span>泌尿科</span>
+      </a>
+    </div>
+    <p><span></span></p> 
+    <div class="item line">
+      <a href="#">
+        <img src="images/ico-4.png" alt="" />
+        <span>儿科</span>
+      </a>
+    </div>  
+    <div class="item line">
+      <a href="#">
+        <img src="images/ico-5.png" alt="" />
+        <span>内科</span>
+      </a>
+    </div>  
+    <div class="item">
+      <a href="#">
+        <img src="images/ico-6.png" alt="" />
+        <span>妇产科</span>
+      </a>
+    </div>
+    <p><span></span></p> 
+    <div class="item line">
+      <a href="#">
+        <img src="images/ico-7.png" alt="" />
+        <span>眼科</span>
+      </a>
+    </div>  
+    <div class="item line">
+      <a href="#">
+        <img src="images/ico-8.png" alt="" />
+        <span>耳鼻喉科</span>
+      </a>
+    </div>  
+    <div class="item">
+      <a href="#">
+        <img src="images/ico-9.png" alt="" />
+        <span>脑神经科</span>
+      </a>
+    </div>
+    <p><span></span></p> 
+    <div class="item line">
+      <a href="#">
+        <img src="images/ico-10.png" alt="" />
+        <span>骨科</span>
+      </a>
+    </div>  
+    <div class="item line">
+      <a href="#">
+        <img src="images/ico-11.png" alt="" />
+        <span>口腔科</span>
+      </a>
+    </div>  
+    <div class="item">
+      <a href="#">
+        <img src="images/ico-12.png" alt="" />
+        <span>内分泌科</span>
+      </a>
+    </div> 
+  </div>
+  <!-- 科室-列表 end -->
+</body>  
+</html> 

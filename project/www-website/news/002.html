@@ -1,0 +1,600 @@
+x;
+		else
+			return $this->_keyPrefix=md5('Yii.'.get_class($this).'.'.Yii::app()->getId());
+	}
+	public function setStateKeyPrefix($value)
+	{
+		$this->_keyPrefix=$value;
+	}
+	public function getState($key,$defaultValue=null)
+	{
+		$key=$this->getStateKeyPrefix().$key;
+		return isset($_SESSION[$key]) ? $_SESSION[$key] : $defaultValue;
+	}
+	public function setState($key,$value,$defaultValue=null)
+	{
+		$key=$this->getStateKeyPrefix().$key;
+		if($value===$defaultValue)
+			unset($_SESSION[$key]);
+		else
+			$_SESSION[$key]=$value;
+	}
+	public function hasState($key)
+	{
+		$key=$this->getStateKeyPrefix().$key;
+		return isset($_SESSION[$key]);
+	}
+	public function clearStates()
+	{
+		$keys=array_keys($_SESSION);
+		$prefix=$this->getStateKeyPrefix();
+		$n=strlen($prefix);
+		foreach($keys as $key)
+		{
+			if(!strncmp($key,$prefix,$n))
+				unset($_SESSION[$key]);
+		}
+	}
+	public function getFlashes($delete=true)
+	{
+		$flashes=array();
+		$prefix=$this->getStateKeyPrefix().self::FLASH_KEY_PREFIX;
+		$keys=array_keys($_SESSION);
+		$n=strlen($prefix);
+		foreach($keys as $key)
+		{
+			if(!strncmp($key,$prefix,$n))
+			{
+				$flashes[substr($key,$n)]=$_SESSION[$key];
+				if($delete)
+					unset($_SESSION[$key]);
+			}
+		}
+		if($delete)
+			$this->setState(self::FLASH_COUNTERS,array());
+		return $flashes;
+	}
+	public function getFlash($key,$defaultValue=null,$delete=true)
+	{
+		$value=$this->getState(self::FLASH_KEY_PREFIX.$key,$defaultValue);
+		if($delete)
+			$this->setFlash($key,null);
+		return $value;
+	}
+	public function setFlash($key,$value,$defaultValue=null)
+	{
+		$this->setState(self::FLASH_KEY_PREFIX.$key,$value,$defaultValue);
+		$counters=$this->getState(self::FLASH_COUNTERS,array());
+		if($value===$defaultValue)
+			unset($counters[$key]);
+		else
+			$counters[$key]=0;
+		$this->setState(self::FLASH_COUNTERS,$counters,array());
+	}
+	public function hasFlash($key)
+	{
+		return $this->getFlash($key, null, false)!==null;
+	}
+	protected function changeIdentity($id,$name,$states)
+	{
+		Yii::app()->getSession()->regenerateID();
+		$this->setId($id);
+		$this->setName($name);
+		$this->loadIdentityStates($states);
+	}
+	protected function saveIdentityStates()
+	{
+		$states=array();
+		foreach($this->getState(self::STATES_VAR,array()) as $name=>$dummy)
+			$states[$name]=$this->getState($name);
+		return $states;
+	}
+	protected function loadIdentityStates($states)
+	{
+		$names=array();
+		if(is_array($states))
+		{
+			foreach($states as $name=>$value)
+			{
+				$this->setState($name,$value);
+				$names[$name]=true;
+			}
+		}
+		$this->setState(self::STATES_VAR,$names);
+	}
+	protected function updateFlash()
+	{
+		$counters=$this->getState(self::FLASH_COUNTERS);
+		if(!is_array($counters))
+			return;
+		foreach($counters as $key=>$count)
+		{
+			if($count)
+			{
+				unset($counters[$key]);
+				$this->setState(self::FLASH_KEY_PREFIX.$key,null);
+			}
+			else
+				$counters[$key]++;
+		}
+		$this->setState(self::FLASH_COUNTERS,$counters,array());
+	}
+	protected function updateAuthStatus()
+	{
+		if($this->authTimeout!==null && !$this->getIsGuest())
+		{
+			$expires=$this->getState(self::AUTH_TIMEOUT_VAR);
+			if ($expires!==null && $expires < time())
+				$this->logout(false);
+			else
+				$this->setState(self::AUTH_TIMEOUT_VAR,time()+$this->authTimeout);
+		}
+	}
+	public function checkAccess($operation,$params=array(),$allowCaching=true)
+	{
+		if($allowCaching && $params===array() && isset($this->_access[$operation]))
+			return $this->_access[$operation];
+		else
+			return $this->_access[$operation]=Yii::app()->getAuthManager()->checkAccess($operation,$this->getId(),$params);
+	}
+}
+class CHttpSession extends CApplicationComponent implements IteratorAggregate,ArrayAccess,Countable
+{
+	public $autoStart=true;
+	public function init()
+	{
+		parent::init();
+		if($this->autoStart)
+			$this->open();
+		register_shutdown_function(array($this,'close'));
+	}
+	public function getUseCustomStorage()
+	{
+		return false;
+	}
+	public function open()
+	{
+		if($this->getUseCustomStorage())
+			@session_set_save_handler(array($this,'openSession'),array($this,'closeSession'),array($this,'readSession'),array($this,'writeSession'),array($this,'destroySession'),array($this,'gcSession'));
+		if(@session_start()===false && YII_DEBUG)
+		{
+			$message=Yii::t('yii','Failed to start session.');
+			if(function_exists('error_get_last'))
+			{
+				$error=error_get_last();
+				if(isset($error['message']))
+					$message=$error['message'];
+			}
+			Yii::log($message, CLogger::LEVEL_WARNING, 'system.web.CHttpSession');
+		}
+	}
+	public function close()
+	{
+		if(session_id()!=='')
+			@session_write_close();
+	}
+	public function destroy()
+	{
+		if(session_id()!=='')
+		{
+			@session_unset();
+			@session_destroy();
+		}
+	}
+	public function getIsStarted()
+	{
+		return session_id()!=='';
+	}
+	public function getSessionID()
+	{
+		return session_id();
+	}
+	public function setSessionID($value)
+	{
+		session_id($value);
+	}
+	public function regenerateID($deleteOldSession=false)
+	{
+		session_regenerate_id($deleteOldSession);
+	}
+	public function getSessionName()
+	{
+		return session_name();
+	}
+	public function setSessionName($value)
+	{
+		session_name($value);
+	}
+	public function getSavePath()
+	{
+		return session_save_path();
+	}
+	public function setSavePath($value)
+	{
+		if(is_dir($value))
+			session_save_path($value);
+		else
+			throw new CException(Yii::t('yii','CHttpSession.savePath "{path}" is not a valid directory.',
+				array('{path}'=>$value)));
+	}
+	public function getCookieParams()
+	{
+		return session_get_cookie_params();
+	}
+	public function setCookieParams($value)
+	{
+		$data=session_get_cookie_params();
+		extract($data);
+		extract($value);
+		if(isset($httponly))
+			session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly);
+		else
+			session_set_cookie_params($lifetime,$path,$domain,$secure);
+	}
+	public function getCookieMode()
+	{
+		if(ini_get('session.use_cookies')==='0')
+			return 'none';
+		else if(ini_get('session.use_only_cookies')==='0')
+			return 'allow';
+		else
+			return 'only';
+	}
+	public function setCookieMode($value)
+	{
+		if($value==='none')
+			ini_set('session.use_cookies','0');
+		else if($value==='allow')
+		{
+			ini_set('session.use_cookies','1');
+			ini_set('session.use_only_cookies','0');
+		}
+		else if($value==='only')
+		{
+			ini_set('session.use_cookies','1');
+			ini_set('session.use_only_cookies','1');
+		}
+		else
+			throw new CException(Yii::t('yii','CHttpSession.cookieMode can only be "none", "allow" or "only".'));
+	}
+	public function getGCProbability()
+	{
+		return (int)ini_get('session.gc_probability');
+	}
+	public function setGCProbability($value)
+	{
+		$value=(int)$value;
+		if($value>=0 && $value<=100)
+		{
+			ini_set('session.gc_probability',$value);
+			ini_set('session.gc_divisor','100');
+		}
+		else
+			throw new CException(Yii::t('yii','CHttpSession.gcProbability "{value}" is invalid. It must be an integer between 0 and 100.',
+				array('{value}'=>$value)));
+	}
+	public function getUseTransparentSessionID()
+	{
+		return ini_get('session.use_trans_sid')==1;
+	}
+	public function setUseTransparentSessionID($value)
+	{
+		ini_set('session.use_trans_sid',$value?'1':'0');
+	}
+	public function getTimeout()
+	{
+		return (int)ini_get('session.gc_maxlifetime');
+	}
+	public function setTimeout($value)
+	{
+		ini_set('session.gc_maxlifetime',$value);
+	}
+	public function openSession($savePath,$sessionName)
+	{
+		return true;
+	}
+	public function closeSession()
+	{
+		return true;
+	}
+	public function readSession($id)
+	{
+		return '';
+	}
+	public function writeSession($id,$data)
+	{
+		return true;
+	}
+	public function destroySession($id)
+	{
+		return true;
+	}
+	public function gcSession($maxLifetime)
+	{
+		return true;
+	}
+	//------ The following methods enable CHttpSession to be CMap-like -----
+	public function getIterator()
+	{
+		return new CHttpSessionIterator;
+	}
+	public function getCount()
+	{
+		return count($_SESSION);
+	}
+	public function count()
+	{
+		return $this->getCount();
+	}
+	public function getKeys()
+	{
+		return array_keys($_SESSION);
+	}
+	public function get($key,$defaultValue=null)
+	{
+		return isset($_SESSION[$key]) ? $_SESSION[$key] : $defaultValue;
+	}
+	public function itemAt($key)
+	{
+		return isset($_SESSION[$key]) ? $_SESSION[$key] : null;
+	}
+	public function add($key,$value)
+	{
+		$_SESSION[$key]=$value;
+	}
+	public function remove($key)
+	{
+		if(isset($_SESSION[$key]))
+		{
+			$value=$_SESSION[$key];
+			unset($_SESSION[$key]);
+			return $value;
+		}
+		else
+			return null;
+	}
+	public function clear()
+	{
+		foreach(array_keys($_SESSION) as $key)
+			unset($_SESSION[$key]);
+	}
+	public function contains($key)
+	{
+		return isset($_SESSION[$key]);
+	}
+	public function toArray()
+	{
+		return $_SESSION;
+	}
+	public function offsetExists($offset)
+	{
+		return isset($_SESSION[$offset]);
+	}
+	public function offsetGet($offset)
+	{
+		return isset($_SESSION[$offset]) ? $_SESSION[$offset] : null;
+	}
+	public function offsetSet($offset,$item)
+	{
+		$_SESSION[$offset]=$item;
+	}
+	public function offsetUnset($offset)
+	{
+		unset($_SESSION[$offset]);
+	}
+}
+class CHtml
+{
+	const ID_PREFIX='yt';
+	public static $errorSummaryCss='errorSummary';
+	public static $errorMessageCss='errorMessage';
+	public static $errorCss='error';
+	public static $requiredCss='required';
+	public static $beforeRequiredLabel='';
+	public static $afterRequiredLabel=' <span class="required">*</span>';
+	public static $count=0;
+	public static function encode($text)
+	{
+		return htmlspecialchars($text,ENT_QUOTES,Yii::app()->charset);
+	}
+	public static function decode($text)
+	{
+		return htmlspecialchars_decode($text,ENT_QUOTES);
+	}
+	public static function encodeArray($data)
+	{
+		$d=array();
+		foreach($data as $key=>$value)
+		{
+			if(is_string($key))
+				$key=htmlspecialchars($key,ENT_QUOTES,Yii::app()->charset);
+			if(is_string($value))
+				$value=htmlspecialchars($value,ENT_QUOTES,Yii::app()->charset);
+			else if(is_array($value))
+				$value=self::encodeArray($value);
+			$d[$key]=$value;
+		}
+		return $d;
+	}
+	public static function tag($tag,$htmlOptions=array(),$content=false,$closeTag=true)
+	{
+		$html='<' . $tag . self::renderAttributes($htmlOptions);
+		if($content===false)
+			return $closeTag ? $html.' />' : $html.'>';
+		else
+			return $closeTag ? $html.'>'.$content.'</'.$tag.'>' : $html.'>'.$content;
+	}
+	public static function openTag($tag,$htmlOptions=array())
+	{
+		return '<' . $tag . self::renderAttributes($htmlOptions) . '>';
+	}
+	public static function closeTag($tag)
+	{
+		return '</'.$tag.'>';
+	}
+	public static function cdata($text)
+	{
+		return '<![CDATA[' . $text . ']]>';
+	}
+	public static function metaTag($content,$name=null,$httpEquiv=null,$options=array())
+	{
+		if($name!==null)
+			$options['name']=$name;
+		if($httpEquiv!==null)
+			$options['http-equiv']=$httpEquiv;
+		$options['content']=$content;
+		return self::tag('meta',$options);
+	}
+	public static function linkTag($relation=null,$type=null,$href=null,$media=null,$options=array())
+	{
+		if($relation!==null)
+			$options['rel']=$relation;
+		if($type!==null)
+			$options['type']=$type;
+		if($href!==null)
+			$options['href']=$href;
+		if($media!==null)
+			$options['media']=$media;
+		return self::tag('link',$options);
+	}
+	public static function css($text,$media='')
+	{
+		if($media!=='')
+			$media=' media="'.$media.'"';
+		return "<style type=\"text/css\"{$media}>\n/*<![CDATA[*/\n{$text}\n/*]]>*/\n</style>";
+	}
+	public static function refresh($seconds, $url='')
+	{
+		$content="$seconds";
+		if($url!=='')
+			$content.=';'.self::normalizeUrl($url);
+		Yii::app()->clientScript->registerMetaTag($content,null,'refresh');
+	}
+	public static function cssFile($url,$media='')
+	{
+		if($media!=='')
+			$media=' media="'.$media.'"';
+		return '<link rel="stylesheet" type="text/css" href="'.self::encode($url).'"'.$media.' />';
+	}
+	public static function script($text)
+	{
+		return "<script type=\"text/javascript\">\n/*<![CDATA[*/\n{$text}\n/*]]>*/\n</script>";
+	}
+	public static function scriptFile($url)
+	{
+		return '<script type="text/javascript" src="'.self::encode($url).'"></script>';
+	}
+	public static function form($action='',$method='post',$htmlOptions=array())
+	{
+		return self::beginForm($action,$method,$htmlOptions);
+	}
+	public static function beginForm($action='',$method='post',$htmlOptions=array())
+	{
+		$htmlOptions['action']=$url=self::normalizeUrl($action);
+		$htmlOptions['method']=$method;
+		$form=self::tag('form',$htmlOptions,false,false);
+		$hiddens=array();
+		if(!strcasecmp($method,'get') && ($pos=strpos($url,'?'))!==false)
+		{
+			foreach(explode('&',substr($url,$pos+1)) as $pair)
+			{
+				if(($pos=strpos($pair,'='))!==false)
+					$hiddens[]=self::hiddenField(urldecode(substr($pair,0,$pos)),urldecode(substr($pair,$pos+1)),array('id'=>false));
+			}
+		}
+		$request=Yii::app()->request;
+		if($request->enableCsrfValidation && !strcasecmp($method,'post'))
+			$hiddens[]=self::hiddenField($request->csrfTokenName,$request->getCsrfToken(),array('id'=>false));
+		if($hiddens!==array())
+			$form.="\n".self::tag('div',array('style'=>'display:none'),implode("\n",$hiddens));
+		return $form;
+	}
+	public static function endForm()
+	{
+		return '</form>';
+	}
+	public static function statefulForm($action='',$method='post',$htmlOptions=array())
+	{
+		return self::form($action,$method,$htmlOptions)."\n".
+			self::tag('div',array('style'=>'display:none'),self::pageStateField(''));
+	}
+	public static function pageStateField($value)
+	{
+		return '<input type="hidden" name="'.CController::STATE_INPUT_NAME.'" value="'.$value.'" />';
+	}
+	public static function link($text,$url='#',$htmlOptions=array())
+	{
+		if($url!=='')
+			$htmlOptions['href']=self::normalizeUrl($url);
+		self::clientChange('click',$htmlOptions);
+		return self::tag('a',$htmlOptions,$text);
+	}
+	public static function mailto($text,$email='',$htmlOptions=array())
+	{
+		if($email==='')
+			$email=$text;
+		return self::link($text,'mailto:'.$email,$htmlOptions);
+	}
+	public static function image($src,$alt='',$htmlOptions=array())
+	{
+		$htmlOptions['src']=$src;
+		$htmlOptions['alt']=$alt;
+		return self::tag('img',$htmlOptions);
+	}
+	public static function button($label='button',$htmlOptions=array())
+	{
+		if(!isset($htmlOptions['name']))
+		{
+			if(!array_key_exists('name',$htmlOptions))
+				$htmlOptions['name']=self::ID_PREFIX.self::$count++;
+		}
+		if(!isset($htmlOptions['type']))
+			$htmlOptions['type']='button';
+		if(!isset($htmlOptions['value']))
+			$htmlOptions['value']=$label;
+		self::clientChange('click',$htmlOptions);
+		return self::tag('input',$htmlOptions);
+	}
+	public static function htmlButton($label='button',$htmlOptions=array())
+	{
+		if(!isset($htmlOptions['name']))
+			$htmlOptions['name']=self::ID_PREFIX.self::$count++;
+		if(!isset($htmlOptions['type']))
+			$htmlOptions['type']='button';
+		self::clientChange('click',$htmlOptions);
+		return self::tag('button',$htmlOptions,$label);
+	}
+	public static function submitButton($label='submit',$htmlOptions=array())
+	{
+		$htmlOptions['type']='submit';
+		return self::button($label,$htmlOptions);
+	}
+	public static function resetButton($label='reset',$htmlOptions=array())
+	{
+		$htmlOptions['type']='reset';
+		return self::button($label,$htmlOptions);
+	}
+	public static function imageButton($src,$htmlOptions=array())
+	{
+		$htmlOptions['src']=$src;
+		$htmlOptions['type']='image';
+		return self::button('submit',$htmlOptions);
+	}
+	public static function linkButton($label='submit',$htmlOptions=array())
+	{
+		if(!isset($htmlOptions['submit']))
+			$htmlOptions['submit']=isset($htmlOptions['href']) ? $htmlOptions['href'] : '';
+		return self::link($label,'#',$htmlOptions);
+	}
+	public static function label($label,$for,$htmlOptions=array())
+	{
+		if($for===false)
+			unset($htmlOptions['for']);
+		else
+			$htmlOptions['for']=$for;
+		if(isset($htmlOptions['required']))
+		{
+			if($htmlOptions['required'])
+			{
+				if(isset($htmlOptions['class']))
+					$htmlOptions['class'].=' '.self::$required

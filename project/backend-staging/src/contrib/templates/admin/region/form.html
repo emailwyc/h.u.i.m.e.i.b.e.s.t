@@ -1,0 +1,55 @@
+{% extends 'admin/layout.html' %}
+{% block title %}医院区域管理 | 惠每极致{% endblock %}
+
+{% block content %}
+{% if create %}<h3>添加区域</h3>{% else %}<h3>编辑区域</h3>{% endif %}
+<br>
+
+<div class="row">
+    <div class="col-md-9">
+        <form method="POST" action="" class="form-horizontal" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.name.label }}</span>
+                    {{ form.name(class="form-control") }}
+                </div>
+                {% if form.name.errors %}
+                <div class="alert alert-danger">
+                    {{ form.name.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.parent.label }}</span>
+                    {{ form.parent(class="form-control") }}
+                </div>
+                {% if form.parent.errors %}
+                <div class="alert alert-danger">
+                    {{ form.parent.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+            </form>
+    </div>
+    <div class="col-md-1">
+        <button type="submit" class="btn btn-danger btn-lg">完 &nbsp; 成</button>
+        <br>
+        <br>
+        <a class="btn btn-warning btn-lg" href="/admin/region/list" role="button">取 &nbsp; 消</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(function($) {
+    $('button[type="submit"]').click(function() {
+        $(this).attr('disabled', 'disabled');
+        $(this).text('保 存 中 ...');
+        $("form").submit();
+    });
+});
+</script>
+{% endblock %}

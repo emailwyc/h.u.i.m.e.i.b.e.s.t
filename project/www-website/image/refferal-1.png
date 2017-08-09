@@ -1,0 +1,36 @@
+l();
+	var arcid = jQuery.trim(jQuery('#snsinfo_arcid').val());
+	message     = XTools.verifyStringLen(message);
+	if(message === false){
+	    alert('评论' + XTools.error);
+	    if(comid === 0) jQuery('#comment_message').focus();
+	    else jQuery("#repcomment_"+comid).focus();
+	    return false;
+	}
+	jQuery.getJSON('http://comment.hihoku.com/comment.php?ac=comment&do=send&callback=?',{message:message,userid:userid,username:username,photourl:photourl,arcid:arcid,pid:pid,type:type},function(data){
+		if(data == "1") alert("您的评论太过频繁,休息一下再评论吧!");
+		else if(data == "0") alert("评论失败,请联系管理员!");
+		else if(data == "3") alert("评论字数有误,请修正!");
+		else{
+			if(comid === 0){
+				var html = '';
+				html +='<li id="delcom' + data.commentid + '" onmouseover="jQuery(\'#reportshowli_'+data.commentid+'\').show();" style="display:none;" onmouseout="jQuery(\'#reportshowli_'+data.id+'\').hide();">';
+				html +='<dl class="backup-list-two clearfix">';
+				html +='<dt>';
+				html +='<a href="'+data.userid+'"><img class="userhead" onerror="this.onerror=null;this.src=\'http://sns.hihoku.com/ucenter/images/noavatar_small.gif\'" title="'+data.username+'" src="'+data.photourl+'" /></a>';
+				html +='</dt>';
+				html +='<dd>';
+				html +='<p class="backup-text"><a href="'+data.userid+'">' +data.username+ '：</a>' +data.message+'</p>';
+				html +='<div class="time-and-app date"><span>';
+				if(data.delcheck == "1") html += '<a href="javascript:void(0);" onclick="delComment(' +data.commentid+ ',0);">删除</a>';
+				html +='<a href="javascript:void(0);" onclick="replay(\''+data.commentid+'\');" class="pinglun">回复(<em id="repcomcount_'+data.commentid+'">0</em>)</a>';
+				html += '</span>' +data.sendtime+ '</div>';
+				html +='<div id="div_comment_'+data.commentid+'" class="commentsList repclearfix" style="display:none" value="0"></div></dd>';
+				html +='</dl>';
+				html +='</li>';
+				var newli=jQuery('#comments');
+				newli.prepend(html);
+				var replycount = parseInt(jQuery('#replys').html())+1;
+				if(replycount == 1) jQuery("#nowebfriendcomment").slideUp();
+				jQuery('#replys').html(replycount);
+				v

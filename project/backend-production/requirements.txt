@@ -1,0 +1,9 @@
+--index https://pypi.python.org/simple/
+
+pep8
+Flask
+Flask-WTF
+flask-mongoengine
+flask-cache
+requests
+isoweek

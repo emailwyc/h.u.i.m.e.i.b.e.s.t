@@ -1,0 +1,26 @@
+{% extends 'admin/layout.html' %}
+{% block title %}医生信息统计 | 惠每极致{% endblock %}
+
+{% block content %}
+
+<style>
+a.btn {margin-right: 24px}
+tr th, tr td {word-break: keep-all}
+</style>
+
+<h3>医生信息统计</h3>
+<br>
+<div class="row">
+    <div class="col-md-12" style="padding:0">
+        <div>
+            <a href="?when=2016-01" class="btn btn-lg {% if month_str == '2016-01' %}btn-primary{% else %}btn-default{% endif %}">2016-01</a>
+            <a href="?when=2016-02" class="btn btn-lg {% if month_str == '2016-02' %}btn-primary{% else %}btn-default{% endif %}">2016-02</a>
+            <a href="?when=2016-03" class="btn btn-lg {% if month_str == '2016-03' %}btn-primary{% else %}btn-default{% endif %}">2016-03</a>
+            <a href="?when=2016-04" class="btn btn-lg {% if month_str == '2016-04' %}btn-primary{% else %}btn-default{% endif %}">2016-04</a>
+            <br>
+            <br>
+        </div>
+        {{ widgets.AnalyticsDoctor(data) }}
+    </div>
+</div>
+{% endblock %}

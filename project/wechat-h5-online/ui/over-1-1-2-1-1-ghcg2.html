@@ -1,0 +1,76 @@
+<!DOCTYPE=html>  
+<html>  
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link rel="shortcut icon" href="images/favicon.ico" />  
+<title>门诊预约成功通知</title>
+<link href="css/style.css" rel="stylesheet" />
+<script src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".zxgh-con .btn").click(function(){
+		if($(".zxgh-con .text3").hasClass("con"))
+		{
+			$(this).children("a").text("收回")
+			$(".zxgh-con .text3").removeClass("con")
+		}
+		else
+		{
+			$(this).children("a").text("展开")
+			$(".zxgh-con .text3").addClass("con")
+		}
+	})
+})
+</script> 
+</head>  
+<body>
+  <!-- 咨询挂号-内容 -->
+  <div class="zxgh-con lh15 fs13">
+      <div class="item">
+        <div class="text1 fs14">就诊人王阳</div>
+        <div class="text2">
+          <p>性别：男</p>
+          <p>年龄：33</p>
+        </div>
+        <div class="yuan"></div>
+      </div>
+      <div class="item">
+        <div class="text1">预约医生：吴坚炯</div>
+        <div class="text2">
+          <p>预约科室：内科</p>
+          <p>预约医院：北京协和医院</p>
+        </div>
+        <div class="yuan"></div>
+      </div>
+      <div class="item">  
+        <div class="text2">
+          <p>就诊时间：<span class="cr1">2015-06-08</span></p>
+          <p>就诊状态：<span class="cr1">待就诊</span></p>
+          <p>就诊费用：300元</p>
+        </div>  
+        <div class="yuan"></div>
+      </div>
+      <div class="item">
+        <div class="text3 con ch4"><span class="ch8">病情描述：</span>医生您好，我的胃不好，老胃病了，好：医生您好，我的胃不好，老胃病了，好都困扰着我：医生您好，我的胃不好，老胃病了，好都困扰着我：医生生您好，我的胃不好，老胃病了，好：医生您好，我的胃不好，老胃病了，好都困扰着我：医生您好，我的胃不好，老胃病了，好都困扰着我：医生您好，我的胃不好，您好，我的胃不好，老胃病了，好都困扰着我，想好好调理一下...</div>
+        <div class="btn tr"><a href="javascript:void(0)">展开</a></div>
+        <div class="yuan"></div>
+      </div>
+      <div class="photo">
+         <p>图片信息</p>
+         <div class="cfix">
+           <div><img src="images/1.jpg" alt="" /></div>
+           <div><img src="images/1.jpg" alt="" /></div>
+           <div><img src="images/1.jpg" alt="" /></div>
+           <div><img src="images/1.jpg" alt="" /></div>
+           <div><img src="images/1.jpg" alt="" /></div>
+           <div><img src="images/1.jpg" alt="" /></div>
+         </div> 
+      </div>
+  </div>
+  <!-- 咨询挂号-内容 end -->
+</body>  
+</html> 

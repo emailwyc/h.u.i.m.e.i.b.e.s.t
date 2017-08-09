@@ -1,0 +1,32 @@
+tor.php 194
+ERROR - 2016-01-29 11:14:10 --> {"signature":"61fc8ad4bd14ee4cdbcfc29662b693193eb8553c","timestamp":"1454037249","nonce":"358128784"}
+ERROR - 2016-01-29 11:14:10 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwVnl1FUTQDIibK4e2JjECes]]></FromUserName>
+<CreateTime>1454037249</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fact%2Farticle%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=actarticle#wechat_redirect]]></EventKey>
+<MenuId>401886139</MenuId>
+</xml>
+ERROR - 2016-01-29 11:14:10 --> receive a new event: VIEWwangyanchong
+ERROR - 2016-01-29 11:14:10 --> Severity: Warning --> Missing argument 1 for Act::article() /Server/www/wechat-h5-online/app_huimeibest/controllers/Act.php 20
+ERROR - 2016-01-29 11:14:10 --> Severity: Warning --> Missing argument 1 for Act::article() /Server/www/wechat-h5-online/app_huimeibest/controllers/Act.php 20
+ERROR - 2016-01-29 11:14:45 --> {"signature":"75cd6bdcb35268746ff50d31f3c916f0a46dc256","timestamp":"1454037285","nonce":"885547490"}
+ERROR - 2016-01-29 11:14:45 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwVnl1FUTQDIibK4e2JjECes]]></FromUserName>
+<CreateTime>1454037285</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fact%2Farticle%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=actarticle#wechat_redirect]]></EventKey>
+<MenuId>401886139</MenuId>
+</xml>
+ERROR - 2016-01-29 11:14:45 --> receive a new event: VIEWwangyanchong
+ERROR - 2016-01-29 11:14:45 --> Severity: Warning --> Missing argument 1 for Act::article() /Server/www/wechat-h5-online/app_huimeibest/controllers/Act.php 20
+ERROR - 2016-01-29 11:14:45 --> Severity: Warning --> Missing argument 1 for Act::article() /Server/www/wechat-h5-online/app_huimeibest/controllers/Act.php 20
+ERROR - 2016-01-29 11:14:57 --> {"signature":"3444e666dadabbdba9505b4347f7ef6bd5b30603","timestamp":"1454037297","nonce":"337091128"}
+ERROR - 2016-01-29 11:14:57 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwVnl1FUTQDIibK4e2JjECes]]></FromUserName>
+<CreateTime>1454037297</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.q

@@ -1,0 +1,59 @@
+<!DOCTYPE html>  
+<html>  
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link rel="shortcut icon" href="images/favicon.ico" />  
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<title>官网接口说明文档</title>
+<link href="css/style.css" rel="stylesheet" />
+</head>  
+<body>
+</div>
+<h1>正式接口将h5test 改为h5即可</h1>
+
+<h2>前端官网文章：</h2>
+	得到文章列表：</br>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com/Json/websiteGetArticleList(测试环境)</br>	
+		&nbsp;&nbsp;参数        ：p页数（每页10条）(默认p=1), class:文章分类，1：梅奥 2：原创 3：精选 (不传该参数默认搜索所有类型文章)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	得到文章详情：</br>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com/Json/websiteGetArticleDetails(测试环境)</br>	
+		&nbsp;&nbsp;参数        ：_id：文章id</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+
+<h2>后端官网文章：</h2>
+	得到文章列表：</br>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/gwArticle/getList</br>	
+		&nbsp;&nbsp;参数        ：p页数（每页20条）(默认p=1), class:文章分类，1：梅奥 2：原创 3：精选 (不传该参数默认搜索所有类型文章)</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	得到文章详情：</br>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/gwArticle/getDetails</br>	
+		&nbsp;&nbsp;参数        ：_id：文章id</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	添加文章：</br>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/gwArticle/addArticle</br>	
+		&nbsp;&nbsp;参数        ：title,description,icon 头图,body:文章内容,class:文章类型，order：排序</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	编辑文章：</br>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/gwArticle/editArticle</br>	
+		&nbsp;&nbsp;参数        ：_id：文章id，title,description,icon,body,class,order</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+	删除文章：</br>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com:8082/gwArticle/delArticle</br>	
+		&nbsp;&nbsp;参数        ：_id：文章id</br>
+		&nbsp;&nbsp;返回（json）:格式{'data':{},'status':0,'message':"desc"}正常返回时候status=0,其他视为异常</br></br>
+
+<h2>问卷调查：</h2>
+	问卷(测试环境)：</br>
+		&nbsp;&nbsp;地址（POST）：http://h5test.huimeibest.com/Json/websiteQue</br>	
+		&nbsp;&nbsp;参数        ： 参数随意，只要不是空就行</br>
+		&nbsp;&nbsp;返回（json）: 1成功  0失败</br></br>
+	
+</div>
+</body>  
+</html> 

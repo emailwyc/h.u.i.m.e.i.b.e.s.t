@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, button, input, textarea, th, td, table, a, em, span, img {
+    margin: 0;
+    padding: 0;
+}
+
+body, button, input, select, textarea {
+    font: 14px/1.5 "微软雅黑";
+    color: #3e3e3e;
+    outline:none;
+    resize:none;
+}
+
+em, i {
+    font-style: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    overflow: hidden
+}
+
+img {
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+html {
+    overflow-y: scroll;
+    min-height: 100%;
+}
+
+.focus {
+    outline: none;
+}
+
+.cfix {
+    zoom: 1;
+}
+
+.cfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.tr {
+    text-align: right;
+}
+
+.tc {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+body {
+    width: 100%;
+    overflow-x: hidden; background: #f3f3f3;
+    height: 100%;
+}
+.body{ padding:0 10px; max-width: 730px; margin: 0 auto; height: 100%; background: #fff;}
+.title{ font-size: 16px; color: #222; padding: 15px 0;}
+.time{ font-size: 12px; color: #999; padding-bottom:15px; }
+.time span{ color: #2381e8; padding-left: 10px;}
+.content img{ max-width: 100%;}
+.content2{ padding-bottom: 50px;}
+.upload{ position: fixed; left: 0; bottom: 0; width: 100%; background: rgba(0,0,0,.5);}
+.upload a{ color: #fff; display: block; line-height: 40px; font-size: 16px; text-align: center;}

@@ -1,0 +1,57 @@
+{% extends 'admin/layout.html' %}
+{% block title %}医生银行卡查询 | 惠每极致{% endblock %}
+
+{% block content %}
+
+<style>
+p {margin:8px 0 0 0}
+tr th, tr td {word-break: keep-all}
+</style>
+
+<h3>医生银行卡查询</h3>
+<br>
+<div class="row">
+    <div class="col-md-12" style="padding:0">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    {{ messages | join('<br>'|safe) }}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <div class="row" style="margin:0">
+            <form method="POST" action="" class="form-horizontal">
+                <div class="col-md-4">
+                    {{ form.hidden_tag() }}
+                    <div class="form-group">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon">{{ form.order_id.label }}</span>
+                            {{ form.order_id(class="form-control") }}
+                        </div>
+                        {% if form.order_id.errors %}
+                        <div class="alert alert-danger">
+                            {{ form.order_id.errors | join('<br>'|safe) }}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary btn-lg">查 &nbsp; 询</button>
+                </div>
+            </form>
+        </div>
+
+        <br>
+        {% if order != False %}
+            {{ widgets.OrderDetail(order) }}
+        {% endif %}
+
+        <br>
+        {% if doctor_private != False %}
+            {{ widgets.DoctorPrivate(doctor_private) }}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

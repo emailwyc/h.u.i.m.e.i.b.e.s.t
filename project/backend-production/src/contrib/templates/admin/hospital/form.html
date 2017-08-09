@@ -1,0 +1,153 @@
+{% extends 'admin/layout.html' %}
+{% block title %}医院管理 | 惠每极致{% endblock %}
+
+{% block content %}
+{% if create %}<h3>添加医院</h3>{% else %}<h3>编辑医院</h3>{% endif %}
+<br>
+
+<div class="row">
+    <div class="col-md-9">
+        <form method="POST" action="" class="form-horizontal" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.name.label }}</span>
+                    {{ form.name(class="form-control") }}
+                </div>
+                {% if form.name.errors %}
+                <div class="alert alert-danger">
+                    {{ form.name.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.region_id.label }}</span>
+                    {{ form.region_id(class="form-control") }}
+                </div>
+                {% if form.region_id.errors %}
+                <div class="alert alert-danger">
+                    {{ form.region_id.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.region_child_id.label }}</span>
+                    {{ form.region_child_id(class="form-control") }}
+                </div>
+                {% if form.region_child_id.errors %}
+                <div class="alert alert-danger">
+                    {{ form.region_child_id.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">{{ form.address.label }}</span>
+                    {{ form.address(class="form-control") }}
+                </div>
+                <div class="alert alert-info">
+                    有分院的，此处可以填写总院地址。也可以这样填写：
+                    <br>
+<pre style="margin:10px 0 10px">
+东院：北京市东城区帅府园一号。西院：北京市西城区大木仓胡同41号。
+</pre>
+                </div>
+                {% if form.address.errors %}
+                <div class="alert alert-danger">
+                    {{ form.address.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon height-auto">{{ form.branches.label }}</span>
+                    {{ form.branches(class="form-control height-auto", rows=9) }}
+                </div>
+                <div class="alert alert-info">
+                    第一行是分院名称，第二行是分院地址，第三行空白；第四行又是分院名称 ...
+                    <br><br>
+                    例如：
+                    <br>
+<pre style="margin:10px 0 10px">
+东院
+北京市东城区帅府园一号
+
+西院
+北京市西城区大木仓胡同41号
+
+南院
+北京市 ...
+
+北院
+北京市 ...</pre>
+                </div>
+                {% if form.branches.errors %}
+                <div class="alert alert-danger">
+                    {{ form.branches.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon height-auto">{{ form.rule.label }}</span>
+                    {{ form.rule(class="form-control height-auto", rows=5) }}
+                </div>
+                {% if form.rule.errors %}
+                <div class="alert alert-danger">
+                    {{ form.rule.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon height-auto">{{ form.description.label }}</span>
+                    {{ form.description(class="form-control height-auto", rows=5) }}
+                </div>
+                {% if form.description.errors %}
+                <div class="alert alert-danger">
+                    {{ form.description.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+            </div>
+
+        </form>
+    </div>
+    <div class="col-md-1">
+        <button type="submit" class="btn btn-danger btn-lg">完 &nbsp; 成</button>
+        <br>
+        <br>
+        <a class="btn btn-warning btn-lg" href="/admin/hospital/list" role="button">取 &nbsp; 消</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(function($) {
+    $('button[type="submit"]').click(function() {
+        $(this).attr('disabled', 'disabled');
+        $(this).text('保 存 中 ...');
+        $("form").submit();
+    });
+    $('#region_id').change(function(){
+        $.getJSON('/admin/hospital/region_child', {parent: $(this).val()}, function(json) {
+            var dc = $('#region_child_id');
+            $('option', dc).remove();
+            $.each(json, function(k, v){
+                var option = '<option value="' + k + '">' + v + '</option>';
+                dc.append(option);
+            });
+        });
+    });
+});
+</script>
+{% endblock %}

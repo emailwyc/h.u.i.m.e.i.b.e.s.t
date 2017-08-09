@@ -1,0 +1,15 @@
+{% extends 'admin/layout.html' %}
+{% block title %}查看科室 | 惠每极致{% endblock %}
+
+{% block content %}
+<h3>查看科室</h3>
+<br>
+<div class="row">
+    <div class="col-md-9">
+        {{ widgets.Department(department) }}
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-danger btn-lg" href="/admin/department/update/{{ department.id }}" role="button">更 &nbsp; 新</a>
+    </div>
+</div>
+{% endblock %}

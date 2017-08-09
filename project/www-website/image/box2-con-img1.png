@@ -1,0 +1,190 @@
+ef="file_uploading.html">File Uploading Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="form_validation.html">Form Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ftp.html">FTP Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image_lib.html">Image Manipulation Class</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Input Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="javascript.html">Javascript Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="language.html">Language Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="loader.html">Loader Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migration.html">Migrations Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output.html">Output Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pagination.html">Pagination Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parser.html">Template Parser Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html">Security Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sessions.html">Session Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table.html">HTML Table Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trackback.html">Trackback Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typography.html">Typography Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unit_testing.html">Unit Testing Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uri.html">URI Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_agent.html">User Agent Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xmlrpc.html">XML-RPC and XML-RPC Server Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zip.html">Zip Encoding Class</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Database Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../database/examples.html">Quick Start: Usage Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/configuration.html">Database Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/connecting.html">Connecting to a Database</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/queries.html">Running Queries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/results.html">Generating Query Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/helpers.html">Query Helper Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/query_builder.html">Query Builder Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/transactions.html">Transactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/metadata.html">Getting MetaData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/call_function.html">Custom Function Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/caching.html">Query Caching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/forge.html">Database Manipulation with Database Forge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/utilities.html">Database Utilities Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/db_driver_reference.html">Database Driver Reference</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../helpers/index.html">Helpers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/array_helper.html">Array Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/captcha_helper.html">CAPTCHA Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/cookie_helper.html">Cookie Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/date_helper.html">Date Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/directory_helper.html">Directory Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/download_helper.html">Download Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/email_helper.html">Email Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/file_helper.html">File Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/form_helper.html">Form Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/html_helper.html">HTML Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/inflector_helper.html">Inflector Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/language_helper.html">Language Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/number_helper.html">Number Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/path_helper.html">Path Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/security_helper.html">Security Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/smiley_helper.html">Smiley Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/string_helper.html">String Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/text_helper.html">Text Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/typography_helper.html">Typography Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/url_helper.html">URL Helper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../helpers/xml_helper.html">XML Helper</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to CodeIgniter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../documentation/index.html">Writing CodeIgniter Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DCO.html">Developer&#8217;s Certificate of Origin 1.1</a></li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">CodeIgniter</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Libraries</a> &raquo;</li>
+      
+    <li>Input Class</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="input-class">
+<h1>Input Class<a class="headerlink" href="#input-class" title="Permalink to this headline">¶</a></h1>
+<p>The Input Class serves two purposes:</p>
+<ol class="arabic simple">
+<li>It pre-processes global input data for security.</li>
+<li>It provides some helper methods for fetching input data and pre-processing it.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This class is initialized automatically by the system so there
+is no need to do it manually.</p>
+</div>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#input-filtering" id="id1">Input Filtering</a><ul>
+<li><a class="reference internal" href="#security-filtering" id="id2">Security Filtering</a></li>
+<li><a class="reference internal" href="#xss-filtering" id="id3">XSS Filtering</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#accessing-form-data" id="id4">Accessing form data</a><ul>
+<li><a class="reference internal" href="#using-post-get-cookie-or-server-data" id="id5">Using POST, GET, COOKIE, or SERVER Data</a></li>
+<li><a class="reference internal" href="#using-the-php-input-stream" id="id6">Using the php://input stream</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#class-reference" id="id7">Class Reference</a></li>
+</ul>
+</div>
+<div class="custom-index container"></div><div class="section" id="input-filtering">
+<h2><a class="toc-backref" href="#id1">Input Filtering</a><a class="headerlink" href="#input-filtering" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="security-filtering">
+<h3><a class="toc-backref" href="#id2">Security Filtering</a><a class="headerlink" href="#security-filtering" title="Permalink to this headline">¶</a></h3>
+<p>The security filtering method is called automatically when a new
+<a class="reference internal" href="../general/controllers.html"><em>controller</em></a> is invoked. It does the
+following:</p>
+<ul class="simple">
+<li>If <tt class="docutils literal"><span class="pre">$config['allow_get_array']</span></tt> is FALSE (default is TRUE), destroys
+the global GET array.</li>
+<li>Destroys all global variables in the event register_globals is
+turned on.</li>
+<li>Filters the GET/POST/COOKIE array keys, permitting only alpha-numeric
+(and a few other) characters.</li>
+<li>Provides XSS (Cross-site Scripting Hacks) filtering. This can be
+enabled globally, or upon request.</li>
+<li>Standardizes newline characters to <tt class="docutils literal"><span class="pre">PHP_EOL</span></tt> (\n in UNIX-based OSes,
+\r\n under Windows). This is configurable.</li>
+</ul>
+</div>
+<div class="section" id="xss-filtering">
+<h3><a class="toc-backref" href="#id3">XSS Filtering</a><a class="headerlink" href="#xss-filtering" title="Permalink to this headline">¶</a></h3>
+<p>The Input class has the ability to filter input automatically to prevent
+cross-site scripting attacks. If you want the filter to run
+automatically every time it encounters POST or COOKIE data you can
+enable it by opening your <em>application/config/config.php</em> file and setting
+this:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$config</span><span class="p">[</span><span class="s1">&#39;global_xss_filtering&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="k">TRUE</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Please refer to the <a class="reference internal" href="security.html"><em>Security class</em></a> documentation for
+information on using XSS Filtering in your application.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">The &#8216;global_xss_filtering&#8217; setting is DEPRECATED and kept
+solely for backwards-compatibility purposes. XSS escaping should
+be performed on <em>output</em>, not <em>input</em>!</p>
+</div>
+</div>
+</div>
+<div class="section" id="accessing-form-data">
+<h2><a class="toc-backref" href="#id4">Accessing form data</a><a class="headerlink" href="#accessing-form-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-post-get-cookie-or-server-data">
+<h3><a class="toc-backref" href="#id5">Using POST, GET, COOKIE, or SERVER Data</a><a class="headerlink" href="#using-post-get-cookie-or-server-data" title="Permalink to this headline">¶</a></h3>
+<p>CodeIgniter comes with helper methods that let you fetch POST, GET,
+COOKIE or SERVER items. The main advantage of using the provided
+methods rather than fetching an item directly (<tt class="docutils literal"><span class="pre">$_POST['something']</span></tt>)
+is that the methods will check to see if the item is set and return
+NULL if not. This lets you conveniently use data without
+having to test whether an item exists first. In other words, normally
+you might do something like this:</p>
+<div class="highlight-ci"><div class="highlight"><pre><span class="nv">$something</span> <span class="o">=</span> <span class="nb">isset</span><span class="p">(</span><spa

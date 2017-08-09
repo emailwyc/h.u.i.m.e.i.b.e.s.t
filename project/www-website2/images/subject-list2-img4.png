@@ -1,0 +1,28 @@
+wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+<MenuId>403147524</MenuId>
+</xml>
+ERROR - 2016-03-14 11:09:03 --> {"signature":"0ec22a48b71d31bc7f5bdc34eee168f334c5441c","timestamp":"1457924943","nonce":"800955541"}
+ERROR - 2016-03-14 11:09:03 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwaZiML6QsTIv_2XHvcMOmP0]]></FromUserName>
+<CreateTime>1457924943</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fshare%2Fqrcode%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=sharecode#wechat_redirect]]></EventKey>
+<MenuId>403147524</MenuId>
+</xml>
+ERROR - 2016-03-14 11:09:31 --> {"signature":"e948a717e13fdf4f2e02c8c0a174c7ef47f98d53","timestamp":"1457924971","nonce":"2060368045"}
+ERROR - 2016-03-14 11:09:31 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwRlLmey3uNo9zz3EZpFxWaI]]></FromUserName>
+<CreateTime>1457924971</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[我的邀请]]></Content>
+<MsgId>6261740070870180778</MsgId>
+</xml>
+ERROR - 2016-03-14 11:09:57 --> {"status":"success","send_id":"cad57192ee644bb8694ef7a1932e74fc","fee":1,"sms_credits":"3440"}
+ERROR - 2016-03-14 11:10:01 --> {"signature":"444a947182c87e254f8730f4c83a43577a2ebb5d","timestamp":"1457925001","nonce":"1457804794"}
+ERROR - 2016-03-14 11:10:01 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwaZiML6QsTIv_2XHvcMOmP0]]></FromUserName>
+<CreateTime>1457925001</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=co

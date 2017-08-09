@@ -1,0 +1,65 @@
+{% extends 'admin/layout.html' %}
+{% block title %}医生患教文章管理 | 惠每极致{% endblock %}
+
+{% block content %}
+<h3>医生患教文章管理</h3>
+<br>
+
+<div class="row">
+    <div class="col-md-11">
+        <form method="POST" action="" class="form-horizontal" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon height-auto">{{ form.articles.label }}</span>
+                    {{ form.articles(class="form-control height-auto", style="white-space:pre; overflow:scroll", rows=24) }}
+                </div>
+                {% if form.articles.errors %}
+                <div class="alert alert-danger">
+                    {{ form.articles.errors | join('<br>'|safe) }}
+                </div>
+                {% endif %}
+                <div class="alert alert-info">
+一篇文章需要 4 个属性：文章标题、发表时间、文章链接、文章摘要，每个属性 1 行，共 4 行<br>
+一篇文章为一组，每组之间空 1 行<br><br>
+示例：<br><br>
+<pre>
+心脏瓣膜病｜手术刚刚结束，请淡定！
+2015-12-25
+http://mp.weixin.qq.com/s?__biz=MzI5MTA0NzU2Ng==&mid=402356799&idx=1&sn=adb35943710f9045ed8ee38b410462cf&scene=4#wechat_redirect
+心脏瓣膜手术开始前，麻醉师都会帮助患者处于沉睡之中，以至没有痛觉，也不会记得手术的过程。所以，有时术后患者清醒后，发现双手被固定、说不出话来，或是嘴里、身上多了很多气管插管，就会惊慌害怕。其实，这些都是术后的一些正常现象。那么，手术结束后，患者通常会面对些什么状况，又要注意些什么呢？
+
+手术台上的冷漠和赤诚
+2015-12-25
+http://mp.weixin.qq.com/s?__biz=MzI5MTA0NzU2Ng==&mid=402356799&idx=2&sn=28e3fb4c6f1197c9e471acedf9dec4f1&scene=4#wechat_redirect
+让我们为自己祝福, 万一有一天我们躺在白茫茫的手术台，主刀的医生年富力强, 耳聪目健, 头脑像南极一样镇定, 心地像赤道一般火热, 正处于外科事业的巅峰。
+
+谣言粉碎机 | 朋友圈里的那些传言可信吗？
+2015-12-25
+http://mp.weixin.qq.com/s?__biz=MzI5MTA0NzU2Ng==&mid=402205288&idx=2&sn=6626d4bdc3248988d7fcd52f2e72914d&scene=4#wechat_redirect
+你被这样的传言忽悠过吗？ 面膜＝毁容 心梗时咳嗽可以救命 止疼药能缓解一切疼痛 听医生的话，了解真相，身体不会差。
+</pre>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-1">
+        <button type="submit" class="btn btn-danger btn-lg">完 &nbsp; 成</button>
+        <br>
+        <br>
+        <a class="btn btn-warning btn-lg" href="/admin/doctor/show/{{id}}" role="button">取 &nbsp; 消</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+$(document).ready(function($) {
+    $('button[type="submit"]').click(function() {
+        $(this).attr('disabled', 'disabled');
+        $(this).text('保 存 中 ...');
+        $("form").submit();
+    });
+});
+</script>
+{% endblock %}

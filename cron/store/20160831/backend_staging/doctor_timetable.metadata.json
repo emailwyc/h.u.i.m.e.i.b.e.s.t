@@ -1,0 +1,1 @@
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "backend_staging.doctor_timetable" }, { "v" : 1, "unique" : true, "key" : { "doctor" : 1, "service" : 1, "date" : 1, "interval" : 1 }, "name" : "doctor_1_service_1_date_1_interval_1", "ns" : "backend_staging.doctor_timetable", "background" : false } ] }

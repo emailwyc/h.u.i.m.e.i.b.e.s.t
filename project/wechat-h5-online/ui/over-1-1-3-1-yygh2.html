@@ -1,0 +1,123 @@
+<!DOCTYPE=html>  
+<html>  
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<link rel="shortcut icon" href="images/favicon.ico" />  
+<title>预约挂号</title>
+<link href="css/style.css" rel="stylesheet" />
+<script src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">  
+$(document).ready(function(){
+	$(".jzr-form .name").click(function(){
+		$(".jzr-select,.mask").show();
+	});
+	$(".jzr-select .close,.mask").click(function(){
+		$(".jzr-select,.mask").hide();
+	})
+	$(document).on("change",".jzr-form .img-add input[type=file]",function(){
+		var length=$(".jzr-form .img-add").length;
+		var num=$(this).index(".jzr-form .img-add input[type=file]")
+		if(length<=4)
+		{
+			$(this).parent(".img-add").after("<div class=\"img-add\"><input type=\"file\" capture=\"camera\" accept=\"image/*\"></div>")
+		}
+		if(length>=1)
+		{
+			$(".jzr-form .image .right").hide();
+		}
+			var url=window.URL.createObjectURL(this.files[0])
+		    $(".jzr-form .img-add").eq(num).append("<img src=\""+url+"\" alt=\"\" />")
+	})
+	$(document).on("click",".jzr-form .img-add img",function(){
+		var length=$(".jzr-form .img-add img").length;
+		var mes=confirm("您确定要删除图片吗？");
+		if(mes==true)
+		{	
+		    $(this).parent(".img-add").remove();
+			if(length==5)
+			{
+				$(".jzr-form .image .left").append("<div class=\"img-add\"><input type=\"file\" capture=\"camera\" accept=\"image/*\"></div>")
+			}
+			if(length==1)
+			{
+				$(".jzr-form .image .right").show();
+			}
+			
+		}
+	})
+});
+</script>  
+</head>  
+<body class="green bg1">
+  <!-- 医生-信息 -->
+  <div class="ys-info">
+    <div href="#" class="top">
+      <div class="left tc">
+        <a href="#"><img class="tx" src="images/1.jpg" alt="" /></a>
+        <img class="jb" src="images/sanjia.png" alt="" />
+      </div>
+      <div class="right cw8">
+        <p class="xm fs14 cw1">吴坚炯</p>
+        <p class="zw">副主治医师</p>
+        <p class="sc">擅长：食管、胃、十二指肠、肝、胆食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、食管、胃、十二指肠、</p>
+      </div>
+      <div class="zxgh cw8"><img src="images/ico3-gh.png" alt="" /><span>挂号 <em>129</em></span></div>
+    </div>
+  </div>
+  <!-- 医生-信息 end -->
+  <!-- 就诊人-表单 -->
+  <form>
+  <div class="jzr-form pb35">
+    <div class="name cfix">
+      <div class="left fl fs14">就诊人：</div>
+      <div class="right"><span class="fs14">王阳</span><em class="ch4">33岁</em><img src="images/sex-nan.png" alt="" /></div>
+    </div>
+    <div class="info fs13 ch7 lh15">
+      <div>就诊科室：内科</div>
+      <div>就诊医院：北京协和医院</div>
+      <div>就诊时间：2015-06-08  周六  下午</div>
+    </div>
+    <div class="tit fs14">病情资料</div>
+    <div class="textarea">
+      <textarea class="lh15" placeholder="请详细描述您的病情，症状，治疗经过，既往疾病以及想要获得的帮助等，方便医生匹配专家团队（请输入10-300字）"></textarea>
+    </div>
+    <div class="image cfix">
+      <div class="left fl">
+        <div class="img-add">
+          <input type="file" capture="camera" accept="image/*">
+        </div>
+      </div>
+      <div class="right fl lh15">
+        <div class="fs13">添加图片（不超过9张）</div>
+        <div class="ch4">症状部位，检查报告，诊断报告单，以及例等其他病情资料</div>
+      </div>
+    </div>  
+    <div class="yuan lh15">
+      <div class="fs13">200元／次</div>
+      <div class="ch4">医生确认后到医院挂号就诊</div>
+    </div>
+  </div>
+  <!-- 就诊人-表单 end -->
+  <div class="yes bb">
+    <div><a href="#" class="btn1">确 定</a></div>
+  </div>
+  </form>
+  <!-- 就诊人-选择 -->
+  <div class="jzr-select bb zi10 fs13 tc">
+    <div>
+      <p>选择就诊人</p>
+      <a href="javascript:void(0)">王阳</a>
+      <a href="javascript:void(0)">王阳阳</a>
+      <a href="javascript:void(0)">马冯才</a>
+    </div>
+    <div><a href="#">添加家庭成员</a></div>
+    <div><a href="javascript:void(0)" class="ch8 close">取消</a></div>
+  </div>
+  <!-- 就诊人-选择 end -->
+  <div class="mask"></div>  
+</body>  
+</html> 

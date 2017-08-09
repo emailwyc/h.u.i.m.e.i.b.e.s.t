@@ -1,0 +1,11 @@
+# vim: set fileencoding=utf-8 :
+
+INSTANCE_CONFIG_LOADED = True
+
+MONGODB_SETTINGS = {
+    'db': '',
+    'host': '127.0.0.1',
+    'port': 27017,
+}
+
+# vim:ts=4:sw=4

@@ -1,0 +1,41 @@
+tamp":"1454688564","nonce":"1829561165"}
+ERROR - 2016-02-06 00:09:24 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwVnl1FUTQDIibK4e2JjECes]]></FromUserName>
+<CreateTime>1454688564</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+<MenuId>402483012</MenuId>
+</xml>
+ERROR - 2016-02-06 00:09:24 --> receive a new event: VIEWwangyanchong
+ERROR - 2016-02-06 00:09:28 --> {"signature":"b42c6473bc757f546a4b59444d07128237c1c520","timestamp":"1454688568","nonce":"2055775438"}
+ERROR - 2016-02-06 00:09:28 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwZ2en0Okaz--t79j_qw7O3o]]></FromUserName>
+<CreateTime>1454688568</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[100028]]></EventKey>
+<Ticket><![CDATA[gQEr8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL3pUcno5N2JsMEZHcHd6dTVUQlRSAAIEHnu0VgMEgDoJAA==]]></Ticket>
+</xml>
+ERROR - 2016-02-06 00:09:28 --> 100028qqqqqq
+ERROR - 2016-02-06 00:09:28 --> 感谢您关注找明医
+客服热线: 400-068-6895wangyanchong
+ERROR - 2016-02-06 00:09:30 --> {"signature":"423fe4b860c071162c65c07913bdde6986af86c2","timestamp":"1454688570","nonce":"705482736"}
+ERROR - 2016-02-06 00:09:30 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwZ2en0Okaz--t79j_qw7O3o]]></FromUserName>
+<CreateTime>1454688570</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+<MenuId>402483012</MenuId>
+</xml>
+ERROR - 2016-02-06 00:09:30 --> receive a new event: VIEWwangyanchong
+ERROR - 2016-02-06 00:12:50 --> {"signature":"844b7fd9897cdf568bef2392938fc99504939dda","timestamp":"1454688769","nonce":"1942161204"}
+ERROR - 2016-02-06 00:12:50 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwSXlgip0rnPiAU0aSRZ41ss]]></FromUserName>
+<CreateTime>1454688769</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[qrscene_100022]]></EventKey>
+<Ticket><![CDATA[gQGu8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2FEcklJQVBseEZHOUJKNUJkeFRSAAIENXS0VgMEgDoJAA==]]></Ticket>
+</xm

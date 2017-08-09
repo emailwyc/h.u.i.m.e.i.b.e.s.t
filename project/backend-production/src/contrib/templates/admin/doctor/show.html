@@ -1,0 +1,43 @@
+{% extends 'admin/layout.html' %}
+{% block title %}查看医生 | 惠每极致{% endblock %}
+
+{% block content %}
+
+<style>
+tr th {min-width: 80px}
+</style>
+
+<h3>查看医生</h3>
+<br>
+<div class="row">
+    <div class="col-md-2">
+        {% if doctor.avatar %}
+        {% set src=doctor.avatar %}
+        {% else %}
+        {% set src = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj4KPGRlZnM+CiAgICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgogICAgICAgIDwhW0NEQVRBWyNob2xkZXJfMTUwYWNlMTg0ZTcgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+CiAgICA8L3N0eWxlPgo8L2RlZnM+CjxnIGlkPSJob2xkZXJfMTUwYWNlMTg0ZTciPgogICAgPHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiNFRUVFRUUiLz4KICAgIDxnPgogICAgICAgIDx0ZXh0IHg9IjI0IiB5PSI1MCI+5rKh5pyJ5Zu+54mHPC90ZXh0PgogICAgPC9nPgo8L2c+Cjwvc3ZnPgo=' %}
+        {% endif %}
+        <img src="{{ src }}" class="img-responsive img-circle" style="max-width: 80%;">
+        <br>
+    </div>
+    <div class="col-md-7">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    {{ messages | join('<br>'|safe) }}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {{ widgets.Doctor(doctor) }}
+    </div>
+    <div class="col-md-1">
+        <a class="btn btn-danger btn-lg" href="/admin/doctor/update/{{ doctor.id }}" role="button">更 &nbsp; 新</a>
+        <br>
+        <br>
+        <a class="btn btn-primary btn-lg" href="/admin/doctor/article/{{ doctor.id }}" role="button">患教文章</a>
+    </div>
+
+        {{ widgets.DoctorArticles(articles) }}
+</div>
+{% endblock %}

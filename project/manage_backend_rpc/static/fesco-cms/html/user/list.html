@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>用户列表</title>
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div id="navContainer"></div>
+<div class="container">
+  <div class="row page-header">
+    <div class="col-md-6 col-xs-6">
+      <h1>用户列表</h1>
+    </div>
+    <div class="col-md-6 col-xs-6 text-right">
+      <a class="btn btn-default" href="create.html">添加用户</a>
+    </div>
+  </div>
+  <div class="table-responsive" id="table">
+    <table class="table table-bordered table-striped table-hover" id="pageTable">
+      <thead>
+      <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>电话</th>
+        <th>可用次数</th>
+        <th>订单数</th>
+        <th>功能</th>
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <nav id="page">
+    <ul class="pagination">
+    </ul>
+  </nav>
+</div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/style.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/userView.js"></script>
+<script>
+  var currentPage;//当前页数
+  var countPage;//总页数
+  var countNum;//总个数
+  $(document).ready(function () {
+    userView.loadUserList();
+  })
+</script>
+</body>
+</html>

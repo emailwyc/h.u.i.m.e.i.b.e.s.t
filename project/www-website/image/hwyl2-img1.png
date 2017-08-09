@@ -1,0 +1,84 @@
+�段详细信息
+	function GetFieldObject($id="me")
+	{
+		return mysql_fetch_field($this->result[$id]);
+	}
+
+	//获得查询的总记录数
+	function GetTotalRow($id="me")
+	{
+		if($this->result[$id]==0)
+		{
+			return -1;
+		}
+		else
+		{
+			return mysql_num_rows($this->result[$id]);
+		}
+	}
+
+	//获取上一步INSERT操作产生的ID
+	function GetLastID()
+	{
+		//如果 AUTO_INCREMENT 的列的类型是 BIGINT，则 mysql_insert_id() 返回的值将不正确。
+		//可以在 SQL 查询中用 MySQL 内部的 SQL 函数 LAST_INSERT_ID() 来替代。
+		//$rs = mysql_query("Select LAST_INSERT_ID() as lid",$this->linkID);
+		//$row = mysql_fetch_array($rs);
+		//return $row["lid"];
+		return mysql_insert_id($this->linkID);
+	}
+
+	//释放记录集占用的资源
+	function FreeResult($id="me")
+	{
+		@mysql_free_result($this->result[$id]);
+	}
+	function FreeResultAll()
+	{
+		if(!is_array($this->result))
+		{
+			return '';
+		}
+		foreach($this->result as $kk => $vv)
+		{
+			if($vv)
+			{
+				@mysql_free_result($vv);
+			}
+		}
+	}
+
+	//设置SQL语句，会自动把SQL语句里的#@__替换为$this->dbPrefix(在配置文件中为$cfg_dbprefix)
+	function SetQuery($sql)
+	{
+		$prefix="#@__";
+		$sql = str_replace($prefix,$this->dbPrefix,$sql);
+		$this->queryString = $sql;
+	}
+
+	function SetSql($sql)
+	{
+		$this->SetQuery($sql);
+	}
+
+	//显示数据链接错误信息
+	function DisplayError($msg)
+	{
+		$errorTrackFile = dirname(__FILE__).'/../data/mysql_error_trace.inc';
+		if( file_exists(dirname(__FILE__).'/../data/mysql_error_trace.php') )
+		{
+			@unlink(dirname(__FILE__).'/../data/mysql_error_trace.php');
+		}
+		$emsg = '';
+		$emsg .= "<div style='display:none;'><h3>DedeCMS Error Warning!</h3>\r\n";
+		$emsg .= "<div><a href='http://bbs.dedecms.com' target='_blank' style='color:red'>Technical Support: http://bbs.dedecms.com</a></div>";
+		$emsg .= "<div style='line-helght:160%;font-size:14px;color:green'>\r\n";
+		$emsg .= "<div style='color:blue'><br />Error page: <font color='red'>".$this->GetCurUrl()."</font></div>\r\n";
+		$emsg .= "<div>Error infos: {$msg}</div>\r\n";
+		$emsg .= "<br /></div></div>\r\n";
+		
+		
+		echo $emsg;
+		
+		$savemsg = 'Page: '.$this->GetCurUrl()."\r\nError: ".$msg;
+		//保存MySq

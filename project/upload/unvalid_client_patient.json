@@ -1,0 +1,1460 @@
+[
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "",
+    "status": "",
+    "patient": "",
+    "client_source": "",
+    "illness": "",
+    "track": ""
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.8.25",
+    "name": "张泽月",
+    "status": "",
+    "patient": "阮班嵋",
+    "client_source": "400进线",
+    "illness": "肝脏腺癌转移",
+    "track": "0925已退款；0831已签合同，款已到账，进入服务流程；0826转诊办公室见面；0825进线，客户发送病历资料"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.9.7",
+    "name": "刘先生",
+    "status": "",
+    "patient": "沈春华",
+    "client_source": "400进线",
+    "illness": "肝癌",
+    "track": "0907电话，患者目前在上海肿瘤医院住院，犹豫的点是希望找一家更靠谱的中介，想到公司看看，我建议客户来北京，对方说如果来北京，再跟我联系"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "王女士",
+    "status": "",
+    "patient": "王基成",
+    "client_source": "400进线",
+    "illness": "渐冻症",
+    "track": "0829患者这几天在发烧，已跟家属沟通让他单独做就医评估，等反馈"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "赵先生",
+    "status": "",
+    "patient": "赵嘉诚",
+    "client_source": "屈总",
+    "illness": "脑垂体瘤",
+    "track": "0907说想先听听国内专家的意见，如果搞不定，再找海外"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "边先生",
+    "status": "",
+    "patient": "边唯畅",
+    "client_source": "朱总",
+    "illness": "神经元蜡样脂褐质沉积症（NCL）",
+    "track": "0915将光盘拿走，先听香港专家的意见；0910电话，现在没在廊坊，下周来北京做检查；0826下午见面，已发合同，待客户回复（客户阅兵后会再来北京看病）"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "吴女士",
+    "status": "",
+    "patient": "吴爷爷",
+    "client_source": "屈总",
+    "illness": "骨髓增生异常综合症",
+    "track": "0915不需要了；0907下午见面，给了先做一个eConsults多方比较的建议"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "褚先生",
+    "status": "",
+    "patient": "朋友儿子",
+    "client_source": "屈总",
+    "illness": "",
+    "track": "0915客户决定去另一家美国医院；0901已沟通，推荐Record Review，等孩子父母反馈"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "马先生",
+    "status": "",
+    "patient": "马父亲",
+    "client_source": "400进线",
+    "illness": "脑瘤",
+    "track": "0915说时间不确定，可能今年，可能明年；0902电话，发了基本信息，父亲是糖尿病希望全面调理，自己公司员工想做体检"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "张女士",
+    "status": "",
+    "patient": "朱允黎",
+    "client_source": "400进线",
+    "illness": "胃癌",
+    "track": "1029电话，已经请了一个美国医生到广州会诊，要在国内治疗，保持联系；1012电话沟通，先生胃癌已经手术，目前在化疗，国内医生给出2种诊断，追求更好的治疗方式；要跟家属再商量"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "米女士",
+    "status": "",
+    "patient": "XX",
+    "client_source": "屈总",
+    "illness": "肺癌",
+    "track": "1019微信，患者在三亚301做了全面检查，医院说他们可以在三亚康复。所以暂时不去美国了；1008电话，沟通了转诊的流程，要跟家属商量"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "刘燕梅",
+    "status": "",
+    "patient": "刘继宗",
+    "client_source": "屈总",
+    "illness": "肝癌",
+    "track": "1028不需要了；1009电话沟通，已经说明梅奥record review拒绝的情况，未接"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "薛女士",
+    "status": "",
+    "patient": "董存俊",
+    "client_source": "400进线",
+    "illness": "尿毒症",
+    "track": "1029电话，对接人是患者女儿的朋友，说话力度有限，患者已做过一次透析，目前不着急，理念没到；1019电话沟通，好友的父亲尿毒症，国内医生判断要做透析，想找到国际上最好的治疗方式；已沟通record review，说会跟家属商量"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "王先生",
+    "status": "中期",
+    "patient": "杨筱静",
+    "client_source": "400进线",
+    "illness": "颈椎肿瘤",
+    "track": "0107电话，说手术在华山医院做的很成功，目前在观察，后期有需要再联系；1023电话沟通，患者目前只有pet-ct的检查报告，没有医生诊断的资料，需要在检查之后再跟进。目前在华山医院等床位，资料已发"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "郑女士",
+    "status": "中期",
+    "patient": "郑德初",
+    "client_source": "400进线",
+    "illness": "淋巴癌",
+    "track": "0120电话，患者目前在用中药调理，但情况不乐观，不需要了；1029电话，客户认为去美国化疗费用太高，但考虑听梅奥医生的意见，报价1万，说跟患者商量；1023电话沟通，患者已经是晚期，客户要跟患者商量，再跟进"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "贺女士",
+    "status": "中期",
+    "patient": "贺女士",
+    "client_source": "400进线",
+    "illness": "试管婴儿",
+    "track": "0218电话，不说原因，就是希望先在国内做，等失败了再说；0215未接，发了短信；0120未接，发了短信；1203梅奥询问amh什么时候能出结果；1023电话沟通，还要再查几个项目，再沟通"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "吴女士",
+    "status": "",
+    "patient": "吴菊生",
+    "client_source": "屈总",
+    "illness": "骨髓增生异常综合症",
+    "track": "1030电话沟通，介绍人不知道患者病情的变化，客户说目前不需要进一步的咨询，因为患者已经没办法出国，同时一直想回老家。"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "于宏",
+    "status": "",
+    "patient": "于宏",
+    "client_source": "屈总",
+    "illness": "综合性妇科和甲状腺疾病",
+    "track": "1211电话，客户自己有朋友在美国，已经帮忙预约好；1122电话，说明了服务细则，说要考虑一下"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "屈先生",
+    "status": "",
+    "patient": "XX先生",
+    "client_source": "邹倩",
+    "illness": "间皮瘤",
+    "track": "1211竞品；1126在转诊办公室见面，屈先生是患者的朋友，也是空总的医生，说明了病情"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.11.30",
+    "name": "秦先生",
+    "status": "",
+    "patient": "赵守德",
+    "client_source": "屈总",
+    "illness": "胰腺癌",
+    "track": "1211微信，患者决定在国内治疗；1130电话，已发送病历，但是病理的结果还没出来，明天跟进"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.11.30",
+    "name": "牛先生",
+    "status": "长期",
+    "patient": "牛太太",
+    "client_source": "屈总",
+    "illness": "骨髓增生异常综合症",
+    "track": "0328微信，在北京做的骨髓移植，已康复；0127微信分享；0119微信分享；0102微信分享；1211微信，客户选择先听国内医生建议，进行血液配型；1202微信，下周三上午10点来北京；1130微信联系，等待骨穿的结果，下周来北京"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.11.30",
+    "name": "潘女士",
+    "status": "中期",
+    "patient": "XX先生",
+    "client_source": "400进线",
+    "illness": "强制性脊柱炎",
+    "track": "0719微信，老板最近身体很好，要求分享强直性脊柱炎最新治疗信息；0302微信，老板最近没提这事，潘女士也不敢提；0216微信分享；0121微信分享，她老板年前很忙，催要病历；0103电话，很关心强直性脊柱炎的新技术；0102微信分享；1229见面，详细问了梅奥的治疗流程，还没拿到病历，如果要去会自己包机去，让给一个单独陪同的报价；1211微信，患者在国外出差，由于强直性脊柱炎是慢性病，还不着急，说等天气暖和了再考虑；1201微信，已向老板汇报，等反馈"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.3",
+    "name": "杨女士",
+    "status": "长期",
+    "patient": "杨女士",
+    "client_source": "邹佳翠",
+    "illness": "宫颈癌",
+    "track": "0218分享体检的资料，争取让她去梅奥做体检+针对宫颈癌术后的检查；0127微信分享；0119微信分享；0102微信分享；1203电话，术后癌细胞已经消失，担心复发，先发资料，初步了解梅奥"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.9",
+    "name": "阿荣女士",
+    "status": "长期",
+    "patient": "阿荣母亲",
+    "client_source": "400进线",
+    "illness": "播散性脑脊髓炎",
+    "track": "0127微信分享；0119邮件分享；0102邮件分享；1216电话，患者在冲激素，病情好转，因此转诊暂缓；1209电话，已沟通患者病情，阿荣姐姐目前在北京带母亲治疗，说会由她姐姐联系我"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.11",
+    "name": "杨宁",
+    "status": "",
+    "patient": "官文婷",
+    "client_source": "屈总",
+    "illness": "视网膜母细胞瘤",
+    "track": "1211电话，官女士前期已经将孩子的病历通过校友交给纪念斯隆凯特琳医院的医生看过，目前正在通过盛诺一家办理出国手续。"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.14",
+    "name": "张莉",
+    "status": "短期",
+    "patient": "底瑞军",
+    "client_source": "祖凌云",
+    "illness": "小细胞肺癌",
+    "track": "0315微信，下月底总回北京见面；0216未接，发了微信，视频会诊，说会转达患者；0126微信，患者目前在住院，说等病情稳定后再说；0115发微信，希望等到患者回北京亲自见面，再做RR；0114送合同，答应打款；0113电话，推了6.9万的转诊，担心到了梅奥以后没有治疗方案，等反馈；0112见面，已经签订了合同，等待打款；0108电话，根据Sim给出的信息帮患者分析了病情，以及国外可能有的药物。建议患者带全部病历资料到转诊办公室签合同；0107病历已发；0106催问患者病历；0102微信分享；1230电话，详细问了RR和Re的流程，先加微信，等她发病历；1222小细胞肺癌在美国也没有药物，患者决定在国内治疗；1214电话，说明了患者病情，已经做完手术，做完了3期化疗，患者本人比较虚弱，不太想继续放化疗。咨询梅奥的治疗，了解全流程后，说跟患者反馈。"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.14",
+    "name": "干淑敏",
+    "status": "长期",
+    "patient": "黄竹博",
+    "client_source": "mayo邮箱",
+    "illness": "骨母细胞瘤",
+    "track": "0127邮件分享；0102邮件分享；1221患者发来邮件，说正在纠结，过段时间再联系；1214电话，由于患者尚未确诊，建议先确诊，消费实力有限。"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.15",
+    "name": "张江艳",
+    "status": "中期",
+    "patient": "张红代",
+    "client_source": "mayo邮箱",
+    "illness": "十二指肠癌",
+    "track": "0128微信，推了视频会诊，患者如果年后还能来北京，到时候联系；0126电话，她母亲已经肝转移，家属现在在医科院肿瘤医院见医生，之后反馈；0106提供梅奥小肠癌治疗页面，答应发送病历；1231说元旦后来北京，到时候见面；1215电话，直接推的RR+RE，跟家属商量"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.24",
+    "name": "成先生",
+    "status": "中期",
+    "patient": "成先生小孩",
+    "client_source": "阮班嵋",
+    "illness": "一型糖尿病",
+    "track": "0315微信，未回复；0125未接，发了短信；0106电话，sim提供咨询，目前需要让患者再做一个针对胰腺的CT，有结果后跟进；0102微信分享；1224电话，发送小孩的病历，再跟进；1223阮班嵋女儿张女士介绍，一直未接听电话，发了短信"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.24",
+    "name": "章维嘉",
+    "status": "长期",
+    "patient": "",
+    "client_source": "洋大夫",
+    "illness": "渐冻症",
+    "track": "0114电话，未接，发了短信，疑似竞品；0113、0106微信跟进，未回复；1228见面，患者目前已经丧失基本活动的能力，推荐了RR，等反馈；1224电话，洋大夫戚小磊介绍，约的下周一见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.24",
+    "name": "何先生",
+    "status": "长期",
+    "patient": "",
+    "client_source": "惠每",
+    "illness": "食管癌",
+    "track": "0126微信，患者近期身体挺好，医生说三个月后复查；0108微信跟进，只是一个增生，但患者追求更好的治疗，也可以考虑去梅奥，等本人和家属的反馈；0107发送病历；0106微信发送梅奥治疗食管癌的方式页面；1231微信，客户说上海医生建议先观察，不考虑去美国治疗了；1224电话，刚刚在食道检查出高级癌变，已做完病理，下周三拿到结果，需求是了解美国是否有新药，先做RR"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.25",
+    "name": "王莹",
+    "status": "中期",
+    "patient": "",
+    "client_source": "屈总",
+    "illness": "脑神经疾病",
+    "track": "0328微信，未回复；0115电话，希望有机会来北京面谈；0107发送梅奥治疗癫痫的页面给客户；0102微信分享，一周后发送病历；1231微信，这段时间忙，元旦后联系；1225电话，孩子目前不能吃饭，不认识父母；先发病历"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.25",
+    "name": "刘女士",
+    "status": "中期",
+    "patient": "",
+    "client_source": "400进线",
+    "illness": "脑神经疾病",
+    "track": "0107电话，自己联系梅奥了；0102邮件分享；1228电话，患者目前在国内的各大医院都看过，不明确诊断，希望了解梅奥的治疗方式。已经介绍了情况，推荐做RR，说跟家里商量一下。"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.28",
+    "name": "赵奕女士",
+    "status": "中期",
+    "patient": "",
+    "client_source": "400进线",
+    "illness": "体检",
+    "track": "0118未接，发了短信；1228电话，就是想看资料，其他需求都不说，邮件已发"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.29",
+    "name": "徐先生",
+    "status": "短期",
+    "patient": "徐家滨",
+    "client_source": "mayo邮箱",
+    "illness": "食道癌转移",
+    "track": "0215电话，目前病情稳定，手术顺利，不需要了；0129未接，发了短信；0120未接，发了短信；0107电话，患者目前身体状态不太好，担心多发转移，希望知道美国更好的治疗方式和药物，推了RR，晚上先发病历，发合同；1229将全部病历发送过来，食管癌术后，一个淋巴结转移，医生目前建议化疗，已回复邮件，等待患者联系。"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2015.12.30",
+    "name": "蒋女士",
+    "status": "短期",
+    "patient": "蒋进民",
+    "client_source": "400进线",
+    "illness": "脑垂体肿瘤",
+    "track": "0613已经在国内治疗；0202电话，说要等一段时间；0129未接，发了短信；0120未接，发了短信；0114未接，发了短信，询问想法和进展；0107电话，目前人在上海，在忙，晚点联系；0106邮件跟进；1231见面要跟儿女商量一下去梅奥的时间，先做RR"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.1.7",
+    "name": "李兵强",
+    "status": "中期",
+    "patient": "",
+    "client_source": "珊",
+    "illness": "心脏二次搭桥手术",
+    "track": "0119电话，患者刚在安贞医院做完心脏支架，情况不乐观，暂时无需求；0107患者已经无法来北京，需要先回家调养；0107电话，本来约的明天上午见面，忽然发信息说熟悉的医生担心老人无法适应长途飞行，电话正在通话中"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.1.11",
+    "name": "王先生",
+    "status": "短期",
+    "patient": "刘学东",
+    "client_source": "400进线",
+    "illness": "乳腺癌晚期",
+    "track": "0121短信，患者由于之前很着急，目前在香港治疗，先观察治疗效果，我询问了治疗方式，香港医生给了详细的化疗+靶向药+免疫治疗的三组方案；0119未接，发了短信；0115电话，分析了病历，推了RR，发送合同，客户正在出差，下周一跟进；0111电话，患者目前的情况不乐观，在河北住院，先安排老家的亲戚把患者病历邮寄给我"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.1.11",
+    "name": "斯先生",
+    "status": "中期",
+    "patient": "",
+    "client_source": "杨俊",
+    "illness": "眼疾",
+    "track": "0809微信；0328微信，未回复；0315微信跟进；0217微信跟进，还没做检查；0122微信跟进，刚回北京，推荐了去同仁或者北大眼科做检查；0121微信跟进，未回复；0114电话，沟通了病情，已经10年没做检查，先去同仁做个全面检查"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.1.18",
+    "name": "赵镇",
+    "status": "",
+    "patient": "孟红",
+    "client_source": "朱总",
+    "illness": "乳腺癌",
+    "track": "0118约在转诊办公室见面，未见到客户"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.1.18",
+    "name": "李新林",
+    "status": "短期",
+    "patient": "小孩",
+    "client_source": "朱总",
+    "illness": "神经、肾脏疾病",
+    "track": "0301电话，说跟太太商量一下，中午给我回电话；0215未接，发了短信；0202未接，发了短信；0129未接，短信说正在出差，明天跟我联系；0128电话，沟通了先付1万，签证不通过再退款7000的方式，说晚上回家跟太太再碰一下，明天联系；0127电话，0121协助发送给李先生的医疗建议；0119方案已发送，客户一直未反馈；0118电话，Sim做了病情分析，等待患者发送MRI片子确认诊断。"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.1.19",
+    "name": "于女士",
+    "status": "短期",
+    "patient": "",
+    "client_source": "400进线",
+    "illness": "体检",
+    "track": "0217电话，还没决定去哪里体检，比较中，给了建议，这个人更像是老板秘书；0202未接，发了短信，还没确认；0125电话，邮件已经收到，约转诊办公室见面，她还没跟老板汇报，如果去的话是夫妻两个人一起，说要问一下老板，后天跟进；0121电话，详细讲了梅奥体检的方案，担心的点是不知道这个检查能深入到什么程度，给她发冯仑和潘石屹梅奥体检的链接；0120未接，发了短信；0119电话，想了解梅奥体检的特色，先发送资料，明天电话跟进"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.1.19",
+    "name": "徐寿春",
+    "status": "短期",
+    "patient": "徐寿春",
+    "client_source": "400进线",
+    "illness": "体检",
+    "track": "0216电话，跟一个台湾朋友聊起梅奥，认为现在的需求不紧急，台湾的医疗就能满足。我介绍了梅奥体检的特点和HLP，客户说再跟太太和朋友商量一下；0202未接，发了短信，节前很忙，让节后联系；0128邮件推进；0125短信，说还没看IAO表格，之后联系；0121电话，明天一早要出差，周日回来，先发送IAO表格，下周一电话约见；0119电话，想去梅奥做长期健康管理和重大疾病预防，约了这周见面，直接填表签合同"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.1.25",
+    "name": "卢天白",
+    "status": "",
+    "patient": "",
+    "client_source": "惠每",
+    "illness": "贲门癌",
+    "track": "0128电话，病理结果显示只是一个炎症，不需要转诊；0125电话，明确聊了出国的流程，现在要等周四病理报告和胃镜的结果出来，做RR"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.1.27",
+    "name": "谢丽",
+    "status": "",
+    "patient": "老公",
+    "client_source": "惠每",
+    "illness": "抑郁症+心脏病",
+    "track": "0809微信；0601见面，担心精神疾病会由于语言问题，即使到了梅奥也解决不了，已经颠覆，跟老公商量一下，再做决定；0531微信，约的明天下午2点见面；0301微信，老公最近身体很好；0202微信，推送阳红翻译的文章，让她早作准备；0201电话，目前患者在使用一种药，病情明显好转，虽然诊断不明，但家属希望先观察一段时间，再决定是否转诊。我推荐了梅奥的体检，家属认可，也觉得过段时间可以去梅奥做个综合的身体检查；0129约定明天联系；0127微信沟通，初步聊了病情，一直在忙，约了明天电话"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.1.28",
+    "name": "陆艺雄",
+    "status": "",
+    "patient": "母亲",
+    "client_source": "朱总",
+    "illness": "丙肝",
+    "track": "0328微信，未回复；0301微信推进，未回复；0217微信推进，说等回北京再说；0128见面，当场签合同，但还未付款"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.2.2",
+    "name": "吕娟",
+    "status": "",
+    "patient": "田小棣",
+    "client_source": "屈总",
+    "illness": "非小细胞肺癌转移",
+    "track": "0809微信；0226微信，她的顾虑是想去癌症专科医院，我已尝试颠覆；0222微信分享；0205电话，目前还在考虑，推荐了美国的三个医院，节后联系；0202微信+电话，做了病情咨询和方案，需求是趁着身体恢复的不错，找到美国更好的治疗方式；推荐了体检，说整体上把方案一起跟先生探讨一下，明天联系"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.2.3",
+    "name": "李女士",
+    "status": "",
+    "patient": "李桥-老公",
+    "client_source": "400进线",
+    "illness": "克罗恩病",
+    "track": "0309电话，目前在上海长海医院做会诊，暂时打算在国内治疗；0303电话，挂号出了点问题，没看上专家，等看完协和的医生之后再联系；0301见面，思路很清晰，如果去梅奥就是明确诊断，这两天会做决定，是否去梅奥治疗；0227电话，患者还没到北京，到了以后会打我电话；0225电话，患者本人这两天会来北京，约了周六转诊办公室见面，具体时间再定；0223电话，指导患者从医院拿切片，让医院出具正面；0219电话，希望让梅奥给做一次病理；0218短信，说想在国内再做一次病理，告知梅奥可以做病理，说跟家人再商量一下；0216未接，发了短信；0215邮件短信跟进；0205电话，患者之前用的免疫制剂，但是肝部出现异常，所以药已经停了。医生也说不让用消炎药。如果要去梅奥，会安排在4月。先做就医评估，发送合同；0203电话，患者在南京军区总医院确诊克罗恩病，叔叔在美国，婶婶是医生，已经初步看过。患者目前不能吃饭，只能打营养液+免疫抑制剂，咨询梅奥的转诊和费用，短信已发送，先发病历。"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.2.23",
+    "name": "孟先生",
+    "status": "",
+    "patient": "孟向东",
+    "client_source": "屈总",
+    "illness": "结肠癌",
+    "track": "0328未接，发了短信，老两口已经决定在国内治疗；0315未接，发了短信；0309未接，发了短信；0303电话，父亲出国有限制，但是可以解决，北肿的专家也是建议靶向治疗，今天中午还会有一个会诊，等结果出来；0229见面，儿子是希望父亲去美国治疗，但是老两口偏向在国内，明天上午在北肿做专家会诊，之后联系；0227电话，昨天做了核磁，周一出报告，专家会做会诊，之后联系；0225电话，明早去西肿瘤做会诊；0224电话，本周四出核磁报告和专家会诊，到时候再考虑转诊；0223微信咨询，询问了都有哪些服务项目，发送了病历，患者儿子明天早上会联系我"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.2.23",
+    "name": "单女士",
+    "status": "",
+    "patient": "单先生",
+    "client_source": "400进线",
+    "illness": "先天性多囊肾衰竭",
+    "track": "0315未接，发了短信；0225电话，这两天有事，还没发病历，说过些日子，发了之后会给我一个短信；0223电话，全国中西医的知名专家都看过了，都没有好办法，想咨询国外，推荐了RR或者视频，客户倾向视频，先发病历，帮忙判断"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.2.24",
+    "name": "张女士",
+    "status": "",
+    "patient": "张女士",
+    "client_source": "400进线",
+    "illness": "肺腺癌",
+    "track": "0301微信，家人让她现在青岛做化疗，没办法，等来北京的时候见面；0227电话，家人不想让她来北京看病，她本人很矛盾，等反馈；0226电话，青岛的医生建议她手术，患者在犹豫。我建议她先来看北京的专家，想下周或者下下周来，已沟通300-500的费用，可以接受；0224电话，描述了病情，报价之后说要考虑一下，消费能力有限"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.2.26",
+    "name": "潘女士",
+    "status": "",
+    "patient": "",
+    "client_source": "400进线",
+    "illness": "肝癌",
+    "track": "0315电话，暂时不去美国治疗了；0301未接，发了短信，说病人去外地了，等回北京带到转诊办公室见面；0226电话，希望咨询梅奥的医生患者的情况适不适合做肝移植，让她先发病历，再跟进"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.2.26",
+    "name": "IAOCA",
+    "status": "",
+    "patient": "小孩",
+    "client_source": "朱总",
+    "illness": "双下肢康复",
+    "track": "0309微信跟进，暂时决定在国内治疗；0229微信跟进，未回复；0226微信建群，先发病历过来"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.2",
+    "name": "李万宏",
+    "status": "",
+    "patient": "李万宏",
+    "client_source": "中再-媛媛",
+    "illness": "运动神经元损伤",
+    "track": "0307电话，这老两口今年5月移民澳洲，女儿的意见是先让澳洲的医生看看，如果还不行，再去美国；0302电话，加了微信，约了本周五上午见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.2",
+    "name": "钟先生",
+    "status": "",
+    "patient": "钟太太",
+    "client_source": "400进线",
+    "illness": "脑肿瘤",
+    "track": "0307电话，家人已经决定选择香港的医院；0303跟钟先生父母见面，先做RR，回去家里商量一下之后，给反馈；0302电话，约了明天下午5点见面，钟太太的父母在北京，拿病历过来"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.2",
+    "name": "郝女士",
+    "status": "",
+    "patient": "",
+    "client_source": "400进线",
+    "illness": "口腔黏膜疾病",
+    "track": "0315电话，暂时决定在国内治疗；0309未接，发了短信；0303接通，发了短信，父母这两天会来北京看病；0302未接，发了短信"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.4",
+    "name": "成亚",
+    "status": "",
+    "patient": "成亚母亲",
+    "client_source": "屈总",
+    "illness": "脑梗+抑郁症",
+    "track": "0307未接，发了微信，不需要了；0304电话，引导先做RR，之后决定是否要做视频，说考虑一下"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.4",
+    "name": "余女士",
+    "status": "",
+    "patient": "余女士母亲",
+    "client_source": "屈总",
+    "illness": "胃癌",
+    "track": "0304电话，目前还在诊断阶段，病理、影像这些都没出来，之后跟进"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.8",
+    "name": "宋倩娜",
+    "status": "",
+    "patient": "",
+    "client_source": "屈总",
+    "illness": "集体体检",
+    "track": "0314电话，客户想去台湾体检，我们无法安排，下次有机会再合作；0308电话，详细询问了体检的内容，说问问客户是否接受，再跟进"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.9",
+    "name": "郭万怀",
+    "status": "",
+    "patient": "郭万怀",
+    "client_source": "杨俊",
+    "illness": "疑似肿瘤",
+    "track": "0322微信，未回复；0315微信，未回复；0309电话，已发病历，肿瘤标志物上升，有肿瘤家族史，目前在哺乳期，北医三院说可能是哺乳期的问题，希望了解梅奥有哪些在哺乳期检查的方法（无法做增强核磁）"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.10",
+    "name": "朱先生",
+    "status": "",
+    "patient": "母亲",
+    "client_source": "屈总",
+    "illness": "乳腺癌",
+    "track": "0407电话，目前已经决定在国内治疗，报了视频会诊，担心美国专家意见与国内专家不一致，此人的观念有问题；0324陈晨和静明见面，buyin了一些想法，本人还要见上海的医生，等他见完上海医生联系；0322微信，已经上了化疗，这两天会来北京，约转诊办公室见面；0310微信，患者目前已经在做化疗，家属同时已经联系美国的医生，希望得到建议后，再决定是否过去。"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.10",
+    "name": "刘玉魁",
+    "status": "",
+    "patient": "爱人",
+    "client_source": "屈总",
+    "illness": "多发性软骨炎",
+    "track": "0407电话，爱人情况还是没有好转，但是意向性很强，可以帮忙转介绍；0328电话，病情恶化，提醒他提前做好准备，统一治疗目标，推荐RR。过两天再跟进；0325收到病历；0322静明检索，发现梅奥也没有好的治疗方式；0316电话，这周之内会出完整的病理，多发软骨炎+肺部感染，朋友来转诊办公室看过后，信任感增加，希望了解梅奥在这个领域跟国内不一样的治疗方式，本周之内跟进；0310电话，跟协和医院明确诊断，询问梅奥的免疫科水平。目前肺感染，拿到病历后发我"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.11",
+    "name": "于女士",
+    "status": "",
+    "patient": "",
+    "client_source": "400进线",
+    "illness": "",
+    "track": "0323电话，对患者转诊美国有路途远的担心，加微信，有合适患者再合作；代理"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.11",
+    "name": "刘永明",
+    "status": "",
+    "patient": "刘永明",
+    "client_source": "400进线",
+    "illness": "肾病",
+    "track": "0323电话，病情好转，财务大权在他老婆那里，暂时不考虑了；0316电话，再次颠覆，周六会把最新的病历发给我，到时候再颠覆一次；0311电话，常年吃中药治疗肾病，听说梅奥的肾脏科是全美最好，打来电话咨询，下周来北京，约具体时间见面。"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.14",
+    "name": "刘睿",
+    "status": "",
+    "patient": "冯培茹",
+    "client_source": "屈总",
+    "illness": "脑膜瘤",
+    "track": "0321微信跟进，患者老公没有表态需要治疗，对接人不好说话；0314屈总拉微信群，资料不全，客户去补充"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.14",
+    "name": "郑先生",
+    "status": "",
+    "patient": "家属",
+    "client_source": "400进线",
+    "illness": "肺腺癌",
+    "track": "0322电话，客户本人坚持先在301做射波刀治疗，对接人很认可我们，等待机会；0317见面，已经提交咨询服务反馈；0316电话，约的明天上午去转诊办公室见面；0315客户手机没电，放家里充电，没有见到面，再约；0314电话，家属肺腺癌4期，脑转迹象，在东肿瘤看过了，院士建议去天坛，约了明天下午在转诊办公室见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.14",
+    "name": "章芷骞",
+    "status": "",
+    "patient": "母亲",
+    "client_source": "挂号网",
+    "illness": "糖尿病",
+    "track": "挂号网员工；0314电话，目前处于糖尿病早中期，三高，但是没有并发症，已经决定去瑞金医院治疗，还没有出国的打算，初步了解"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.14",
+    "name": "张宗恺",
+    "status": "",
+    "patient": "张宗恺",
+    "client_source": "挂号网",
+    "illness": "老年痴呆",
+    "track": "0323关机；0315关机；0314关机；"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.17",
+    "name": "张国梁",
+    "status": "",
+    "patient": "母亲",
+    "client_source": "屈总",
+    "illness": "非霍奇金淋巴瘤",
+    "track": "0809微信，在用伊鲁替尼一个药；0617发送丁炜活动链接；0602见面，病理腊块丢失，开颅手术的时候没有拿掉肿块，儿子非常担心，需求是希望了解梅奥针对这种情况，还有什么更好的治疗方式，前提是不再取病理，已签合同，等待付款；0601约的转诊办公室见面；0529微信，以丁伟讲座为吸引；0407微信，今天上午做的开颅手术，等病理结果；0322微信，目前在等全身核磁和病理检查的结果；0318整合资料，给到家属，患者是政府官员的夫人，身份敏感，有消息会反馈；0317问诊+初步咨询；"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.18",
+    "name": "朱总",
+    "status": "",
+    "patient": "周建伟",
+    "client_source": "朱总",
+    "illness": "肾癌",
+    "track": "0407关机，发了短信；0318电话，初步咨询，等朱总反馈"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.18",
+    "name": "徐翔歌",
+    "status": "",
+    "patient": "叔叔",
+    "client_source": "400进线",
+    "illness": "视网膜色素性变",
+    "track": "0407微信，人还在多伦多；0325电话，就技术本身跟客户探讨，客户认可，颠覆了观点，把目标调整为收集尽量多的信息；0323未接；0322提供仿生眼介绍给患者的儿子，回访未接；0318电话，咨询梅奥的仿生眼技术，详细解答后说跟家属商量一下，再跟进"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.18",
+    "name": "汪女士",
+    "status": "",
+    "patient": "",
+    "client_source": "400进线",
+    "illness": "",
+    "track": "0318在忙，让周一致电"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.18",
+    "name": "张女士",
+    "status": "",
+    "patient": "哥哥",
+    "client_source": "周生来",
+    "illness": "肝部罕见病",
+    "track": "0809微信，关注病理会诊，还在沟通；0504跟进，未回复；0419微信，家属还有一些顾虑，持续颠覆中；0415见面，肝部的罕见病，目前的治疗只能针对并发症，但是没有找到病因，需求是了解梅奥的治疗方式，已经咨询清楚，说回去跟家人商量；0318电话，哥哥患有肝部罕见病，目前人没在北京，等回北京约见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.20",
+    "name": "闵锐",
+    "status": "",
+    "patient": "朋友小孩",
+    "client_source": "屈总",
+    "illness": "神经类疾病",
+    "track": "0407微信follw；0328微信，还未拿到病历；0320微信，先去拿病历，发送梅奥神经科优势资料"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.23",
+    "name": "张先生",
+    "status": "",
+    "patient": "",
+    "client_source": "安贞医院某医生",
+    "illness": "心脏疾病",
+    "track": "0810短信；0617短信跟进；0504电话，还没回北京，父亲身体稳定；0419未接，发了短信；0407未接，发了短信，还在出差，不确定什么时候回；0324说近期要出差，下周三通电话定时间；0323电话，暂定本周五见面，周四下午五点确认"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.29",
+    "name": "马先生",
+    "status": "",
+    "patient": "朋友",
+    "client_source": "屈总",
+    "illness": "高度近视+网脱+玻璃体混浊+白内障",
+    "track": "0504已经决定在国内治疗；0419微信跟进；0406电话，患者目前在同仁和人民会诊，4.11这周有结果；0329微信，马先生朋友，男性52岁，近日在咨询同仁眼科专家，也有意去美国看，希望通过转诊办公室联系美国医院就诊"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.3.30",
+    "name": "高嘉晨",
+    "status": "",
+    "patient": "母亲",
+    "client_source": "陈龙",
+    "illness": "免疫疾病+体检",
+    "track": "0402进入合同环节；0330微信初步沟通，母亲5月20日飞美国，希望安排去梅奥体检+治疗"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.2",
+    "name": "刘阳",
+    "status": "",
+    "patient": "朋友",
+    "client_source": "朱总",
+    "illness": "胸腺瘤+重症肌无力",
+    "track": "0405电话，做了问诊+就医评估推荐，手上有医生资源，还希望合作，再约面谈"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.5",
+    "name": "陈院长",
+    "status": "",
+    "patient": "父亲",
+    "client_source": "惠每",
+    "illness": "",
+    "track": "0419未接，发了短信；0405电话，本人是河南一个地方医院的院长，先发病历到mayo邮箱"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.5",
+    "name": "殷女士",
+    "status": "",
+    "patient": "朋友家人",
+    "client_source": "400进线",
+    "illness": "",
+    "track": "0810短信；0405电话，本人在医院工作，受朋友委托咨询远程会诊，留了邮箱，先发送病历"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.5",
+    "name": "陈先生（Julie）",
+    "status": "",
+    "patient": "家人",
+    "client_source": "400进线",
+    "illness": "肺腺癌晚期",
+    "track": "0810发送丁炜活动视频；0529微信；0512电话，客户在盛诺一家和我们视频会诊中做对比；0418微信，本周三会出全基因检测和增强CT的结果，到时候决定是否要做视频会诊；0412见面，核心需求是夫妻俩在加拿大生完小孩才发现父亲的病情，所以虽然病情已经稳定，依然想弥补对父亲的愧疚。可能消费的产品是视频会诊、病理会诊、转诊，根据跟父亲商量的结果而定，但父亲不想出国给儿女添麻烦，大概率会选择视频会诊或病理会诊；0407电话，约了下周二上午10点见面；0405电话，患者肺腺癌晚期，目前状况稳定，家属希望咨询更好的治疗方式，家属本周会来北京，暂定下周一二转诊办公室见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.6",
+    "name": "王小路",
+    "status": "",
+    "patient": "王小路",
+    "client_source": "卢柏文",
+    "illness": "免疫疾病",
+    "track": "0412催问病情概述；0406电话，之前在安徽和广州的医院看过医生，但两边的诊断不一样，目前在用一些激素类的药物，不太想去梅奥，先帮忙安排在广州看医生，会写一份病情概述给我"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.10",
+    "name": "郭瑞",
+    "status": "",
+    "patient": "老婆",
+    "client_source": "屈总",
+    "illness": "壶腹中分化腺癌",
+    "track": "0529微信；0419微信，目前在等颅内减压，做头部放疗，病人有大面积水肿，已经下不了床；0411微信，16号约了个核磁，希望等结果出来再做就医评估；0410电话，跟静明一起做了详细咨询，明后天会去北肿住院，会跟医生商量一下"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.15",
+    "name": "王铁军",
+    "status": "",
+    "patient": "父亲",
+    "client_source": "孙美婷-高杰医生",
+    "illness": "肝癌肺转移",
+    "track": "0719父亲病情有好转，已经决定在国内治疗；0504未接，发了短信；0419电话，他妹妹本周四回京，约的周五上午一起见面；0415电话，跟患者儿子沟通了病人情况，已经多方咨询国内医生，初步了解梅奥的情况，下周二来转诊办公室见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.19",
+    "name": "吴女士",
+    "status": "",
+    "patient": "老公",
+    "client_source": "400进线",
+    "illness": "糖尿病",
+    "track": "0810短信；0719未接，发了短信；0504未接，发了短信；0419电话，患者在河北邢台，患者二型糖尿病，7/8年病史，有皮肤瘙痒的并发症，问了我们跟盛诺一家的区别，已经颠覆，可能消费的产品是视频会诊，发了邮件，电话推进"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.19",
+    "name": "贡女士",
+    "status": "",
+    "patient": "",
+    "client_source": "400进线",
+    "illness": "肺病",
+    "track": "0419电话，这个人是民生的客户，替朋友问的，了解了流程和价格，有需求再联系"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.20",
+    "name": "郭女士",
+    "status": "",
+    "patient": "公公",
+    "client_source": "400进线",
+    "illness": "肺腺癌",
+    "track": "0421电话，家人决定在国内治疗，这个人不在病人身边，影响力有限；0420电话，公公刚刚在301做的活检，肺腺癌，近端淋巴结转移，希望了解梅奥的治疗方式和转诊流程、费用。已沟通，家人这几天在北京，约了见面，会转达。"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.25",
+    "name": "龚先生",
+    "status": "",
+    "patient": "龚先生",
+    "client_source": "400进线",
+    "illness": "胃返流",
+    "track": "0529微信；0504微信回访，还在比较麻省总院和梅奥，给出了建议；0425微信咨询，患者本人一直咳嗽，更多通过文字；希望详细了解梅奥的一个新技术Linx手术，静明做了电话咨询，等反馈"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.26",
+    "name": "王丽",
+    "status": "",
+    "patient": "女儿",
+    "client_source": "就医160",
+    "illness": "非霍奇金淋巴瘤",
+    "track": "0719丁炜二次传播稿分享；0603电话，正在做第四次化疗，已告知丁伟的活动，发送报名页面；0504电话，云南省人民医院的医生建议她做自体干细胞移植，约了北大肿瘤的医生远程会诊，下周跟进；0426电话，询问了我们的资质，患者及家属在昆明，下周先约视频咨询。患者20岁，女，诊断为非霍杰金氏淋巴瘤，已经进行4期化疗，效果不好，想去美国梅奥医学中心诊治，咨询梅奥医学中心对非霍杰金氏淋巴瘤治疗生存率为多少？是否有化疗成功的案例？挂号就诊翻译等费用为多少？治疗费用为多少？"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.27",
+    "name": "谷屿",
+    "status": "",
+    "patient": "谷屿",
+    "client_source": "Sim",
+    "illness": "",
+    "track": "0504微信，家属回复先吃段中药；0427由Sim在积水潭接待客户，为他做初步咨询，经济能力有限"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.27",
+    "name": "田杰",
+    "status": "",
+    "patient": "田杰",
+    "client_source": "屈总",
+    "illness": "舌癌",
+    "track": "0810微信；0525微信，还在考虑，医生都推荐MD安德森；0517电话，手术后，目前在恢复期，考虑去梅奥做后续治疗，主治医生推荐的安德森；0505微信，未回复；0427见面，要确认是否在国内手术"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.4.29",
+    "name": "陈杰",
+    "status": "",
+    "patient": "家人bb",
+    "client_source": "微信端",
+    "illness": "眼癌",
+    "track": "0502电话，家人由于费用问题，已经决定在国内治疗"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.2",
+    "name": "迟猛-鹿冰",
+    "status": "",
+    "patient": "朱海燕",
+    "client_source": "屈总",
+    "illness": "肺腺癌",
+    "track": "0719微信；0622微信；0519电话，在等待一个基因检测结果，到时候联系；0512电话，下周一来北京做检查，到时候约见面；0508微信，月底来北京；0502微信，发送病历"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.4",
+    "name": "陈先生",
+    "status": "",
+    "patient": "黄女士-太太",
+    "client_source": "易加医",
+    "illness": "罕见血液病",
+    "track": "0810微信，询问赴美行程安排；0719微信，9月底去美国，下次来协和复查约见面；0706电话，太太目前在用鲁索替尼治疗，担心耐药和副作用，认可一定要去一次美国医院的观点，提了就医评估发医疗邀请函，跟太太商量后反馈；0504电话，要了资料，说要跟太太商量"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.6",
+    "name": "任女士",
+    "status": "",
+    "patient": "任女士",
+    "client_source": "400进线",
+    "illness": "试管",
+    "track": "0719、0705已停机；0614未接，发了短信；0529短信，跟进；0506电话，任女士人在南京，要先做检查，发送了检查List"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.6",
+    "name": "宋先生",
+    "status": "",
+    "patient": "宋先生",
+    "client_source": "400进线",
+    "illness": "鼻中隔偏曲粘连",
+    "track": "0719微信；0705微信；0614短信跟进；0523电话，还没定来北京的时间；0506电话，常年在同仁医院看病，过段时间来北京见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.7",
+    "name": "Iren",
+    "status": "",
+    "patient": "女儿",
+    "client_source": "屈总",
+    "illness": "黑色素痣",
+    "track": "0719微信，目前没有在治疗了；0517微信，未回复；0507微信，目前诊断是黑色素痣，发送梅奥儿科优势，再跟进"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.7",
+    "name": "Miranda",
+    "status": "",
+    "patient": "家人",
+    "client_source": "朱总",
+    "illness": "肝癌晚期",
+    "track": "0719微信，客户没有回复；0529微信；0510微信，病历还没出来；0507微信，还未拿到病历，希望邮件联系，再跟进"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.11",
+    "name": "韩先生",
+    "status": "",
+    "patient": "太太",
+    "client_source": "400进线",
+    "illness": "库欣病",
+    "track": "0802微信，暂时决定在国内治疗，病情不严重；0719微信，下周初复查结果；0523微信，医生让等待一个月才能出结果；0512发送梅奥治疗库欣病的具体药物；0511见面，经济实力没有问题，等复查结果出来，如果指标增高，再转诊去梅奥"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.16",
+    "name": "史德功",
+    "status": "",
+    "patient": "太太",
+    "client_source": "400进线",
+    "illness": "肝癌晚期",
+    "track": "0525病情恶化，暂时不需要；0521电话，已经找到梅奥肝病专家，做视频会诊，等待整理好的病历；0519电话，需求就是视频会诊，我们没有合适的医生；0517电话咨询，患者目前已经无法出国，需要第二诊疗意见；0516电话，发送病历，约第二天跟医学顾问一起打个电话"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.17",
+    "name": "姚蕾",
+    "status": "",
+    "patient": "儿子",
+    "client_source": "400进线",
+    "illness": "头晕罕见病",
+    "track": "0614小孩吃中药好了，订单closed；0531微信分享；0518跟老公一起在转诊办公室见面，态度转变，内部决策中，过两天跟进；0517来公司撞门，比较焦虑"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.23",
+    "name": "彭女士",
+    "status": "",
+    "patient": "亲戚小孩",
+    "client_source": "400进线",
+    "illness": "脑血管瘤",
+    "track": "0523电话，小孩要做开颅手术，咨询梅奥医生建议，给了方案和报价，会转达家属，这不是核心决策人"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.24",
+    "name": "陈雀华",
+    "status": "",
+    "patient": "本人",
+    "client_source": "400进线",
+    "illness": "胃肠罕见病",
+    "track": "0810以时间催单；0719微信，亲戚反馈美国医院都要见到患者本人，考虑就医评估，9月初要陪女儿去美国上学；0531微信，近期有别的事要忙，过段时间再联系；0526电话，初步buyin想法，先做就医评估，在犹豫，过两天跟进；0524电话，先发病历，晓晔查梅奥能提供的价值，明天上午电话会议沟通"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.25",
+    "name": "钱宇清",
+    "status": "",
+    "patient": "本人",
+    "client_source": "400进线",
+    "illness": "未分化肉瘤",
+    "track": "0719微信，目前病情稳定，；0613微信答疑；0531微信沟通，问了费用和转诊病人的详情，还在考虑；0527电话会议，患者的医生也推荐她去梅奥，先做就医评估，还有怀疑，再跟进；0525电话，先发病历，晓晔查梅奥能提供的价值，下午电话会议沟通"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.27",
+    "name": "奚女士",
+    "status": "",
+    "patient": "老公",
+    "client_source": "400进线",
+    "illness": "脑部肿瘤",
+    "track": "0810微信；0722联系，刚做完核磁，肿瘤变小，指导先听临床医生建议；0719微信；0613微信跟进；0602微信沟通，发送案例，等待对方考虑；0527电话，脑部肿瘤，担心国内的成功率，咨询梅奥的治疗方式和费用，已经发送病历，跟晓晔讨论后给反馈"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.27",
+    "name": "仲先生",
+    "status": "",
+    "patient": "亲戚",
+    "client_source": "屈总",
+    "illness": "",
+    "track": "0527电话，患者是这个人的亲戚，关系不太近，说让家属直接跟我联系"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.30",
+    "name": "蔺先生",
+    "status": "",
+    "patient": "某医生",
+    "client_source": "400进线",
+    "illness": "宫颈癌术后",
+    "track": "0621微信邀请参加活动，说患者出游了；0602丁伟答应做视频，蔺先生回跟患者沟通，再反馈；0531收到病历，问罗总是否有合适的医生；0530电话，给医生的领导咨询，需求点在远程视频会诊，已经沟通清楚，先发来病历找合适的医生"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.5.30",
+    "name": "高女士",
+    "status": "",
+    "patient": "父亲",
+    "client_source": "屈总",
+    "illness": "肺癌",
+    "track": "0719微信；0603见面，国内医生说不能手术，也不能化疗，见面后给了一个咨询服务反馈，正在做基因检测，经济实力有限"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.1",
+    "name": "罗金龙",
+    "status": "",
+    "patient": "太太",
+    "client_source": "屈总",
+    "illness": "肺癌多发转移",
+    "track": "0613用药物清单跟进；0601电话，目前需求并不明确，加了微信，再探寻需求"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.1",
+    "name": "李先生",
+    "status": "",
+    "patient": "小孩",
+    "client_source": "400进线",
+    "illness": "骨纤维增生",
+    "track": "0714微信，还是希望找到梅奥比国内突出先进的点，已经告知的确没有办法；0605微信，经济实力有限，已告知去梅奥的必要性是诊断"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.10",
+    "name": "张福荣",
+    "status": "",
+    "patient": "哥哥",
+    "client_source": "上海办",
+    "illness": "神经元损伤",
+    "track": "0719微信；0705微信，7月中会来北京治疗，到时候联系；0610电话，客户希望知道梅奥在治疗这个病上的优势，由晓晔整理，再提交客户，下下周会来北京，到时候见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.13",
+    "name": "孙女士",
+    "status": "",
+    "patient": "父亲",
+    "client_source": "400进线",
+    "illness": "胶质瘤+血管瘤",
+    "track": "0705不需要了；0614微信，引导到做就医评估，发送合同，再考虑；0613电话，需求是治疗方案+效果预估+费用"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.14",
+    "name": "孙先生",
+    "status": "",
+    "patient": "小孩",
+    "client_source": "屈总-马少华",
+    "illness": "骨肉瘤",
+    "track": "0719微信，很迷茫，目前在301的化疗效果不错，但不能确定保肢，犹豫去不去梅奥，引导做就医评估；0706微信，目前孩子还在山东，下次去北京复查的时候发最新病例，再联系；0614见面，目前还没拿到全部病历，10天左右化疗后出结果，到时候先做就医评估"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.17",
+    "name": "孙女士夫妇",
+    "status": "",
+    "patient": "孙女士夫妇",
+    "client_source": "朱总",
+    "illness": "IVF+代孕",
+    "track": "0706跟进，决定去波士顿；0617见面，客户的需求非常明确，也问了好几家加州的生殖中心，太太很想去，先生在意费用，再跟进"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.24",
+    "name": "姚先生",
+    "status": "",
+    "patient": "亲戚",
+    "client_source": "张彩云",
+    "illness": "胃间质瘤",
+    "track": "0624电话，只做了一个胃镜，307的医生主观判断是恶性的，建议取病理+做CT，需求是药物，引导做视频会诊"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.27",
+    "name": "王女士",
+    "status": "",
+    "patient": "本人",
+    "client_source": "百度商桥",
+    "illness": "生孩子",
+    "track": "0627电话，需求是怀孕7、8个月之后去美国医院生产，已告知海关可能不让过，说再跟先生商量"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.27",
+    "name": "杨小姐",
+    "status": "",
+    "patient": "母亲",
+    "client_source": "丁炜活动-后台",
+    "illness": "淋巴瘤",
+    "track": "0627电话，目前母亲病情稳定，需求是复发后转诊到梅奥"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.27",
+    "name": "简女士",
+    "status": "",
+    "patient": "客户",
+    "client_source": "丁炜活动-太平",
+    "illness": "-",
+    "track": "0627电话，这人不是客户，手里有客户，发了信息，有需要跟我联系"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.27",
+    "name": "赵焕涛",
+    "status": "",
+    "patient": "朋友",
+    "client_source": "丁炜活动-太平",
+    "illness": "",
+    "track": "0630电话，关心转诊的流程和费用，为身边的朋友咨询，有需要再联系；0627关机，发了短信，让明天联系"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "",
+    "name": "周鉴",
+    "status": "",
+    "patient": "母亲",
+    "client_source": "丁炜活动-后台",
+    "illness": "淋巴瘤",
+    "track": "15年初上海肿瘤医院诊断T淋母，6次化疗后自体移植，3个月后今年3月复发，纵隔肿瘤10余公分，再化疗目前已经第十次化疗，纵隔积液，用排流，血像低，血小板0.1白细胞0.2。上海华东医院出病危通知书"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.27",
+    "name": "雍衡",
+    "status": "",
+    "patient": "朋友",
+    "client_source": "丁炜活动-太平",
+    "illness": "",
+    "track": "0630电话，为朋友咨询，有美国保险，0627电话，没带手机，老婆接的，明天联系"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.27",
+    "name": "张女士",
+    "status": "",
+    "patient": "姐姐",
+    "client_source": "丁炜活动-太平",
+    "illness": "",
+    "track": "0810电话，20号左右来北京，到时候约在转诊办公室见面；0630电话，患者去年在复旦的肿瘤医院做的重离子治疗，下下周带上全部的病历来转诊办公室；0627电话，正在忙，晚点联系"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.27",
+    "name": "周先生",
+    "status": "",
+    "patient": "弟弟",
+    "client_source": "工行客户经理",
+    "illness": "",
+    "track": "0719微信，目前病情稳定，没有耐药；0627电话，弟弟是白血病，跟丹娜法伯做过视频会诊，拿到方案后在德国买的药，自己用药后症状得到缓解，担心耐药。已经告知去梅奥建立科学的治疗方案，有时间来北京见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.28",
+    "name": "何燕",
+    "status": "",
+    "patient": "朋友小孩",
+    "client_source": "400进线",
+    "illness": "白血病",
+    "track": "0701电话，考虑费用问题，在国内治疗；0629电话，朋友的小孩，刚查出来，需求是了解优势，考虑后续治疗在国内还是国外。诊断是急行早右粒细胞白血病。问了费用、周期，先跟朋友讨论"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.28",
+    "name": "孙女士",
+    "status": "",
+    "patient": "家属",
+    "client_source": "400进线",
+    "illness": "脑部肿瘤",
+    "track": "0629电话，孙女士本人在美国，家属在北京，询问了自己申请和通过惠每申请的区别，跟家属商量，再联系"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.6.28",
+    "name": "何召锋",
+    "status": "",
+    "patient": "同学",
+    "client_source": "屈总",
+    "illness": "急行T细胞淋巴白血病",
+    "track": "0719微信，询问咨询费用，要再跟家人商量；0628电话，多次尝试治疗，包括NK细胞免疫治疗，告知梅奥优势，患者本人在合肥，太太复查的时候会来北京，到时候约见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.1",
+    "name": "韩女士",
+    "status": "",
+    "patient": "同学",
+    "client_source": "百度搜索",
+    "illness": "疑似克罗恩病",
+    "track": "0704见面，需求是让梅奥医生帮忙明确诊断，但患者本人过不去，已告知不可能，要么做病理会诊，要么直接转诊过去，经济能力有限；0701电话，最开始在同仁医院看的病，做了盲肠手术，一直没有好转；之后在协和医院做的会诊，也没最终诊断，疑似克罗恩病"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.4",
+    "name": "董女士",
+    "status": "",
+    "patient": "小孩",
+    "client_source": "朱总",
+    "illness": "一型糖尿病",
+    "track": "0706见面，太太的担心是孩子今年高二，相等高考完再去；0705电话，现在人就在北京，今晚定时间，明天上午见面，关注临床试验和梅奥的优势；0704微信，希望了解梅奥治疗一型糖尿病的优势"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.4",
+    "name": "Nana",
+    "status": "",
+    "patient": "陈景先",
+    "client_source": "卢柏文",
+    "illness": "肝癌晚期",
+    "track": "0705看病例后，回电话，患者目前治疗情况不理想，已经出现肺转、骨转，引导先做就医评估；0704微信，发送病历"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.5",
+    "name": "闵锐",
+    "status": "",
+    "patient": "本人和太太",
+    "client_source": "屈总",
+    "illness": "龙凤胎",
+    "track": "0714微信，跟太太商量，想去梅奥体检+龙凤胎；0707微信；0705电话，需求是去梅奥生龙凤胎，担心效果和安全性，发了梅奥IVF的资料，跟太太商量后反馈"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.7",
+    "name": "李女士",
+    "status": "",
+    "patient": "老公",
+    "client_source": "400进线",
+    "illness": "神经类罕见病",
+    "track": "0802微信，出不起费用；0718微信；0707电话，老公在宣武医院看的病，被告知已经没有别的办法，咨询梅奥更好的方法，自己在网上做了很多功课，查到一种药，国内没有，先发病历，做病历咨询"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.8",
+    "name": "王凯",
+    "status": "",
+    "patient": "岳母",
+    "client_source": "杨博胜",
+    "illness": "肺腺癌",
+    "track": "0719电话，问折扣，还是过于考虑费用；0718电话，想见屈总，已经告知出差，有需要再联系；0714未接，发了短信，家人没在北京，还要再商量，判断为推词；0708通过杨博胜的介绍直接找到高瓴办公室，临时过去见面。主要犹豫点在费用上，拿走合同，回去考虑"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.8",
+    "name": "闫女士",
+    "status": "",
+    "patient": "本人",
+    "client_source": "百度搜索",
+    "illness": "右侧下腋多处淋巴结肿大",
+    "track": "0708电话，人在郑州，CT、核磁、PET、病理都做过，没有确诊，医生让手术，病人询问是否有不手术的确诊方法，已告知需要做【就医评估】，病人在犹豫，后回复微信不考虑，估计是费用问题"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.8",
+    "name": "刘琦玲",
+    "status": "",
+    "patient": "母亲",
+    "client_source": "百度搜索",
+    "illness": "肾癌晚期",
+    "track": "0712电话，母亲身体基本情况很差，本人认为无法长途飞行；0708电话，母亲今年78岁，2003年确诊肾癌，并做了左肾全切除手术。以后一直服用多吉美。2015年发现肺部转移，2016年又发生了骨转移。需求是到梅奥就医，告知需要先做就医评估，认可，加了微信，晚上整理病历后，先看病历"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.8",
+    "name": "左先生",
+    "status": "",
+    "patient": "阿姨/父母",
+    "client_source": "百度搜索",
+    "illness": "卵巢癌术后/体检",
+    "track": "0713未接，发了短信，还在考虑；0708电话，为阿姨咨询卵巢癌的术后，今年1月做的手术，目前在用中药治疗，想去梅奥复查，问了流程，先做就医评估，等整理好的病历；为父母咨询梅奥体检，需求是筛查癌症"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.11",
+    "name": "王文滔",
+    "status": "",
+    "patient": "父亲",
+    "client_source": "高瓴",
+    "illness": "早期前列腺癌",
+    "track": "0712电话，已沟通梅奥的价值，大概率在国内治疗；0711微信，父亲刚刚查出前列腺癌，目前只有一个核磁报告，穿刺12次只有1次穿到癌细胞"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.11",
+    "name": "苏女士",
+    "status": "",
+    "patient": "女儿",
+    "client_source": "屈总",
+    "illness": "脊髓损伤",
+    "track": "0719短信；0711电话，母亲思路很清晰，问了能做的和价格，很清楚脊髓损伤不可逆"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.12",
+    "name": "震Dearek",
+    "status": "",
+    "patient": "亲戚",
+    "client_source": "屈总",
+    "illness": "肺癌四期",
+    "track": "0714催发病历，亲戚暂时不想治疗；0712微信，帮亲戚咨询，还没有病历，先去问亲戚要病历"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.12",
+    "name": "罗小姐",
+    "status": "",
+    "patient": "父亲",
+    "client_source": "陈晨",
+    "illness": "胃癌晚期",
+    "track": "0725微信，问了免疫治疗，还在考虑；0719微信，8月初全家回北京，再商量；0712电话，胃癌术后，目前状态不错，由于肾病不能进行放化疗，寻求更好的治疗方式。详细问了流程和费用，经济实力有限，可能选择3万的远程视频会诊"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.12",
+    "name": "李东升",
+    "status": "",
+    "patient": "本人",
+    "client_source": "惠每",
+    "illness": "体检",
+    "track": "0810微信催单，顾虑是价格，在犹豫；0808见面，关心基于目前体检结果有哪些意见，需求是肿瘤的早期筛查，肺癌为主，找好的投资项目；0807约好周一下午4点半见面；0802约好下周一定见面时间；0729微信，本周出差，下周约见面时间；0719微信，体检报告还没出来；0712微信，老罗拉群，去梅奥体检的需求，10月底会在美国，顺便过去。目前没有体检报告，约的下周拿到体检报告后见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.12",
+    "name": "战总",
+    "status": "",
+    "patient": "本人",
+    "client_source": "惠每",
+    "illness": "体检",
+    "track": "0810微信催单；0808跟秘书建立联系，一并卖研讨会；0807改变主意；0802战总不想自己一个人去，放弃；0712微信，阳红拉群，对体检感兴趣，约了见面，下周要去加拿大，等回来约时间"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.13",
+    "name": "严先生",
+    "status": "",
+    "patient": "父亲",
+    "client_source": "就医160",
+    "illness": "冠心病",
+    "track": "0714未接，发了短信，还要再考虑，像竞品；0713电话，已告知诊室内翻译免费，buy in"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.14",
+    "name": "张湛",
+    "status": "",
+    "patient": "父亲",
+    "client_source": "陈晨",
+    "illness": "小细胞肺癌",
+    "track": "0809微信，还是关注DLL3的试验组；0729微信；0722微信跟进；0714电话，目前父亲用紫杉醇的化疗结果还没出来，周边结节组织有一个肿块，马上要做病理。等这两个结果出来后，再见面，进行下一步就医评估和申请临床试验组"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.15",
+    "name": "Crystal",
+    "status": "",
+    "patient": "朋友小孩",
+    "client_source": "屈总",
+    "illness": "RB",
+    "track": "0809微信；0802微信；0719微信，孩子母亲还在广州治疗，本周回天津推进；0715电话，同事的小孩查出RB，情况比较严重，先做RR，已经告知费用，发送合同，会交给孩子母亲"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.17",
+    "name": "葛建全",
+    "status": "",
+    "patient": "女儿",
+    "client_source": "屈总",
+    "illness": "神经损伤",
+    "track": "0803见面，当天晚上换了血，黄疸对运动神经和听了神经有损伤，目前的治疗是以康复为主，需求是以找到突出性的优势，才会去。15号会出一个很重要的报告，知道神经元损伤的程度，到时候跟进；0722微信跟进；0717电话，女儿新生儿黄疸非常严重抢救导致神经损伤，聊了梅奥的优势，以及先做就医评估，buy in，等拿到全部病历后见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.18",
+    "name": "高女士",
+    "status": "",
+    "patient": "本人",
+    "client_source": "丁炜活动二次传播",
+    "illness": "蕈样肉芽肿",
+    "track": "0729短信；0718未接，发了短信"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.19",
+    "name": "徐先生",
+    "status": "",
+    "patient": "父亲",
+    "client_source": "韩辉",
+    "illness": "小细胞肺癌",
+    "track": "0809微信；0802微信；0719建群，韩辉同事推荐，跟徐先生打了电话，需求是梅奥更好的治疗方式，介绍了新药和团队医疗。等一个基因检测结果，暂定本周末见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.19",
+    "name": "杜女士",
+    "status": "",
+    "patient": "本人",
+    "client_source": "华山医院-赵晓龙",
+    "illness": "踝关节退行性变化",
+    "track": "0729微信，还没回上海，病历未发；0719电话，走路就疼，问了很多医生，都没有办法，咨询梅奥更好的治疗方式，加了微信，先发病历"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.21",
+    "name": "张女士",
+    "status": "",
+    "patient": "姐姐",
+    "client_source": "400-百度搜索",
+    "illness": "宫颈癌（低分化神经内分泌癌）",
+    "track": "0802分享丁炜活动视频；0722微信通过，跟进；0721电话，宫颈癌已做过4期化疗，目前状态稳定，8、9月要去美国，希望直接过去看医生，已经有美国签证。告知RR+转诊的流程费用，"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.21",
+    "name": "王先生",
+    "status": "",
+    "patient": "女朋友父亲",
+    "client_source": "就医160",
+    "illness": "胰腺癌",
+    "track": "0729短信；0721电话，患者是王先生女友的父亲，胰腺癌，手术后正在发黄疸，国内医生说还有2个月的命。咨询国外的治疗方式。已告知可以让梅奥医生做个评估，再决定是否过去。"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.23",
+    "name": "陈女士",
+    "status": "",
+    "patient": "姐姐",
+    "client_source": "400-百度搜索",
+    "illness": "颈部刺痛",
+    "track": "0812电话，先发送病历，跟晓晔一起致电；0805已经选择在日本治疗；0803电话，详细解释赴美流程，人在广州，后期通过视频的形式签合同；0802短信；0729短信；0723电话，患者是医生。症状是刺痛，腹腔手术后，术中把包块打开，没有缝合，输卵管放在卵巢上。第二次手术做腹腔镜切除，炎性病变，第三次做肠端切除，有感染。痛点游走。做过德国的偏正光治疗，痛点由深到浅。之前在耳朵，现在在下巴附近，1.5*1.5，表皮部分，打了麻醉也存在。已告知需要明确诊断，周一跟进反馈"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.24",
+    "name": "吕女士",
+    "status": "",
+    "patient": "外甥",
+    "client_source": "400-百度搜索",
+    "illness": "上皮腺肉瘤",
+    "track": "0729电话，由于费用问题，决定去台湾治疗；0724电话，2次化疗后无效果，先咨询，考虑美国治疗。关心费用和官方资质，告知可以病历咨询，跟家属商量后反馈"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.25",
+    "name": "杨先生",
+    "status": "",
+    "patient": "姐姐",
+    "client_source": "400-百度搜索",
+    "illness": "乳腺癌早期",
+    "track": "0729电话，家属已经决定去安德森，杨先生不是核心决策人；0725电话，姐姐刚查出乳腺癌早期，还没做任何检查，告知需要先做RR，说要考虑一下"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.26",
+    "name": "赵菁",
+    "status": "",
+    "patient": "母亲",
+    "client_source": "民生客服",
+    "illness": "糖尿病+眼病",
+    "track": "0809短信；0725电话，需求是了解梅奥治疗糖尿病的新方法，要求发一条介绍短信"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.29",
+    "name": "周伟丽",
+    "status": "",
+    "patient": "家属",
+    "client_source": "陈晨-范铁医生-西肿乳腺",
+    "illness": "乳腺癌",
+    "track": "0810未接；0729发送短信"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.7.31",
+    "name": "王先生",
+    "status": "",
+    "patient": "老婆",
+    "client_source": "惠每",
+    "illness": "ALS",
+    "track": "0804微信，要再做一个腰穿，等结果；0801见面，去年十一发现，右上肢，全身核磁，没有问题，挂了神内的号，做了肌电图，3月开始严重，在三院做的确诊，ALS和另一种疾病的合并疾病，lianjiabi，在协和看的李晓光，确诊肌萎缩侧索硬化。加了微信，发了资料，今明两天会见三院和协和的医生，见完后再联系；0731电话，询问ALS在美国最新的治疗方法，直接约好明天上午见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.8.4",
+    "name": "李革",
+    "status": "",
+    "patient": "本人",
+    "client_source": "惠每",
+    "illness": "体检",
+    "track": "0808邮件跟进秘书，还未回复；0804电话，本人英文很好，也去过梅奥，由于上海瑞金的体检不满意，希望每年做一个体检，详细问了体检内容和价格，邮件发送合同，之后反馈"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.8.6",
+    "name": "段女士",
+    "status": "",
+    "patient": "父亲",
+    "client_source": "400进线",
+    "illness": "肾癌复发",
+    "track": "0808见面，右肾上新发现病灶，目前医生建议吃多吉美，需求是如果多吉美无效果，再赴美治疗；0806电话，约好明天见面"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.8.6",
+    "name": "陈琪",
+    "status": "",
+    "patient": "父亲",
+    "client_source": "常宝军",
+    "illness": "肾癌转移",
+    "track": "0809微信，要在做一个穿刺，等结果；0808视频咨询，更倾向在国内做治疗，沟通后同意就医评估，发送合同；0807电话，患者已经出现肺转移、骨转移，不确定是原发还是肾癌转移过去的，约好明天下午2点视频咨询"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.8.9",
+    "name": "刘蓉珍",
+    "status": "",
+    "patient": "本人",
+    "client_source": "亚南总",
+    "illness": "右颈动脉堵塞",
+    "track": "0809电话，在上海华山看的，一条血管堵塞，希望了解梅奥有哪些新技术，主推了第四代支架，等本周造影结果"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.8.10",
+    "name": "樊女士",
+    "status": "",
+    "patient": "父亲",
+    "client_source": "400-百度搜索",
+    "illness": "心脑血管疾病",
+    "track": "0810电话，父亲有不明原因的心脑血管疾病，咨询美国更好的治疗方式，整理病历发送"
+  },
+  {
+   "is_finished":false, "type":"patient","section_id":"2","develop_date": "2016.8.12",
+    "name": "袁女士",
+    "status": "",
+    "patient": "女儿",
+    "client_source": "400-百度搜索",
+    "illness": "脑胶质瘤",
+    "track": "0812电话，需求是视频会诊，先发送病历，跟晓晔一起致电"
+  }
+]

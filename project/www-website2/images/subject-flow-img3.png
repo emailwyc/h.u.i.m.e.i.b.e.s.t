@@ -1,0 +1,27 @@
+IEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+</xml>
+ERROR - 2015-11-17 09:54:08 --> {"signature":"ec269f089b1255dead1395b4823015bdabf11534","timestamp":"1447725248","nonce":"391242883"}
+ERROR - 2015-11-17 09:54:08 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwV84ots96PJvXfCyu4wSWuw]]></FromUserName>
+<CreateTime>1447725248</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+</xml>
+ERROR - 2015-11-17 10:17:57 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2015-11-17 10:24:33 --> {"signature":"7563af6cace72c9aa597c1951d3ccbeb6c0392b5","timestamp":"1447727073","nonce":"1841895871"}
+ERROR - 2015-11-17 10:24:33 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwV84ots96PJvXfCyu4wSWuw]]></FromUserName>
+<CreateTime>1447727073</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fhome%2Findex%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=homeindex#wechat_redirect]]></EventKey>
+</xml>
+ERROR - 2015-11-17 10:34:36 --> {"signature":"87262264be968077128c2f690ab31f66c50f1f8b","timestamp":"1447727676","nonce":"239972416"}
+ERROR - 2015-11-17 10:34:36 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwV84ots96PJvXfCyu4wSWuw]]></FromUserName>
+<CreateTime>1447727676</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.co

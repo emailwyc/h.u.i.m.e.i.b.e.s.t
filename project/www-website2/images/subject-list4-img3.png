@@ -1,0 +1,34 @@
+<![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[100024]]></EventKey>
+<Ticket><![CDATA[gQEv8ToAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL21UcjdhYVBsLUZHRkhHOERSQlRSAAIE7na0VgMEgDoJAA==]]></Ticket>
+</xml>
+ERROR - 2016-02-09 08:53:19 --> 100024qqqqqq
+ERROR - 2016-02-09 08:53:19 --> 感谢您关注找明医
+客服热线: 400-068-6895wangyanchong
+ERROR - 2016-02-09 08:53:45 --> {"signature":"54671ea3ae29eadd0160e6b690cdb74d0dc02d03","timestamp":"1454979225","nonce":"85075700"}
+ERROR - 2016-02-09 08:53:45 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwR81LZeKyJx4ZD6MVBqxZY0]]></FromUserName>
+<CreateTime>1454979225</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxddf4a6cc44d62464&redirect_uri=http%3A%2F%2Fh5.huimeibest.com%2Fuser%2Fdoctor%3Fauth%3Dwx&response_type=code&scope=snsapi_base&state=userdoctor#wechat_redirect]]></EventKey>
+<MenuId>402483012</MenuId>
+</xml>
+ERROR - 2016-02-09 08:53:45 --> receive a new event: VIEWwangyanchong
+ERROR - 2016-02-09 09:49:42 --> {"signature":"78b4f67dd930f20dacef527870cabbae8a8f3266","timestamp":"1454982582","nonce":"1759528761"}
+ERROR - 2016-02-09 09:49:42 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwTAlDKIk3OJtmzkDpWJX0-s]]></FromUserName>
+<CreateTime>1454982582</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+ERROR - 2016-02-09 09:49:42 --> wangyanchong
+ERROR - 2016-02-09 10:15:15 --> {"signature":"6f0bd229bb28603b336923aa06c00941872d93e5","timestamp":"1454984115","nonce":"217304979"}
+ERROR - 2016-02-09 10:15:15 --> <xml><ToUserName><![CDATA[gh_87dba6b18470]]></ToUserName>
+<FromUserName><![CDATA[oFZTWwXJnRfvMkFzLzFWk5prGf1o]]></FromUserName>
+<CreateTime>1454984115</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[SCAN]]></Event>
+<EventKey><![CDATA[90027]]></EventKey>
+<Ticket><![CDATA[gQGj8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNv
